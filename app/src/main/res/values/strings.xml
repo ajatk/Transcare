@@ -1,3 +1,4 @@
 <resources>
     <string name="app_name">Transcare</string>
+    <string name="rupeetext">\u20B9</string>
 </resources>

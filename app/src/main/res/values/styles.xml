@@ -8,5 +8,7 @@
         <item name="colorAccent">@color/colorAccent</item>
     </style>
     <style name="AppTheme1" parent="Theme.AppCompat.Light.NoActionBar"></style>
-
+    <string name="your_string_here">
+        This is an <u>underline</u>.
+    </string>
 </resources>
