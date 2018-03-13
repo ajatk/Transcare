@@ -20,9 +20,15 @@
 
     // sign in screen Dimensions
 
-    <dimen name="editText_size">75dp</dimen>
+    <dimen name="editText_size">70dp</dimen>
     <dimen name="frgtpw_text_size">25sp</dimen>
     <dimen name="signin_text_size">25sp</dimen>
-    <dimen name="margin_edittext_sign_btn">16dp</dimen>
+    <dimen name="margin_edittext_sign_btn">12dp</dimen>
+    <dimen name="sign_in_top_margin">50dp</dimen>
+    <dimen name="left_margin_from_parent">50dp</dimen>
+    <dimen name="margin_top_forgot_text">35dp</dimen>
+    <dimen name="signIn_text_size">25sp</dimen>
+    <dimen name="username_pw_text_size">22sp</dimen>
+
 
 </resources>
