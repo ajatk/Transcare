@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:showIn="navigation_view">
+
+
+    <item
+        android:id="@+id/my_family"
+        android:icon="@drawable/family"
+        android:title="My Family" />
+    <item
+        android:id="@+id/my_order"
+        android:icon="@drawable/order"
+        android:title="My Orders" />
+    <item
+        android:id="@+id/health_trend"
+        android:icon="@drawable/healthtrend"
+        android:title="Health Trends" />
+    <item
+        android:id="@+id/wallet"
+        android:icon="@drawable/wallet"
+        android:title="Wallet" />
+
+    <item
+        android:id="@+id/call_us"
+        android:icon="@drawable/phonr"
+        android:title="Call Us" />
+    <item
+        android:id="@+id/feed_back"
+        android:icon="@drawable/feedback"
+        android:title="Feed Back" />
+    <item
+        android:id="@+id/notification"
+        android:icon="@drawable/notification"
+        android:title="Notification" />
+    <item
+        android:id="@+id/share"
+        android:icon="@drawable/share"
+        android:title="Share" />
+
+</menu>
