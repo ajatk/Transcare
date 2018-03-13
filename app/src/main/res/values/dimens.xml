@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <dimen name="CreateAcountTextSize">20sp</dimen>
+    <dimen name="BackImageWidth">50sp</dimen>
+    <dimen name="BackImageHeight">45sp</dimen>
+    <dimen name="BackImageMarginLeft">16dp</dimen>
+    <dimen name="CreateAccountTextHeight">45sp</dimen>
+    <dimen name="EmailImgeWidth">152dp</dimen>
+    <dimen name="EmailImgeHeight">130dp</dimen>
+    <dimen name="EmailImgeMarginTop">66dp</dimen>
+    <dimen name="EditTextWidth">48dp</dimen>
+    <dimen name="EditTextHeight">48dp</dimen>
+    <dimen name="LongTextMarginTop">24dp</dimen>
+    <dimen name="LongTextSize">14sp</dimen>
+    <dimen name="ResendCodeWidth">82dp</dimen>
+    <dimen name="ResendCodeHeight">50dp</dimen>
+    <dimen name="ResendImageMarginTop">40dp</dimen>
+    <dimen name="EditTextMarginLeft">8sp</dimen>
+</resources>

@@ -1,0 +1,158 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/bg"
+    android:theme="@style/AppTheme1"
+    tools:context="com.seo_loto.transcare.MainActivity1">
+
+
+    <ImageView
+        android:layout_width="@dimen/BackImageWidth"
+        android:layout_height="@dimen/BackImageHeight"
+        android:layout_marginLeft="@dimen/BackImageMarginLeft"
+        android:src="@drawable/back"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/CreateAccountTextHeight"
+        android:gravity="center"
+        android:text="Create Account"
+        android:textColor="#fff"
+        android:textSize="@dimen/CreateAcountTextSize"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.452"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <ImageView
+        android:id="@+id/imageView"
+        android:layout_width="@dimen/EmailImgeWidth"
+        android:layout_height="@dimen/EmailImgeHeight"
+        android:layout_marginTop="@dimen/EmailImgeMarginTop"
+        android:background="@drawable/otp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.503"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/textView"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="32dp"
+        android:layout_marginStart="32dp"
+        android:layout_marginTop="@dimen/LongTextMarginTop"
+        android:gravity="center"
+        android:textSize="@dimen/LongTextSize"
+        android:text="We have sent you the access code via SMS for mobile number verification"
+        android:textColor="#fff"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/imageView"
+        app:layout_constraintVertical_bias="0.023"
+        tools:ignore="MissingConstraints" />
+
+    <EditText
+        android:id="@+id/editText4"
+        android:layout_width="@dimen/EditTextWidth"
+        android:layout_height="@dimen/EditTextHeight"
+        android:background="@drawable/edit_text_background_shape"
+        android:gravity="center"
+        android:textColor="#fff"
+        android:hint="1"
+        android:textSize="@dimen/LongTextSize"
+        android:inputType="number"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/editText"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintHorizontal_chainStyle="packed"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.621" />
+
+    <EditText
+        android:id="@+id/editText"
+        android:layout_width="@dimen/EditTextWidth"
+        android:layout_height="@dimen/EditTextHeight"
+        android:ems="10"
+        android:textColor="#fff"
+        android:background="@drawable/edit_text_background_shape"
+        android:inputType="number"
+        android:gravity="center"
+        android:hint="1"
+        android:textSize="@dimen/LongTextSize"
+        android:layout_marginLeft="@dimen/EditTextMarginLeft"
+        app:layout_constraintBaseline_toBaselineOf="@+id/editText4"
+        app:layout_constraintEnd_toStartOf="@+id/editText2"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/editText4"
+        />
+
+    <EditText
+        android:id="@+id/editText2"
+        android:layout_width="@dimen/EditTextWidth"
+        android:layout_height="@dimen/EditTextHeight"
+        android:ems="10"
+        android:textColor="#fff"
+        android:background="@drawable/edit_text_background_shape"
+        android:inputType="number"
+        android:gravity="center"
+        android:hint="1"
+        android:textSize="@dimen/LongTextSize"
+        android:layout_marginLeft="@dimen/EditTextMarginLeft"
+        app:layout_constraintBaseline_toBaselineOf="@+id/editText"
+        app:layout_constraintEnd_toStartOf="@+id/editText3"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/editText" />
+
+    <EditText
+        android:id="@+id/editText3"
+        android:layout_width="@dimen/EditTextWidth"
+        android:layout_height="@dimen/EditTextHeight"
+        android:ems="10"
+        android:background="@drawable/edit_text_background_shape"
+        android:inputType="number"
+        android:gravity="center"
+        android:textColor="#fff"
+        android:hint="1"
+        android:textSize="@dimen/LongTextSize"
+        android:layout_marginLeft="@dimen/EditTextMarginLeft"
+        app:layout_constraintBaseline_toBaselineOf="@+id/editText2"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/editText2" />
+
+    <ImageView
+        android:id="@+id/imageView2"
+        android:layout_width="@dimen/ResendCodeWidth"
+        android:layout_height="@dimen/ResendCodeHeight"
+        android:layout_marginTop="@dimen/ResendImageMarginTop"
+        android:src="@drawable/enter"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/editText" />
+
+    <TextView
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="43dp"
+        android:textSize="@dimen/LongTextSize"
+        android:layout_marginTop="6dp"
+        android:text="Resend Code"
+        android:textColor="#fff"
+        android:gravity="center"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.503"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/imageView2"
+        app:layout_constraintVertical_bias="0.176" />
+</android.support.constraint.ConstraintLayout>
