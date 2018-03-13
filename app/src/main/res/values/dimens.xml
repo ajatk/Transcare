@@ -17,4 +17,11 @@
     <dimen name="ResendCodeHeight">50dp</dimen>
     <dimen name="ResendImageMarginTop">40dp</dimen>
     <dimen name="EditTextMarginLeft">8sp</dimen>
+
+    // sign in screen Dimensions
+
+    <dimen name="editText_size">55dp</dimen>
+    <dimen name="frgtpw_text_size">17sp</dimen>
+    <dimen name="signin_text_size">18sp</dimen>
+    <dimen name="margin_edittext_sign_btn">8dp</dimen>
 </resources>
