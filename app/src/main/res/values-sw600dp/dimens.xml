@@ -39,5 +39,22 @@
     //Intro Slider Activity
     <dimen name="getstarted_text_size">40sp</dimen>
 
+    /// //HealthPanelsFragment-------------------------------------//
+
+    <dimen name="TextViewMarginLeft">45sp</dimen>
+    <dimen name="TextViewDetMarginLeft">55sp</dimen>
+    <dimen name="TextSize">16sp</dimen>
+    <dimen name="TextSizeIcon">20sp</dimen>
+    <dimen name="TextSize1500">20sp</dimen>
+    <dimen name="ViewDetailssize">15sp</dimen>
+    <dimen name="MarginRightViewDetail">445dp</dimen>
+    <dimen name="MarginRight1500">46dp</dimen>
+    /// // Dailog xml-------------------------------------///////////
+    <dimen name="ProductTextSize">28sp</dimen>
+    <dimen name="LongTextSizeProduct">22sp</dimen>
+    <dimen name="MarginLeft1stTextView">10sp</dimen>
+    <dimen name="MarginTopLondProduct">5dp</dimen>
+    <dimen name="ProductViewMarginTop">14dp</dimen>
+
 
 </resources>
