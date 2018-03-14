@@ -27,12 +27,12 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
-    <ImageView
+    <de.hdodenhof.circleimageview.CircleImageView
         android:id="@+id/imageView"
         android:layout_width="@dimen/EmailImgeWidth"
         android:layout_height="@dimen/EmailImgeHeight"
         android:layout_marginTop="@dimen/EmailImgeMarginTop"
-        android:background="@drawable/otp"
+        android:src="@drawable/ic_launcher_background"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.503"
         app:layout_constraintStart_toStartOf="parent"
