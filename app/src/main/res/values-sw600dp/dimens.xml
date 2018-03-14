@@ -28,7 +28,16 @@
     <dimen name="left_margin_from_parent">50dp</dimen>
     <dimen name="margin_top_forgot_text">35dp</dimen>
     <dimen name="signIn_text_size">25sp</dimen>
-    <dimen name="username_pw_text_size">22sp</dimen>
+    <dimen name="username_pw_text_size">20sp</dimen>
+
+    // nav header dimensions
+
+    <dimen name="navheader_userName_text_size">18sp</dimen>
+    <dimen name="navheader_mail_text_size">15sp</dimen>
+
+
+    //Intro Slider Activity
+    <dimen name="getstarted_text_size">40sp</dimen>
 
     /// //HealthPanelsFragment-------------------------------------//
 

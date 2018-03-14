@@ -1,3 +1,4 @@
+<?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="in.co.ragasoft.transcare">
 
@@ -20,7 +21,6 @@
             android:name=".HomeActivity"
             android:label="@string/title_activity_home"
             android:theme="@style/AppTheme"></activity>
-        <activity android:name=".MainActivity1"></activity>
     </application>
 
 </manifest>
