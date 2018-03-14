@@ -21,6 +21,7 @@ public class Intro_SliderActivity extends AppCompatActivity implements View.OnCl
     private TextView[] dotstv;
     private int[] layouts;
 
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
