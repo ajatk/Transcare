@@ -33,13 +33,13 @@ public class HealthPanelsFrag extends Fragment {
                              Bundle savedInstanceState) {
         // Inflate the layout for this fragment
         view = inflater.inflate(R.layout.fragment_health_panels, container, false);
-
+        context = getActivity();
         rv = view.findViewById(R.id.recyclerview_healthPanels);
         searchView = view.findViewById(R.id.searchView);
         layoutManager = new LinearLayoutManager(getActivity());
         rv.setLayoutManager(layoutManager);
         rv.setItemAnimator(new DefaultItemAnimator());
-        adapter = new HealthPanelsAdapter(list);
+        adapter = new HealthPanelsAdapter(context, list);
         rv.setAdapter(adapter);
         listInIt();
         setSearchTextListener(searchView);
@@ -70,15 +70,15 @@ public class HealthPanelsFrag extends Fragment {
     }
 
     public void listInIt() {
-        ModelClass modelClass = new ModelClass("", "");
+        ModelClass modelClass = new ModelClass("Add", "1500");
         list.add(modelClass);
-        modelClass = new ModelClass("", "");
+        modelClass = new ModelClass("Add", "1500");
         list.add(modelClass);
-        modelClass = new ModelClass("", "");
+        modelClass = new ModelClass("Add", "1500");
         list.add(modelClass);
-        modelClass = new ModelClass("", "");
+        modelClass = new ModelClass("Add", "1500");
         list.add(modelClass);
-        modelClass = new ModelClass("", "");
+        modelClass = new ModelClass("Add", "1500");
         list.add(modelClass);
 
     }

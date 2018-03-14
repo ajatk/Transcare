@@ -1,5 +1,7 @@
 package in.co.ragasoft.transcare.adapter;
 
+import android.app.Dialog;
+import android.content.Context;
 import android.support.annotation.NonNull;
 import android.support.v7.widget.RecyclerView;
 import android.view.LayoutInflater;
@@ -19,10 +21,15 @@ public class HealthPanelsAdapter extends RecyclerView.Adapter<HealthPanelsAdapte
 
     ArrayList<ModelClass> list;
     ArrayList<ModelClass> filterList;
-
+    Context context;
 
     public HealthPanelsAdapter(ArrayList<ModelClass> list) {
         this.list = list;
+    }
+
+    public HealthPanelsAdapter(Context context, ArrayList<ModelClass> list) {
+        this.list = list;
+        this.context = context;
     }
 
     @NonNull
@@ -37,11 +44,17 @@ public class HealthPanelsAdapter extends RecyclerView.Adapter<HealthPanelsAdapte
     public void onBindViewHolder(@NonNull MyViewHolder holder, int position) {
         ModelClass modelClass = list.get(position);
         holder.tvPrice.setText(modelClass.getDiscriptions());
+        // holder.tvAdd.setText(modelClass.getName());
 
         holder.tvAdd.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-
+             /*ProgressDialog pg = new ProgressDialog(context);
+                pg.setMessage("Please wait.....");
+                pg.show();*/
+                Dialog dg = new Dialog(context);
+                // dg.setContentView(R.id.dailogbox_product);
+                dg.show();
             }
         });
 

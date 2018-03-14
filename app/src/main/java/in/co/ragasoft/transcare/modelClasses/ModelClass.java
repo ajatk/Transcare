@@ -14,11 +14,6 @@ public class ModelClass {
         this.discriptions = discriptions;
     }
 
-    public void setDiscriptions(String discriptions, String name) {
-        this.discriptions = discriptions;
-        this.name = name;
-    }
-
     public String getName() {
         return name;
     }
@@ -29,6 +24,11 @@ public class ModelClass {
 
     public String getDiscriptions() {
         return discriptions;
+    }
+
+    public void setDiscriptions(String discriptions) {
+        this.discriptions = discriptions;
+
     }
 
     @Override

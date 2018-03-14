@@ -30,5 +30,16 @@
     <dimen name="signIn_text_size">25sp</dimen>
     <dimen name="username_pw_text_size">22sp</dimen>
 
+    /// //HealthPanelsFragment-------------------------------------//
+
+    <dimen name="TextViewMarginLeft">45sp</dimen>
+    <dimen name="TextViewDetMarginLeft">55sp</dimen>
+    <dimen name="TextSize">16sp</dimen>
+    <dimen name="TextSizeIcon">20sp</dimen>
+    <dimen name="TextSize1500">20sp</dimen>
+    <dimen name="ViewDetailssize">15sp</dimen>
+    <dimen name="MarginRightViewDetail">445dp</dimen>
+    <dimen name="MarginRight1500">46dp</dimen>
+
 
 </resources>
