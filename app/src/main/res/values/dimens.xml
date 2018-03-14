@@ -38,12 +38,19 @@
 
     //HealthPanelsFragment-------------------------------------//
 
-    <dimen name="TextViewMarginLeft">25sp</dimen>
+    <dimen name="TextViewMarginLeft">30sp</dimen>
     <dimen name="TextSize">14sp</dimen>
     <dimen name="TextSizeIcon">18sp</dimen>
-    <dimen name="TextSize1500">16sp</dimen>
+    <dimen name="TextSize1500">14sp</dimen>
+    <dimen name="TextSize150">12sp</dimen>
     <dimen name="ViewDetailssize">10sp</dimen>
-    <dimen name="MarginRightViewDetail">280dp</dimen>
-    <dimen name="TextViewDetMarginLeft">55sp</dimen>
+    <dimen name="MarginRightViewDetail">300dp</dimen>
+    <dimen name="TextViewDetMarginLeft">60sp</dimen>
     <dimen name="MarginRight1500">26dp</dimen>
+    // /// // Dailog xml-------------------------------------///////////
+    <dimen name="ProductTextSize">20sp</dimen>
+    <dimen name="LongTextSizeProduct">16sp</dimen>
+    <dimen name="MarginLeft1stTextView">10sp</dimen>
+    <dimen name="MarginTopLondProduct">0dp</dimen>
+    <dimen name="ProductViewMarginTop">20dp</dimen>
 </resources>

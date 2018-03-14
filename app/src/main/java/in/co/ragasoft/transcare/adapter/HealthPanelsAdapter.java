@@ -3,10 +3,12 @@ package in.co.ragasoft.transcare.adapter;
 import android.app.Dialog;
 import android.content.Context;
 import android.support.annotation.NonNull;
+import android.support.constraint.ConstraintLayout;
 import android.support.v7.widget.RecyclerView;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.view.Window;
 import android.widget.Filter;
 import android.widget.Filterable;
 import android.widget.TextView;
@@ -52,8 +54,11 @@ public class HealthPanelsAdapter extends RecyclerView.Adapter<HealthPanelsAdapte
              /*ProgressDialog pg = new ProgressDialog(context);
                 pg.setMessage("Please wait.....");
                 pg.show();*/
+
                 Dialog dg = new Dialog(context);
-                // dg.setContentView(R.id.dailogbox_product);
+                dg.requestWindowFeature(Window.FEATURE_NO_TITLE);
+                //requestWindowFeature(Window.FEATURE_NO_TITLE);
+                dg.setContentView(R.layout.dailog_health_frag);
                 dg.show();
             }
         });
@@ -107,11 +112,13 @@ public class HealthPanelsAdapter extends RecyclerView.Adapter<HealthPanelsAdapte
 
     public class MyViewHolder extends RecyclerView.ViewHolder {
         TextView tvPrice, tvAdd, tv3, tv4, tv5, tv6;
+        ConstraintLayout layout;
 
         public MyViewHolder(View itemView) {
             super(itemView);
             tvPrice = itemView.findViewById(R.id.textView3);
             tvAdd = itemView.findViewById(R.id.textView6);
+            layout = itemView.findViewById(R.id.dailogbox_product);
         }
     }
 }

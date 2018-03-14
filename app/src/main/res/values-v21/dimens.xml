@@ -1,5 +1,8 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
+    /// //HealthPanelsFragment-------------------------------------//
+
+
     <dimen name="TextViewMarginLeft">25sp</dimen>
     <dimen name="TextSize">14sp</dimen>
     <dimen name="TextSizeIcon">18sp</dimen>
@@ -7,4 +10,11 @@
     <dimen name="ViewDetailssize">10sp</dimen>
     <dimen name="MarginRightViewDetail">280dp</dimen>
     <dimen name="MarginRight1500">26dp</dimen>
+    <dimen name="ProductTextSize">20sp</dimen>
+    <dimen name="LongTextSizeProduct">14sp</dimen>
+    <dimen name="MarginLeft1stTextView">10sp</dimen>
+
+    // /// // Dailog xml-------------------------------------///////////
+    <dimen name="MarginTopLondProduct">0dp</dimen>
+    <dimen name="ProductViewMarginTop">20dp</dimen>
 </resources>
