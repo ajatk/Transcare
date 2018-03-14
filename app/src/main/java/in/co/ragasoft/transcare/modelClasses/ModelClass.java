@@ -1,8 +1,38 @@
-package in.co.ragasoft.transcare;
+package in.co.ragasoft.transcare.modelClasses;
 
 /**
  * Created by Rajat on 3/13/2018.
  */
 
-public class ModelClasses {
+public class ModelClass {
+
+    String name;
+    String discriptions;
+
+    public ModelClass(String name, String discriptions) {
+        this.name = name;
+        this.discriptions = discriptions;
+    }
+
+    public void setDiscriptions(String discriptions, String name) {
+        this.discriptions = discriptions;
+        this.name = name;
+    }
+
+    public String getName() {
+        return name;
+    }
+
+    public void setName(String name) {
+        this.name = name;
+    }
+
+    public String getDiscriptions() {
+        return discriptions;
+    }
+
+    @Override
+    public String toString() {
+        return name;
+    }
 }
