@@ -1,23 +1,27 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
+    //// edit profile ==============--------------------------//
+    <dimen name="ProfileImageWidth">150sp</dimen>
+    <dimen name="ProfileImageHeight">110sp</dimen>
+    <dimen name="EditImageWidth">30sp</dimen>
+    <dimen name="EditImageHeight">25sp</dimen>
 
-    <dimen name="CreateAcountTextSize">20sp</dimen>
-    <dimen name="BackImageWidth">50sp</dimen>
-    <dimen name="BackImageHeight">45sp</dimen>
-    <dimen name="BackImageMarginLeft">16dp</dimen>
-    <dimen name="CreateAccountTextHeight">45sp</dimen>
-    <dimen name="EmailImgeWidth">152dp</dimen>
-    <dimen name="EmailImgeHeight">130dp</dimen>
-    <dimen name="EmailImgeMarginTop">66dp</dimen>
-    <dimen name="EditTextWidth">48dp</dimen>
-    <dimen name="EditTextHeight">48dp</dimen>
-    <dimen name="LongTextMarginTop">24dp</dimen>
-    <dimen name="LongTextSize">14sp</dimen>
-    <dimen name="ResendCodeWidth">82dp</dimen>
-    <dimen name="ResendCodeHeight">50dp</dimen>
-    <dimen name="ResendImageMarginTop">40dp</dimen>
-    <dimen name="EditTextMarginLeft">8sp</dimen>
+    /// //HealthPanelsFragment-------------------------------------//
 
+    <dimen name="TextViewMarginLeft">45sp</dimen>
+    <dimen name="TextViewDetMarginLeft">55sp</dimen>
+    <dimen name="TextSize">16sp</dimen>
+    <dimen name="TextSizeIcon">20sp</dimen>
+    <dimen name="TextSize1500">14sp</dimen>
+    <dimen name="ViewDetailssize">15sp</dimen>
+    <dimen name="MarginRightViewDetail">0dp</dimen>
+    <dimen name="MarginRight1500">15dp</dimen>
+    /// // Dailog xml-------------------------------------///////////
+    <dimen name="ProductTextSize">20sp</dimen>
+    <dimen name="LongTextSizeProduct">16sp</dimen>
+    <dimen name="MarginLeft1stTextView">10sp</dimen>
+    <dimen name="MarginTopLondProduct">5dp</dimen>
+    <dimen name="ProductViewMarginTop">14dp</dimen>
     // sign in screen Dimensions
 
     <dimen name="editText_size">45dp</dimen>
