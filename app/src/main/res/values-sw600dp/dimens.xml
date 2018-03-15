@@ -1,21 +1,12 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
     /// Edit profile ------------------- /////
-    <dimen name="BackImageWidth">40sp</dimen>
-    <dimen name="BackImageHeight">35sp</dimen>
-    <dimen name="BackImageMarginLeft">16dp</dimen>
-    <dimen name="CreateAccountTextHeight">55sp</dimen>
-    <dimen name="EmailImgeWidth">200dp</dimen>
-    <dimen name="EmailImgeHeight">180dp</dimen>
-    <dimen name="EmailImgeMarginTop">76dp</dimen>
+    <dimen name="EditImageWidth">30sp</dimen>
+    <dimen name="EditImageHeight">25sp</dimen>
+
     <dimen name="EditTextWidth">70dp</dimen>
     <dimen name="EditTextHeight">70dp</dimen>
-    <dimen name="LongTextMarginTop">24dp</dimen>
-    <dimen name="LongTextSize">24sp</dimen>
-    <dimen name="ResendCodeWidth">120dp</dimen>
-    <dimen name="ResendCodeHeight">80dp</dimen>
-    <dimen name="ResendImageMarginTop">40dp</dimen>
-    <dimen name="EditTextMarginLeft">15sp</dimen>
+
 
 
     // sign in screen Dimensions
@@ -55,6 +46,9 @@
     <dimen name="MarginLeft1stTextView">10sp</dimen>
     <dimen name="MarginTopLondProduct">5dp</dimen>
     <dimen name="ProductViewMarginTop">14dp</dimen>
+
+    <dimen name="ProfileImageWidth">230sp</dimen>
+    <dimen name="ProfileImageHeight">180sp</dimen>
 
 
 </resources>

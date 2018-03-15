@@ -14,20 +14,20 @@
         android:theme="@style/AppTheme1"
         tools:layout_editor_absoluteY="25dp">
 
-
         <de.hdodenhof.circleimageview.CircleImageView
             android:id="@+id/circleImageView"
-            android:layout_width="@dimen/BackImageWidth"
-            android:layout_height="@dimen/BackImageHeight"
+            android:layout_width="@dimen/EditImageHeight"
+            android:layout_height="@dimen/EditImageHeight"
             android:layout_marginTop="8dp"
+            android:src="@drawable/edit_black"
             app:layout_constraintEnd_toEndOf="@+id/imageView"
             app:layout_constraintTop_toBottomOf="@+id/imageView"
             tools:ignore="MissingConstraints" />
 
         <info.abdolahi.CircularMusicProgressBar
             android:id="@+id/imageView"
-            android:layout_width="@dimen/EmailImgeWidth"
-            android:layout_height="@dimen/EmailImgeHeight"
+            android:layout_width="@dimen/ProfileImageWidth"
+            android:layout_height="@dimen/ProfileImageHeight"
             android:layout_marginTop="40dp"
             android:src="@drawable/ic_launcher_background"
             app:layout_constraintEnd_toEndOf="parent"
@@ -61,8 +61,9 @@
             android:gravity="center_vertical"
             android:hint="Your Full Name"
             android:inputType="number"
+            android:paddingLeft="5sp"
             android:textColor="#fff"
-            android:textSize="@dimen/LongTextSize"
+            android:textSize="16sp"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintHorizontal_bias="0.57"
             app:layout_constraintStart_toStartOf="parent"
@@ -80,8 +81,9 @@
             android:gravity="center_vertical"
             android:hint="Address"
             android:inputType="number"
+            android:paddingLeft="5sp"
             android:textColor="#fff"
-            android:textSize="@dimen/LongTextSize"
+            android:textSize="16sp"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/editText4"
@@ -98,8 +100,9 @@
             android:gravity="center_vertical"
             android:hint="Your Email"
             android:inputType="number"
+            android:paddingLeft="5sp"
             android:textColor="#fff"
-            android:textSize="@dimen/LongTextSize"
+            android:textSize="16sp"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintHorizontal_bias="0.25"
             app:layout_constraintStart_toStartOf="parent"
@@ -117,23 +120,27 @@
             android:gravity="center_vertical"
             android:hint="Mobile Number"
             android:inputType="number"
+            android:paddingLeft="5sp"
             android:textColor="#fff"
-            android:textSize="@dimen/LongTextSize"
+            android:textSize="16sp"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintHorizontal_bias="0.0"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/editText6"
             tools:ignore="MissingConstraints" />
 
-        <FrameLayout
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
+        <Spinner
+            android:id="@+id/spinnerCaseType"
+            android:layout_width="147dp"
+            android:layout_height="40dp"
+            android:layout_gravity="center"
             android:background="#ddd"
+            android:gravity="center"
+            android:prompt="@string/spinner_title"
+            android:spinnerMode="dropdown"
+            tools:layout_editor_absoluteX="181dp"
+            tools:layout_editor_absoluteY="451dp" />
 
-            tools:layout_editor_absoluteX="348dp"
-            tools:layout_editor_absoluteY="680dp">
-
-        </FrameLayout>
 
         <TextView
             android:id="@+id/textView13"
@@ -147,56 +154,6 @@
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/imageView" />
 
-        <EditText
-            android:id="@+id/editText8"
-            android:layout_width="wrap_content"
-            android:layout_height="40sp"
-            android:layout_marginLeft="40dp"
-            android:layout_marginStart="40dp"
-            android:layout_marginTop="8dp"
-            android:background="#ddd"
-            android:gravity="center_vertical"
-            android:hint=" Date of Birth  "
-            android:inputType="number"
-            android:textColor="#fff"
-            android:textSize="@dimen/LongTextSize"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/editText7"
-            tools:ignore="MissingConstraints" />
-
-        <EditText
-            android:id="@+id/editText9"
-            android:layout_width="wrap_content"
-            android:layout_height="40sp"
-
-            android:layout_marginEnd="8dp"
-            android:layout_marginRight="8dp"
-            android:layout_marginTop="8dp"
-            android:background="#ddd"
-            android:gravity="center_vertical"
-            android:hint="Date of Birth"
-            android:inputType="number"
-            android:textColor="#fff"
-            android:textSize="@dimen/LongTextSize"
-            app:layout_constraintEnd_toStartOf="@+id/spinnerCaseType"
-            app:layout_constraintHorizontal_bias="0.454"
-            app:layout_constraintStart_toEndOf="@+id/editText8"
-            app:layout_constraintTop_toBottomOf="@+id/editText7"
-            tools:ignore="MissingConstraints" />
-
-        <Spinner
-            android:id="@+id/spinnerCaseType"
-            android:layout_width="wrap_content"
-            android:layout_height="40dp"
-            android:layout_gravity="center"
-            android:layout_marginEnd="38dp"
-            android:layout_marginRight="8dp"
-            android:layout_marginTop="8dp"
-            android:gravity="center"
-            android:prompt="@string/spinner_title"
-            android:spinnerMode="dropdown"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/editText7" />
 
         <TextView
             android:id="@+id/textView14"
@@ -204,31 +161,51 @@
             android:layout_height="wrap_content"
             android:layout_marginEnd="32dp"
             android:layout_marginStart="32dp"
-            android:layout_marginTop="8dp"
+            android:layout_marginTop="16dp"
+            android:paddingLeft="5sp"
             android:text="Optional :"
+            android:textSize="16sp"
+            android:textStyle="bold"
             app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.13"
+            app:layout_constraintHorizontal_bias="0.0"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/editText9" />
+            app:layout_constraintTop_toBottomOf="@+id/imageView2" />
 
-        <FrameLayout
+        <TextView
+            android:id="@+id/editText"
+            android:layout_width="0dp"
+            android:layout_height="44dp"
+            android:layout_marginEnd="8dp"
+            android:layout_marginLeft="32dp"
+            android:layout_marginRight="8dp"
+            android:layout_marginStart="32dp"
+            android:layout_marginTop="8dp"
+            android:background="#ddd"
+            android:ems="10"
+            android:gravity="center_vertical"
+            android:inputType="textPersonName"
+            android:paddingLeft="5sp"
+            android:text="Date Of Birth"
+            app:layout_constraintEnd_toStartOf="@+id/spinnerCaseType"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/editText7" />
+
+        <ImageView
+            android:id="@+id/imageView2"
             android:layout_width="wrap_content"
-            android:layout_height="40sp"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="8dp"
             android:layout_marginLeft="8dp"
             android:layout_marginStart="8dp"
-            app:layout_constraintStart_toStartOf="parent"
-            tools:layout_editor_absoluteY="536dp">
+            android:layout_marginTop="8dp"
+            android:src="@drawable/edit"
+            app:layout_constraintBottom_toBottomOf="@+id/editText"
+            app:layout_constraintEnd_toEndOf="@+id/editText"
+            app:layout_constraintHorizontal_bias="0.9"
+            app:layout_constraintStart_toStartOf="@+id/editText"
+            app:layout_constraintTop_toTopOf="@+id/editText"
+            app:layout_constraintVertical_bias="0.51" />
 
-        </FrameLayout>
-
-        <FrameLayout
-            android:layout_width="wrap_content"
-            android:layout_height="40sp"
-            android:layout_marginLeft="8dp"
-            android:layout_marginStart="28dp"
-            app:layout_constraintStart_toStartOf="parent"
-            tools:layout_editor_absoluteY="536dp">
-
-        </FrameLayout>
+        />
     </android.support.constraint.ConstraintLayout>
 </ScrollView>

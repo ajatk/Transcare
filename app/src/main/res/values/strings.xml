@@ -12,6 +12,7 @@
 
     <string name="action_settings">Settings</string>
     <string name="spinner_title">SEX    </string>
+    <string name="diabetes_and_health_wellness">Diabetes and Health Wellness</string>
     <string-array name="Gender">
         <item>male</item>
         <item>female</item>
