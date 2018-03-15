@@ -1,7 +1,14 @@
 package in.co.ragasoft.transcare;
 
+import android.content.Context;
+import android.content.Intent;
+import android.net.Uri;
 import android.os.Bundle;
+import android.os.Handler;
 import android.support.design.widget.NavigationView;
+import android.support.v4.app.Fragment;
+import android.support.v4.app.FragmentManager;
+import android.support.v4.app.FragmentTransaction;
 import android.support.v4.view.GravityCompat;
 import android.support.v4.widget.DrawerLayout;
 import android.support.v7.app.ActionBarDrawerToggle;
@@ -11,8 +18,16 @@ import android.view.Menu;
 import android.view.MenuItem;
 import android.widget.Toast;
 
+import in.co.ragasoft.transcare.fragments.HealthPanelsFrag;
+
 public class HomeActivity extends AppCompatActivity
-        implements NavigationView.OnNavigationItemSelectedListener {
+        implements NavigationView.OnNavigationItemSelectedListener, HealthPanelsFrag.OnFragmentInteractionListener {
+    private static int navItemIndex = 0;
+    Fragment fragment = null;
+    FragmentManager fragmentManager;
+    FragmentTransaction fragmentTransaction;
+    Context context;
+    private Handler mHandler;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -22,14 +37,17 @@ public class HomeActivity extends AppCompatActivity
         setSupportActionBar(toolbar);
 
 
+        mHandler = new Handler();
         DrawerLayout drawer = findViewById(R.id.drawer_layout);
         ActionBarDrawerToggle toggle = new ActionBarDrawerToggle(
                 this, drawer, toolbar, R.string.navigation_drawer_open, R.string.navigation_drawer_close);
+        context = getApplicationContext();
         drawer.addDrawerListener(toggle);
         toggle.syncState();
 
         NavigationView navigationView = findViewById(R.id.nav_view);
         navigationView.setNavigationItemSelectedListener(this);
+        displaySelectedScreen(R.id.my_family);
     }
 
     @Override
@@ -83,7 +101,24 @@ public class HomeActivity extends AppCompatActivity
 //        } else if (id == R.id.nav_send) {
 //
 //        }
-        switch (item.getItemId()) {
+
+        displaySelectedScreen(item.getItemId());
+        return true;
+    }
+
+    private Fragment getFragment() {
+        switch (navItemIndex) {
+            case 0:
+                HealthPanelsFrag healthPanelsFrag = new HealthPanelsFrag();
+                return healthPanelsFrag;
+        }
+        return fragment;
+    }
+
+    private void displaySelectedScreen(int itemId) {
+        switch (itemId)
+
+        {
             case R.id.my_family: {
                 Toast.makeText(this, "My Family", Toast.LENGTH_SHORT).show();
             }
@@ -101,6 +136,8 @@ public class HomeActivity extends AppCompatActivity
             }
             break;
             case R.id.call_us: {
+                Intent intent = new Intent(HomeActivity.this, MainActivity1.class);
+                startActivity(intent);
                 Toast.makeText(this, "Call Us", Toast.LENGTH_SHORT).show();
             }
             break;
@@ -116,9 +153,20 @@ public class HomeActivity extends AppCompatActivity
                 Toast.makeText(this, "Share", Toast.LENGTH_SHORT).show();
             }
         }
+        if (fragment != null) {
+            FragmentTransaction ft = getSupportFragmentManager().beginTransaction();
+            ft.replace(R.id.content_frame, fragment);
+            ft.commit();
+        }
 
         DrawerLayout drawer = findViewById(R.id.drawer_layout);
         drawer.closeDrawer(GravityCompat.START);
-        return true;
+
+    }
+
+
+    @Override
+    public void onFragmentInteraction(Uri uri) {
+
     }
 }
