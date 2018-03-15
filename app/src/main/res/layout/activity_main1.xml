@@ -20,7 +20,6 @@
             android:layout_width="@dimen/BackImageWidth"
             android:layout_height="@dimen/BackImageHeight"
             android:layout_marginTop="8dp"
-            android:src="@drawable/edit_black"
             app:layout_constraintEnd_toEndOf="@+id/imageView"
             app:layout_constraintTop_toBottomOf="@+id/imageView"
             tools:ignore="MissingConstraints" />

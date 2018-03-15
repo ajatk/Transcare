@@ -19,24 +19,23 @@
 
     </android.support.v4.view.ViewPager>
 
-    <TextView
-        android:id="@+id/getstarted"
-        android:layout_width="0dp"
-        android:layout_height="wrap_content"
-        android:layout_marginEnd="8dp"
-        android:layout_marginStart="8dp"
-        android:layout_marginTop="8dp"
-        android:background="@color/base_app_color"
-        android:paddingBottom="10dp"
-        android:paddingTop="10dp"
-        android:text="Get Started"
-        android:textAlignment="center"
-        android:textColor="@color/transparent_text_color"
-        android:textSize="@dimen/getstarted_text_size"
-        app:layout_constraintBottom_toBottomOf="@+id/view_Pager"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/dot_layout" />
+    <!--<TextView-->
+    <!--android:id="@+id/getstarted"-->
+    <!--android:layout_width="0dp"-->
+    <!--android:layout_height="wrap_content"-->
+    <!--android:layout_marginEnd="8dp"-->
+    <!--android:layout_marginStart="8dp"-->
+    <!--android:background="@color/base_app_color"-->
+    <!--android:paddingBottom="10dp"-->
+    <!--android:paddingTop="10dp"-->
+    <!--android:text="Get Started"-->
+    <!--android:textAlignment="center"-->
+    <!--android:textColor="@color/transparent_text_color"-->
+    <!--android:textSize="@dimen/getstarted_text_size"-->
+    <!--app:layout_constraintBottom_toBottomOf="@+id/view_Pager"-->
+    <!--app:layout_constraintEnd_toEndOf="parent"-->
+    <!--app:layout_constraintStart_toStartOf="parent"-->
+    <!--app:layout_constraintTop_toBottomOf="@+id/dot_layout" />-->
 
     <LinearLayout
         android:id="@+id/dot_layout"
@@ -51,6 +50,24 @@
         app:layout_constraintTop_toTopOf="parent">
 
     </LinearLayout>
+
+    <TextView
+        android:id="@+id/getstarted"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="8dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginStart="8dp"
+        android:background="@color/base_app_color"
+        android:paddingBottom="10dp"
+        android:paddingTop="10dp"
+        android:text="Get Started"
+        android:textAlignment="center"
+        android:textColor="@color/transparent_text_color"
+        android:textSize="@dimen/getstarted_text_size"
+        app:layout_constraintBottom_toBottomOf="@+id/view_Pager"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
 
     <!--<android.support.constraint.ConstraintLayout-->
     <!--android:layout_width="0dp"-->
