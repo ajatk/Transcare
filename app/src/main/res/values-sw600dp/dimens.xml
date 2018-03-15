@@ -38,6 +38,15 @@
 
     //Intro Slider Activity
     <dimen name="getstarted_text_size">40sp</dimen>
+    <dimen name="dotlayout_top_margin">750dp</dimen>
+
+
+    //Slider 1 dimesions------------------------------------------////
+
+    <dimen name="transcare_text_size">50sp</dimen>
+    <dimen name="transcare_body_text_size">18sp</dimen>
+    <dimen name="margin_left_right">35dp</dimen>
+
 
     /// //HealthPanelsFragment-------------------------------------//
 

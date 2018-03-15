@@ -11,7 +11,9 @@
     <string name="navigation_drawer_close">Close navigation drawer</string>
 
     <string name="action_settings">Settings</string>
-    <string name="spinner_title">SEX    </string>
+    <string name="spinner_title">SEX </string>
+    <string name="slider1_text">Loreun Ipsum is simply dummy text of printing and type setting industry. Loreum Ipsum has been the  Industry\'s standard dummy text book.</string>
+    <string name="transcaretext">What is Transcare</string>
     <string-array name="Gender">
         <item>male</item>
         <item>female</item>

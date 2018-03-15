@@ -53,4 +53,22 @@
     <dimen name="MarginLeft1stTextView">10sp</dimen>
     <dimen name="MarginTopLondProduct">0dp</dimen>
     <dimen name="ProductViewMarginTop">20dp</dimen>
+
+
+    // nav header dimensions
+
+    <dimen name="navheader_userName_text_size">13sp</dimen>
+    <dimen name="navheader_mail_text_size">10sp</dimen>
+
+
+    //Intro Slider Activity
+    <dimen name="getstarted_text_size">20sp</dimen>
+    <dimen name="dotlayout_top_margin">500dp</dimen>
+
+
+    //Slider 1 dimesions------------------------------------------////
+
+    <dimen name="transcare_text_size">25sp</dimen>
+    <dimen name="transcare_body_text_size">14sp</dimen>
+    <dimen name="margin_left_right">20dp</dimen>
 </resources>
