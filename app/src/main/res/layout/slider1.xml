@@ -10,7 +10,7 @@
         android:id="@+id/textView15"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
-        android:layout_marginBottom="140dp"
+        android:layout_marginBottom="@dimen/margin_bottom_parent"
         android:layout_marginEnd="@dimen/margin_left_right"
         android:layout_marginStart="@dimen/margin_left_right"
         android:text="@string/slider1_text"
