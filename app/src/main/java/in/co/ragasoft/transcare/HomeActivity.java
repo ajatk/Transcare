@@ -1,6 +1,7 @@
 package in.co.ragasoft.transcare;
 
 import android.content.Context;
+import android.content.Intent;
 import android.net.Uri;
 import android.os.Bundle;
 import android.os.Handler;
@@ -136,6 +137,9 @@ public class HomeActivity extends AppCompatActivity
             }
             break;
             case R.id.call_us: {
+                Intent intent = new Intent(HomeActivity.this, MainActivity1.class);
+
+                startActivity(intent);
                 Toast.makeText(this, "Call Us", Toast.LENGTH_SHORT).show();
             }
             break;
