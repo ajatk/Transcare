@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
 
-    <dimen name="CreateAcountTextSize">20sp</dimen>
-    <dimen name="BackImageWidth">50sp</dimen>
-    <dimen name="BackImageHeight">45sp</dimen>
+    /// Edit profile ------------------- /////
+    <dimen name="BackImageWidth">30sp</dimen>
+    <dimen name="BackImageHeight">25sp</dimen>
     <dimen name="BackImageMarginLeft">16dp</dimen>
     <dimen name="CreateAccountTextHeight">45sp</dimen>
     <dimen name="EmailImgeWidth">152dp</dimen>
