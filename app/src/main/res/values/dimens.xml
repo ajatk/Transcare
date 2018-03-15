@@ -48,5 +48,13 @@
 
 
     //Intro Slider Activity
-    <dimen name="getstarted_text_size">25sp</dimen>
+    <dimen name="getstarted_text_size">20sp</dimen>
+
+    <dimen name="dotlayout_top_margin">500dp</dimen>
+
+    /Slider 1 dimesions------------------------------------------////
+
+    <dimen name="transcare_text_size">25sp</dimen>
+    <dimen name="transcare_body_text_size">14sp</dimen>
+    <dimen name="margin_left_right">20dp</dimen>
 </resources>
