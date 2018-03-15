@@ -36,12 +36,21 @@
     <dimen name="nav_header_height">176dp</dimen>
     <dimen name="fab_margin">16dp</dimen>
 
-    // nav header dimensions
+    //HealthPanelsFragment-------------------------------------//
 
-    <dimen name="navheader_userName_text_size">14sp</dimen>
-    <dimen name="navheader_mail_text_size">11sp</dimen>
-
-
-    //Intro Slider Activity
-    <dimen name="getstarted_text_size">25sp</dimen>
+    <dimen name="TextViewMarginLeft">30sp</dimen>
+    <dimen name="TextSize">14sp</dimen>
+    <dimen name="TextSizeIcon">18sp</dimen>
+    <dimen name="TextSize1500">14sp</dimen>
+    <dimen name="TextSize150">12sp</dimen>
+    <dimen name="ViewDetailssize">10sp</dimen>
+    <dimen name="MarginRightViewDetail">300dp</dimen>
+    <dimen name="TextViewDetMarginLeft">60sp</dimen>
+    <dimen name="MarginRight1500">26dp</dimen>
+    // /// // Dailog xml-------------------------------------///////////
+    <dimen name="ProductTextSize">20sp</dimen>
+    <dimen name="LongTextSizeProduct">16sp</dimen>
+    <dimen name="MarginLeft1stTextView">10sp</dimen>
+    <dimen name="MarginTopLondProduct">0dp</dimen>
+    <dimen name="ProductViewMarginTop">20dp</dimen>
 </resources>

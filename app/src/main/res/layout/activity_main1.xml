@@ -1,155 +1,234 @@
-<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@drawable/bg"
-    android:theme="@style/AppTheme1">
+    tools:ignore="MissingConstraints"
+    tools:layout_editor_absoluteX="8dp"
+    tools:layout_editor_absoluteY="8dp">
 
-    <ImageView
-        android:layout_width="@dimen/BackImageWidth"
-        android:layout_height="@dimen/BackImageHeight"
-        android:layout_marginLeft="@dimen/BackImageMarginLeft"
-        android:src="@drawable/back"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
-
-    <TextView
+    <android.support.constraint.ConstraintLayout
         android:layout_width="match_parent"
-        android:layout_height="@dimen/CreateAccountTextHeight"
-        android:gravity="center"
-        android:text="Create Account"
-        android:textColor="#fff"
-        android:textSize="@dimen/CreateAcountTextSize"
-        android:textStyle="bold"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.452"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        android:layout_height="match_parent"
+        android:background="#fff"
+        android:theme="@style/AppTheme1"
+        tools:layout_editor_absoluteY="25dp">
 
-    <de.hdodenhof.circleimageview.CircleImageView
-        android:id="@+id/imageView"
-        android:layout_width="@dimen/EmailImgeWidth"
-        android:layout_height="@dimen/EmailImgeHeight"
-        android:layout_marginTop="@dimen/EmailImgeMarginTop"
-        android:src="@drawable/ic_launcher_background"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.503"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
 
-    <TextView
-        android:id="@+id/textView"
-        android:layout_width="0dp"
-        android:layout_height="wrap_content"
-        android:layout_marginEnd="32dp"
-        android:layout_marginStart="32dp"
-        android:layout_marginTop="@dimen/LongTextMarginTop"
-        android:gravity="center"
-        android:text="We have sent you the access code via SMS for mobile number verification"
-        android:textColor="#fff"
-        android:textSize="@dimen/LongTextSize"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.0"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/imageView"
-        app:layout_constraintVertical_bias="0.023"
-        tools:ignore="MissingConstraints" />
+        <de.hdodenhof.circleimageview.CircleImageView
+            android:id="@+id/circleImageView"
+            android:layout_width="@dimen/BackImageWidth"
+            android:layout_height="@dimen/BackImageHeight"
+            android:layout_marginTop="8dp"
+            app:layout_constraintEnd_toEndOf="@+id/imageView"
+            app:layout_constraintTop_toBottomOf="@+id/imageView"
+            tools:ignore="MissingConstraints" />
 
-    <EditText
-        android:id="@+id/editText4"
-        android:layout_width="@dimen/EditTextWidth"
-        android:layout_height="@dimen/EditTextHeight"
-        android:background="@drawable/edit_text_background_shape"
-        android:gravity="center"
-        android:hint="1"
-        android:inputType="number"
-        android:textColor="#fff"
-        android:textSize="@dimen/LongTextSize"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toStartOf="@+id/editText"
-        app:layout_constraintHorizontal_bias="0.5"
-        app:layout_constraintHorizontal_chainStyle="packed"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.621" />
+        <info.abdolahi.CircularMusicProgressBar
+            android:id="@+id/imageView"
+            android:layout_width="@dimen/EmailImgeWidth"
+            android:layout_height="@dimen/EmailImgeHeight"
+            android:layout_marginTop="40dp"
+            android:src="@drawable/ic_launcher_background"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            tools:ignore="MissingConstraints" />
 
-    <EditText
-        android:id="@+id/editText"
-        android:layout_width="@dimen/EditTextWidth"
-        android:layout_height="@dimen/EditTextHeight"
-        android:layout_marginLeft="@dimen/EditTextMarginLeft"
-        android:background="@drawable/edit_text_background_shape"
-        android:ems="10"
-        android:gravity="center"
-        android:hint="1"
-        android:inputType="number"
-        android:textColor="#fff"
-        android:textSize="@dimen/LongTextSize"
-        app:layout_constraintBaseline_toBaselineOf="@+id/editText4"
-        app:layout_constraintEnd_toStartOf="@+id/editText2"
-        app:layout_constraintHorizontal_bias="0.5"
-        app:layout_constraintStart_toEndOf="@+id/editText4"
-        />
+        <TextView
+            android:id="@+id/textView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:gravity="center"
+            android:text="Personal Information"
+            android:textColor="#000"
+            android:textSize="20sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.503"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/textView13"
+            tools:ignore="MissingConstraints" />
 
-    <EditText
-        android:id="@+id/editText2"
-        android:layout_width="@dimen/EditTextWidth"
-        android:layout_height="@dimen/EditTextHeight"
-        android:layout_marginLeft="@dimen/EditTextMarginLeft"
-        android:background="@drawable/edit_text_background_shape"
-        android:ems="10"
-        android:gravity="center"
-        android:hint="1"
-        android:inputType="number"
-        android:textColor="#fff"
-        android:textSize="@dimen/LongTextSize"
-        app:layout_constraintBaseline_toBaselineOf="@+id/editText"
-        app:layout_constraintEnd_toStartOf="@+id/editText3"
-        app:layout_constraintHorizontal_bias="0.5"
-        app:layout_constraintStart_toEndOf="@+id/editText" />
+        <EditText
+            android:id="@+id/editText4"
+            android:layout_width="match_parent"
+            android:layout_height="40sp"
+            android:layout_marginEnd="32dp"
+            android:layout_marginStart="32dp"
+            android:layout_marginTop="16dp"
+            android:background="#ddd"
+            android:gravity="center_vertical"
+            android:hint="Your Full Name"
+            android:inputType="number"
+            android:textColor="#fff"
+            android:textSize="@dimen/LongTextSize"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.57"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/textView"
+            tools:ignore="MissingConstraints" />
 
-    <EditText
-        android:id="@+id/editText3"
-        android:layout_width="@dimen/EditTextWidth"
-        android:layout_height="@dimen/EditTextHeight"
-        android:layout_marginLeft="@dimen/EditTextMarginLeft"
-        android:background="@drawable/edit_text_background_shape"
-        android:ems="10"
-        android:gravity="center"
-        android:hint="1"
-        android:inputType="number"
-        android:textColor="#fff"
-        android:textSize="@dimen/LongTextSize"
-        app:layout_constraintBaseline_toBaselineOf="@+id/editText2"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.5"
-        app:layout_constraintStart_toEndOf="@+id/editText2" />
+        <EditText
+            android:id="@+id/editText5"
+            android:layout_width="match_parent"
+            android:layout_height="40sp"
+            android:layout_marginEnd="32dp"
+            android:layout_marginStart="32dp"
+            android:layout_marginTop="8dp"
+            android:background="#ddd"
+            android:gravity="center_vertical"
+            android:hint="Address"
+            android:inputType="number"
+            android:textColor="#fff"
+            android:textSize="@dimen/LongTextSize"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/editText4"
+            tools:ignore="MissingConstraints" />
 
-    <ImageView
-        android:id="@+id/imageView2"
-        android:layout_width="@dimen/ResendCodeWidth"
-        android:layout_height="@dimen/ResendCodeHeight"
-        android:layout_marginTop="@dimen/ResendImageMarginTop"
-        android:src="@drawable/enter"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/editText" />
+        <EditText
+            android:id="@+id/editText6"
+            android:layout_width="match_parent"
+            android:layout_height="40sp"
+            android:layout_marginEnd="32dp"
+            android:layout_marginStart="32dp"
+            android:layout_marginTop="8dp"
+            android:background="#ddd"
+            android:gravity="center_vertical"
+            android:hint="Your Email"
+            android:inputType="number"
+            android:textColor="#fff"
+            android:textSize="@dimen/LongTextSize"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.25"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/editText5"
+            tools:ignore="MissingConstraints" />
 
-    <TextView
-        android:layout_width="0dp"
-        android:layout_height="wrap_content"
-        android:layout_marginBottom="43dp"
-        android:layout_marginTop="6dp"
-        android:gravity="center"
-        android:text="Resend Code"
-        android:textColor="#fff"
-        android:textSize="@dimen/LongTextSize"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.503"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/imageView2"
-        app:layout_constraintVertical_bias="0.176" />
-</android.support.constraint.ConstraintLayout>
+        <EditText
+            android:id="@+id/editText7"
+            android:layout_width="match_parent"
+            android:layout_height="40sp"
+            android:layout_marginEnd="32dp"
+            android:layout_marginStart="32dp"
+            android:layout_marginTop="8dp"
+            android:background="#ddd"
+            android:gravity="center_vertical"
+            android:hint="Mobile Number"
+            android:inputType="number"
+            android:textColor="#fff"
+            android:textSize="@dimen/LongTextSize"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/editText6"
+            tools:ignore="MissingConstraints" />
+
+        <FrameLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="#ddd"
+
+            tools:layout_editor_absoluteX="348dp"
+            tools:layout_editor_absoluteY="680dp">
+
+        </FrameLayout>
+
+        <TextView
+            android:id="@+id/textView13"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="18dp"
+            android:text="edit profile"
+            android:textSize="16sp"
+            app:layout_constraintEnd_toStartOf="@+id/circleImageView"
+            app:layout_constraintHorizontal_bias="0.864"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/imageView" />
+
+        <EditText
+            android:id="@+id/editText8"
+            android:layout_width="wrap_content"
+            android:layout_height="40sp"
+            android:layout_marginLeft="40dp"
+            android:layout_marginStart="40dp"
+            android:layout_marginTop="8dp"
+            android:background="#ddd"
+            android:gravity="center_vertical"
+            android:hint=" Date of Birth  "
+            android:inputType="number"
+            android:textColor="#fff"
+            android:textSize="@dimen/LongTextSize"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/editText7"
+            tools:ignore="MissingConstraints" />
+
+        <EditText
+            android:id="@+id/editText9"
+            android:layout_width="wrap_content"
+            android:layout_height="40sp"
+
+            android:layout_marginEnd="8dp"
+            android:layout_marginRight="8dp"
+            android:layout_marginTop="8dp"
+            android:background="#ddd"
+            android:gravity="center_vertical"
+            android:hint="Date of Birth"
+            android:inputType="number"
+            android:textColor="#fff"
+            android:textSize="@dimen/LongTextSize"
+            app:layout_constraintEnd_toStartOf="@+id/spinnerCaseType"
+            app:layout_constraintHorizontal_bias="0.454"
+            app:layout_constraintStart_toEndOf="@+id/editText8"
+            app:layout_constraintTop_toBottomOf="@+id/editText7"
+            tools:ignore="MissingConstraints" />
+
+        <Spinner
+            android:id="@+id/spinnerCaseType"
+            android:layout_width="wrap_content"
+            android:layout_height="40dp"
+            android:layout_gravity="center"
+            android:layout_marginEnd="38dp"
+            android:layout_marginRight="8dp"
+            android:layout_marginTop="8dp"
+            android:gravity="center"
+            android:prompt="@string/spinner_title"
+            android:spinnerMode="dropdown"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/editText7" />
+
+        <TextView
+            android:id="@+id/textView14"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="32dp"
+            android:layout_marginStart="32dp"
+            android:layout_marginTop="8dp"
+            android:text="Optional :"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.13"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/editText9" />
+
+        <FrameLayout
+            android:layout_width="wrap_content"
+            android:layout_height="40sp"
+            android:layout_marginLeft="8dp"
+            android:layout_marginStart="8dp"
+            app:layout_constraintStart_toStartOf="parent"
+            tools:layout_editor_absoluteY="536dp">
+
+        </FrameLayout>
+
+        <FrameLayout
+            android:layout_width="wrap_content"
+            android:layout_height="40sp"
+            android:layout_marginLeft="8dp"
+            android:layout_marginStart="28dp"
+            app:layout_constraintStart_toStartOf="parent"
+            tools:layout_editor_absoluteY="536dp">
+
+        </FrameLayout>
+    </android.support.constraint.ConstraintLayout>
+</ScrollView>

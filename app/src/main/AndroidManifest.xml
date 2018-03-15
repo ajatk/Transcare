@@ -19,8 +19,7 @@
         <activity
             android:name=".HomeActivity"
             android:label="@string/title_activity_home"
-            android:theme="@style/AppTheme" />
-        <activity android:name=".Intro_SliderActivity"></activity>
+            android:theme="@style/AppTheme"></activity>
     </application>
 
 </manifest>
