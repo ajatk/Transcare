@@ -44,8 +44,7 @@ public class MainActivity1 extends AppCompatActivity implements AdapterView.OnIt
     Spinner spinnerGender;
     @BindView(R.id.textView13)
     TextView textView13;
-    @BindView(R.id.textView14)
-    TextView textView14;
+
     @BindView(R.id.editText)
     TextView editText;
     @BindView(R.id.imageView2)
