@@ -1,11 +1,11 @@
 package in.co.ragasoft.transcare;
 
 import android.content.Context;
-import android.content.Intent;
 import android.net.Uri;
 import android.os.Bundle;
 import android.os.Handler;
 import android.support.annotation.NonNull;
+import android.support.constraint.ConstraintLayout;
 import android.support.design.widget.BottomNavigationView;
 import android.support.design.widget.NavigationView;
 import android.support.v4.app.Fragment;
@@ -17,8 +17,10 @@ import android.support.v7.app.ActionBarDrawerToggle;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
 import android.view.MenuItem;
+import android.view.View;
 import android.widget.Toast;
 
+import in.co.ragasoft.transcare.fragments.EditProfile;
 import in.co.ragasoft.transcare.fragments.HealthPanelsFrag;
 import in.co.ragasoft.transcare.fragments.HomeFragment;
 
@@ -37,6 +39,7 @@ public class HomeActivity extends AppCompatActivity
     ActionBarDrawerToggle toggle;
     NavigationView navigationView;
     BottomNavigationView bottomNavigationView;
+    ConstraintLayout srchToolbarLayout;
     private Handler mHandler;
 
     @Override
@@ -44,6 +47,7 @@ public class HomeActivity extends AppCompatActivity
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_home);
         toolbar = findViewById(R.id.toolbar);
+        srchToolbarLayout = findViewById(R.id.srch_toolbar_layout);
         toolbar.inflateMenu(R.menu.toolbar_menu_item);
         toolbar.setOnMenuItemClickListener(new Toolbar.OnMenuItemClickListener() {
             @Override
@@ -159,6 +163,10 @@ public class HomeActivity extends AppCompatActivity
             case 0:
                 HealthPanelsFrag healthPanelsFrag = new HealthPanelsFrag();
                 return healthPanelsFrag;
+            case 1:
+                EditProfile editProfile = new EditProfile();
+                return editProfile;
+
         }
         return fragment;
     }
@@ -188,9 +196,15 @@ public class HomeActivity extends AppCompatActivity
             }
             break;
             case R.id.call_us: {
-                Intent intent = new Intent(HomeActivity.this, MainActivity1.class);
+                //toolbar.setVisibility(View.GONE);
+                toolbar.setTitle("EDIT PROFILE");
+                srchToolbarLayout.setVisibility(View.GONE);
+                EditProfile editProfile = new EditProfile();
+                fragmentTransaction = getSupportFragmentManager().beginTransaction();
+                fragmentTransaction.replace(R.id.frame, editProfile);
+                fragmentTransaction.commit();
 
-                startActivity(intent);
+
                 Toast.makeText(this, "Call Us", Toast.LENGTH_SHORT).show();
             }
             break;

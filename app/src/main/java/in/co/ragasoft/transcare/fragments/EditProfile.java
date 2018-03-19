@@ -1,16 +1,21 @@
-package in.co.ragasoft.transcare;
+package in.co.ragasoft.transcare.fragments;
 
+import android.content.Context;
 import android.graphics.Color;
 import android.os.Bundle;
-import android.support.v7.app.AppCompatActivity;
+import android.support.v4.app.Fragment;
 import android.util.Log;
+import android.view.LayoutInflater;
 import android.view.View;
+import android.view.ViewGroup;
 import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
+import android.widget.Button;
 import android.widget.EditText;
 import android.widget.ImageView;
 import android.widget.Spinner;
 import android.widget.TextView;
+import android.widget.Toolbar;
 
 import com.jackandphantom.circularprogressbar.CircleProgressbar;
 
@@ -21,44 +26,61 @@ import java.util.Random;
 import butterknife.BindView;
 import butterknife.ButterKnife;
 import de.hdodenhof.circleimageview.CircleImageView;
+import in.co.ragasoft.transcare.R;
 import info.abdolahi.CircularMusicProgressBar;
 import info.abdolahi.OnCircularSeekBarChangeListener;
 
-public class MainActivity1 extends AppCompatActivity implements AdapterView.OnItemSelectedListener {
+public class EditProfile extends Fragment implements AdapterView.OnItemSelectedListener {
+
     private static final String TAG = "MainActivity";
+    Context context;
     CircularMusicProgressBar circleProfileImage;
     String spinnerG;
     List<String> arrayList;
     @BindView(R.id.editProfile_circleImage)
-    CircleImageView editProfile_circleImage;
+    CircleImageView editProfileCircleImage;
     @BindView(R.id.profile_imageView)
-    CircularMusicProgressBar imageView;
-    @BindView(R.id.textView)
-    TextView textView;
-
-    EditText editText7;
+    CircularMusicProgressBar profileImageView;
+    @BindView(R.id.yourCircularProgressbar)
+    CircleProgressbar yourCircularProgressbar;
+    @BindView(R.id.edit_Name)
+    EditText editName;
+    @BindView(R.id.edit_address)
+    EditText editAddress;
+    @BindView(R.id.edit_email)
+    EditText editEmail;
+    @BindView(R.id.edit_phoneNo)
+    EditText editPhoneNo;
     @BindView(R.id.spinnerGender)
     Spinner spinnerGender;
-
+    @BindView(R.id.editProfile)
+    TextView editProfile;
+    @BindView(R.id.tv_dateOfBirth)
+    TextView tvDateOfBirth;
     @BindView(R.id.imageView2)
     ImageView imageView2;
-    @BindView(R.id.textView17)
-    TextView textView17;
-    @BindView(R.id.textView18)
-    TextView textView18;
-    @BindView(R.id.textView19)
-    TextView textView19;
-
-
+    @BindView(R.id.tv_height)
+    EditText tvHeight;
+    @BindView(R.id.weight)
+    EditText weight;
+    @BindView(R.id.button_submit)
+    Button buttonSubmit;
+    Toolbar toolbar;
 
     @Override
-    protected void onCreate(Bundle savedInstanceState) {
-        super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_main1);
-        ButterKnife.bind(this);
-        spinnerGender.setPrompt("sex");
+    public View onCreateView(LayoutInflater inflater, ViewGroup container,
+                             Bundle savedInstanceState) {
+
+        View view = inflater.inflate(R.layout.fragment_edit_profile, container, false);
+        context = getActivity();
+        ButterKnife.bind(getActivity());
+
+        //locationT = view.findViewById(R.id.location_text);
+
+        spinnerGender = view.findViewById(R.id.spinnerGender);
+        //  spinnerGender.setPrompt("sex");
         spinnerGender.setOnItemSelectedListener(this);
-        circleProfileImage = findViewById(R.id.profile_imageView);
+        circleProfileImage = view.findViewById(R.id.profile_imageView);
         // set progress to 40%
         circleProfileImage.setValue(0);
         circleProfileImage.setOnCircularBarChangeListener(new OnCircularSeekBarChangeListener() {
@@ -81,7 +103,7 @@ public class MainActivity1 extends AppCompatActivity implements AdapterView.OnIt
         });
         circleProfileImage.setOnClickListener(new View.OnClickListener() {
             @Override
-            public void onClick(View view) {
+            public void onClick(View v) {
                 updateRandomly();
             }
         });
@@ -91,11 +113,11 @@ public class MainActivity1 extends AppCompatActivity implements AdapterView.OnIt
         arrayList.add("Male");
         arrayList.add("Female");
         arrayList.add("Other");
-        ArrayAdapter<String> arrayAdapter = new ArrayAdapter<String>(this, R.layout.spinner_textview, arrayList);
+        ArrayAdapter<String> arrayAdapter = new ArrayAdapter<String>(getContext(), R.layout.spinner_textview, arrayList);
         arrayAdapter.setDropDownViewResource(R.layout.spinner_textview);
         spinnerGender.setAdapter(arrayAdapter);
 
-        CircleProgressbar circleProgressbar = findViewById(R.id.yourCircularProgressbar);
+        CircleProgressbar circleProgressbar = view.findViewById(R.id.yourCircularProgressbar);
         circleProgressbar.setForegroundProgressColor(Color.BLUE);
         //circleProgressbar.setBackgroundColor(Color.GREEN);
         circleProgressbar.setBackgroundColor(Color.TRANSPARENT);
@@ -107,6 +129,8 @@ public class MainActivity1 extends AppCompatActivity implements AdapterView.OnIt
         circleProgressbar.setClockwise(true);
         int animationDuration = 2500; // 2500ms = 2,5s
         circleProgressbar.setProgressWithAnimation(65, animationDuration);
+
+        return view;
     }
 
     private void updateRandomly() {
@@ -115,7 +139,6 @@ public class MainActivity1 extends AppCompatActivity implements AdapterView.OnIt
         circleProfileImage.setValue(percent);
 
     }
-
 
     @Override
     public void onItemSelected(AdapterView<?> adapterView, View view, int i, long id) {
@@ -132,4 +155,28 @@ public class MainActivity1 extends AppCompatActivity implements AdapterView.OnIt
     public void onNothingSelected(AdapterView<?> parent) {
 
     }
+
+    @Override
+    public void onDestroyView() {
+        super.onDestroyView();
+
+    }
+
+
+   /* @Override
+    public void onItemSelected(AdapterView<?> adapterView, View view, int i, long id) {
+        Spinner spinner = (Spinner) adapterView;
+
+        if (spinner.getId() == R.id.spinnerGender)
+
+        {
+            spinnerG = adapterView.getItemAtPosition(i).toString();
+        }
+    }
+
+    @Override
+    public void onNothingSelected(AdapterView<?> parent) {
+
+    }*/
+
 }
