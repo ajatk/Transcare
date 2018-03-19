@@ -10,6 +10,8 @@
     <dimen name="ProfileImageWidth">230sp</dimen>
     <dimen name="ProfileImageHeight">180sp</dimen>
 
+    <dimen name="progress_bar_width">170dp</dimen>
+    <dimen name="progress_bar_height">160dp</dimen>
     // sign in screen Dimensions
 
     <dimen name="editText_size">70dp</dimen>
@@ -63,6 +65,10 @@
     <dimen name="MarginLeft1stTextView">10sp</dimen>
     <dimen name="MarginTopLondProduct">5dp</dimen>
     <dimen name="ProductViewMarginTop">14dp</dimen>
+
+
+    //lsjdgjdsfg
+
 
 
 </resources>

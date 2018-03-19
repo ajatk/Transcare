@@ -7,6 +7,10 @@
     <dimen name="EditImageWidth">30sp</dimen>
     <dimen name="EditImageHeight">25sp</dimen>
 
+
+    //lsjdgjdsfg
+    <dimen name="progress_bar_width">132dp</dimen>
+    <dimen name="progress_bar_height">100dp</dimen>
     /// //HealthPanelsFragment-------------------------------------//
 
 

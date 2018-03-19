@@ -1,5 +1,6 @@
 package in.co.ragasoft.transcare;
 
+import android.graphics.Color;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
 import android.util.Log;
@@ -10,6 +11,8 @@ import android.widget.EditText;
 import android.widget.ImageView;
 import android.widget.Spinner;
 import android.widget.TextView;
+
+import com.jackandphantom.circularprogressbar.CircleProgressbar;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -68,7 +71,7 @@ public class MainActivity1 extends AppCompatActivity implements AdapterView.OnIt
         spinnerGender.setOnItemSelectedListener(this);
         progressBar = findViewById(R.id.imageView);
         // set progress to 40%
-        progressBar.setValue(40);
+        progressBar.setValue(0);
         progressBar.setOnCircularBarChangeListener(new OnCircularSeekBarChangeListener() {
             @Override
             public void onProgressChanged(CircularMusicProgressBar circularBar, int progress, boolean fromUser) {
@@ -102,6 +105,19 @@ public class MainActivity1 extends AppCompatActivity implements AdapterView.OnIt
         ArrayAdapter<String> arrayAdapter = new ArrayAdapter<String>(this, R.layout.spinner_textview, arrayList);
         arrayAdapter.setDropDownViewResource(R.layout.spinner_textview);
         spinnerGender.setAdapter(arrayAdapter);
+
+        CircleProgressbar circleProgressbar = findViewById(R.id.yourCircularProgressbar);
+        circleProgressbar.setForegroundProgressColor(Color.BLUE);
+        //circleProgressbar.setBackgroundColor(Color.GREEN);
+        circleProgressbar.setBackgroundColor(Color.TRANSPARENT);
+        circleProgressbar.setBackgroundProgressWidth(10);
+        circleProgressbar.setForegroundProgressWidth(10);
+        circleProgressbar.setForegroundProgressWidth(10);
+        circleProgressbar.enabledTouch(true);
+        circleProgressbar.setRoundedCorner(true);
+        circleProgressbar.setClockwise(true);
+        int animationDuration = 2500; // 2500ms = 2,5s
+        circleProgressbar.setProgressWithAnimation(65, animationDuration);
     }
 
     private void updateRandomly() {
