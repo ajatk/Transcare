@@ -4,7 +4,7 @@
     <!-- TODO: Remove or change this placeholder text -->
     <string name="hello_blank_fragment">Hello blank fragment</string>
 
-    <string name="title_activity_home">HomeActivity</string>
+    <!--<string name="title_activity_home">HomeActivity</string>-->
     <string name="rupeetext">\u20B9</string>
 
     <string name="navigation_drawer_open">Open navigation drawer</string>
@@ -32,4 +32,5 @@
     <string name="optional">Optional :</string>
     <string name="_6_7_ft">6-7/ft</string>
     <string name="_50_kg">50/kg</string>
+    <string name="location_text">location 55 sector chandigarh</string>
 </resources>

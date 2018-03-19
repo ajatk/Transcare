@@ -13,7 +13,7 @@ public class SignInActivity extends AppCompatActivity implements View.OnClickLis
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_sign_in);
-        signin = findViewById(R.id.sign_in);
+        signin = findViewById(R.id.quick_sign_in);
         signin.setOnClickListener(this);
 
     }

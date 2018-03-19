@@ -8,8 +8,34 @@
     tools:context="in.co.ragasoft.transcare.HomeActivity"
     tools:showIn="@layout/app_bar_home">
 
-    <FrameLayout
-        android:id="@+id/content_frame"
+    <RelativeLayout
         android:layout_width="match_parent"
-        android:layout_height="match_parent" />
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:id="@+id/frame"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_above="@+id/bottom_view"
+            android:background="@color/white"
+            android:orientation="vertical"></LinearLayout>
+
+
+        <android.support.design.widget.BottomNavigationView
+            android:id="@+id/bottom_view"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:layout_alignParentBottom="true"
+            android:background="@color/base_app_color"
+            android:paddingBottom="5dp"
+            android:paddingTop="5dp"
+            app:itemIconTint="@color/white"
+            app:itemTextColor="@color/white"
+            app:menu="@menu/bottom_navigation_bar_item"></android.support.design.widget.BottomNavigationView>
+
+
+    </RelativeLayout>
+
+
 </android.support.constraint.ConstraintLayout>
