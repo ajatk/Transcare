@@ -14,70 +14,9 @@
         app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.107"
-        app:srcCompat="@drawable/whitlogo" />
+        app:layout_constraintVertical_bias="0.18"
+        app:srcCompat="@drawable/modifiedlogo" />
 
-    <EditText
-        android:id="@+id/user_name"
-        android:layout_width="0dp"
-        android:layout_height="@dimen/editText_size"
-        android:layout_marginBottom="5dp"
-        android:layout_marginEnd="@dimen/left_margin_from_parent"
-        android:layout_marginStart="@dimen/left_margin_from_parent"
-        android:layout_marginTop="24dp"
-        android:background="@drawable/edittext_boder"
-        android:drawableLeft="@drawable/username"
-        android:drawablePadding="20dp"
-        android:drawableStart="@drawable/username"
-        android:ems="10"
-        android:hint="Username"
-        android:inputType="textPersonName"
-        android:textColorHint="@color/transparent_text_color"
-        android:textSize="@dimen/username_pw_text_size"
-        app:layout_constraintBottom_toTopOf="@+id/password"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/logo" />
-
-    <EditText
-        android:id="@+id/password"
-        android:layout_width="0dp"
-        android:layout_height="@dimen/editText_size"
-        android:layout_marginBottom="15dp"
-        android:layout_marginEnd="@dimen/left_margin_from_parent"
-        android:layout_marginStart="@dimen/left_margin_from_parent"
-        android:layout_marginTop="@dimen/margin_edittext_sign_btn"
-        android:background="@drawable/edittext_boder"
-        android:drawableLeft="@drawable/password"
-        android:drawablePadding="20dp"
-        android:drawableStart="@drawable/password"
-        android:ems="10"
-        android:hint="Password"
-        android:inputType="textPassword"
-        android:textColorHint="@color/transparent_text_color"
-        android:textSize="@dimen/username_pw_text_size"
-        app:layout_constraintBottom_toTopOf="@+id/sign_in"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/user_name" />
-
-    <Button
-        android:id="@+id/sign_in"
-        android:layout_width="0dp"
-        android:layout_height="@dimen/editText_size"
-        android:layout_marginBottom="30dp"
-        android:layout_marginEnd="@dimen/left_margin_from_parent"
-        android:layout_marginStart="@dimen/left_margin_from_parent"
-        android:layout_marginTop="@dimen/sign_in_top_margin"
-        android:background="@color/base_app_color"
-        android:text="Sign In"
-        android:textAllCaps="false"
-        android:textColor="@color/transparent_text_color"
-        android:textSize="@dimen/signin_text_size"
-        app:layout_constraintBottom_toTopOf="@+id/editText2"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/password" />
 
     <TextView
         android:id="@+id/forgot_password"
@@ -91,16 +30,15 @@
         android:textSize="@dimen/frgtpw_text_size"
         app:layout_constraintBottom_toTopOf="@+id/linearLayout2"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textView17" />
+        app:layout_constraintTop_toBottomOf="@+id/quick_sign_in" />
 
     <EditText
         android:id="@+id/editText2"
         android:layout_width="0dp"
         android:layout_height="@dimen/editText_size"
-        android:layout_marginBottom="15dp"
         android:layout_marginEnd="@dimen/left_margin_from_parent"
         android:layout_marginStart="@dimen/left_margin_from_parent"
-        android:layout_marginTop="@dimen/margin_top_mobileNumber"
+        android:layout_marginTop="32dp"
         android:background="@drawable/edittext_boder"
         android:drawableLeft="@drawable/mobile"
         android:drawablePadding="20dp"
@@ -109,19 +47,18 @@
         android:inputType="phone"
         android:textColorHint="@color/transparent_text_color"
         android:textSize="@dimen/username_pw_text_size"
-        app:layout_constraintBottom_toTopOf="@+id/textView17"
+        app:layout_constraintBottom_toTopOf="@+id/quick_sign_in"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/sign_in" />
+        app:layout_constraintTop_toBottomOf="@+id/logo" />
 
     <Button
-        android:id="@+id/textView17"
+        android:id="@+id/quick_sign_in"
         android:layout_width="0dp"
         android:layout_height="@dimen/editText_size"
         android:layout_marginBottom="22dp"
         android:layout_marginEnd="@dimen/left_margin_from_parent"
         android:layout_marginStart="@dimen/left_margin_from_parent"
-        android:layout_marginTop="@dimen/sign_in_top_margin"
         android:background="@color/base_app_color"
         android:text="Quick Sign In"
         android:textAlignment="center"
@@ -178,6 +115,8 @@
         android:layout_height="wrap_content"
         android:layout_marginBottom="8dp"
         android:layout_marginEnd="8dp"
+        android:layout_marginLeft="@dimen/margin_start_bottom_image"
+        android:layout_marginRight="8dp"
         android:layout_marginStart="@dimen/margin_start_bottom_image"
         android:layout_marginTop="@dimen/margin_top_from_bottom_logo"
         app:layout_constraintBottom_toBottomOf="parent"
@@ -206,6 +145,8 @@
         android:layout_height="wrap_content"
         android:layout_marginBottom="8dp"
         android:layout_marginEnd="@dimen/margin_start_bottom_image"
+        android:layout_marginLeft="8dp"
+        android:layout_marginRight="@dimen/margin_start_bottom_image"
         android:layout_marginStart="8dp"
         android:layout_marginTop="@dimen/margin_top_from_bottom_logo"
         app:layout_constraintBottom_toBottomOf="parent"
@@ -213,4 +154,19 @@
         app:layout_constraintStart_toEndOf="@+id/imageView5"
         app:layout_constraintTop_toBottomOf="@+id/linearLayout2"
         app:srcCompat="@drawable/googleplus" />
+
+    <TextView
+        android:id="@+id/textView22"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="8dp"
+        android:layout_marginLeft="@dimen/left_margin_from_parent"
+        android:layout_marginRight="8dp"
+        android:layout_marginStart="@dimen/left_margin_from_parent"
+        android:text="Login via Username/Password"
+        android:textColor="#4fffffff"
+        android:textSize="@dimen/frgtpw_text_size"
+        app:layout_constraintBaseline_toBaselineOf="@+id/forgot_password"
+        app:layout_constraintEnd_toStartOf="@+id/forgot_password"
+        app:layout_constraintStart_toStartOf="parent" />
 </android.support.constraint.ConstraintLayout>
