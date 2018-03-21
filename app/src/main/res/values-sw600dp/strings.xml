@@ -20,5 +20,28 @@
     <string name="optional">Optional :</string>
     <string name="_6_7_ft">6-7/ft</string>
     <string name="_50_kg">50/kg</string>
+    <string name="enter_name">Enter Name</string>
+
+    <string name="app_name">Transcare</string>
+
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+
+    <!--<string name="title_activity_home">HomeActivity</string>-->
+
+    <string name="ortext">or</string>
+    <string name="set_up_your_health">Set Up Your Health Profile</string>
+    <string name="spinner_title">SEX    </string>
+    <string-array name="Gender">
+        <item>male</item>
+        <item>female</item>
+        <item>other</item>
+    </string-array>
+    <string name="slider1_text">Loreun Ipsum is simply dummy text of printing and type setting industry. Loreum Ipsum has been the  Industry\'s standard dummy text book.</string>
+    <string name="transcaretext">What is Transcare</string>
+
+
+    <string name="location_text">location 55 sector chandigarh</string>
+    <string name="profile_complete_text">Your Profile is 78% Complete</string>
 
 </resources>

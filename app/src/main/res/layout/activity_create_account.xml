@@ -1,0 +1,244 @@
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:ignore="MissingConstraints">
+
+    <android.support.constraint.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@drawable/background"
+        android:theme="@style/AppTheme1">
+
+        <de.hdodenhof.circleimageview.CircleImageView
+            android:id="@+id/profile_imageView"
+            android:layout_width="@dimen/ProfileImageWidth"
+            android:layout_height="@dimen/ProfileImageHeight"
+            android:layout_marginTop="@dimen/profileImage_marginTop"
+            android:src="@drawable/ic_launcher_background"
+            app:animateProgress="false"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            tools:ignore="MissingConstraints" />
+
+
+        <EditText
+            android:id="@+id/edit_Name"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/name_text_height"
+            android:layout_marginEnd="32dp"
+            android:layout_marginStart="32dp"
+            android:layout_marginTop="@dimen/editName_Text_Margin_Top"
+            android:background="#17dddddd"
+            android:gravity="center_vertical"
+            android:inputType="text"
+            android:paddingLeft="5sp"
+            android:paddingStart="5sp"
+            android:text="@string/enter_name"
+            android:textColor="#fff"
+            android:textSize="@dimen/editName_textSize"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/profile_imageView"
+            tools:ignore="MissingConstraints" />
+
+        <EditText
+            android:id="@+id/edit_address"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/name_text_height"
+            android:layout_marginEnd="32dp"
+            android:layout_marginStart="32dp"
+            android:layout_marginTop="@dimen/emailText_marginTop1"
+            android:background="#17dddddd"
+            android:gravity="center_vertical"
+            android:inputType="text"
+            android:paddingLeft="5sp"
+            android:text="@string/address"
+            android:textColor="#fff"
+            android:textSize="@dimen/editName_textSize"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/spinnerGender"
+            tools:ignore="MissingConstraints" />
+
+        <EditText
+            android:id="@+id/edit_email"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/name_text_height"
+            android:layout_marginEnd="32dp"
+            android:layout_marginStart="32dp"
+            android:layout_marginTop="@dimen/emailText_marginTop"
+            android:background="#17dddddd"
+            android:gravity="center_vertical"
+            android:inputType="textEmailAddress"
+            android:paddingLeft="5sp"
+            android:text="@string/your_email"
+            android:textColor="#fff"
+            android:textSize="@dimen/editName_textSize"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/edit_Name"
+            tools:ignore="MissingConstraints" />
+
+        <Spinner
+            android:id="@+id/edit_healthProfile"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/name_text_height"
+            android:layout_marginEnd="32dp"
+            android:layout_marginStart="32dp"
+            android:layout_marginTop="@dimen/emailText_marginTop"
+            android:background="#17fffcfc"
+            android:gravity="center_vertical"
+            android:paddingLeft="5sp"
+            android:prompt="@string/set_up_your_health"
+            android:textColor="#fff"
+            android:textSize="16sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/edit_address"
+            tools:ignore="HardcodedText,MissingConstraints" />
+
+        <TextView
+            android:id="@+id/healthProfile_text"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:paddingLeft="5sp"
+            android:text="@string/set_up_your_health"
+            android:textColor="#fff"
+            android:textSize="@dimen/editName_textSize"
+            app:layout_constraintBottom_toBottomOf="@+id/edit_healthProfile"
+            app:layout_constraintEnd_toEndOf="@+id/edit_healthProfile"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toStartOf="@+id/edit_healthProfile"
+            app:layout_constraintTop_toTopOf="@+id/edit_healthProfile" />
+
+        <ImageView
+            android:id="@+id/spinerIcon2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/arrow_drop_down"
+            app:layout_constraintBottom_toBottomOf="@+id/edit_healthProfile"
+            app:layout_constraintEnd_toEndOf="@+id/edit_healthProfile"
+            app:layout_constraintHorizontal_bias="0.95"
+            app:layout_constraintStart_toStartOf="@+id/edit_healthProfile"
+            app:layout_constraintTop_toTopOf="@+id/edit_healthProfile" />
+
+        <Spinner
+            android:id="@+id/spinnerGender"
+            android:layout_width="0dp"
+            android:layout_height="@dimen/name_text_height"
+            android:layout_gravity="center"
+            android:layout_marginEnd="32dp"
+            android:layout_marginRight="32dp"
+            android:layout_marginTop="@dimen/emailText_marginTop"
+            android:background="#17dddddd"
+            android:prompt="@string/set_up_your_health"
+            android:spinnerMode="dropdown"
+            android:textColor="#fff"
+            android:textSize="@dimen/editName_textSize"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@+id/tv_dateOfBirth"
+            app:layout_constraintTop_toBottomOf="@+id/edit_email" />
+
+        <ImageView
+            android:id="@+id/spinerIcon"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/arrow_drop_down"
+            app:layout_constraintBottom_toBottomOf="@+id/spinnerGender"
+            app:layout_constraintEnd_toEndOf="@+id/spinnerGender"
+            app:layout_constraintHorizontal_bias="0.89"
+            app:layout_constraintStart_toStartOf="@+id/spinnerGender"
+            app:layout_constraintTop_toTopOf="@+id/spinnerGender" />
+
+
+        <TextView
+            android:id="@+id/tv_dateOfBirth"
+            android:layout_width="0dp"
+            android:layout_height="@dimen/name_text_height"
+            android:layout_marginEnd="8dp"
+            android:layout_marginLeft="32dp"
+            android:layout_marginRight="8dp"
+            android:layout_marginStart="32dp"
+            android:layout_marginTop="@dimen/emailText_marginTop"
+            android:background="#17dddddd"
+            android:ems="10"
+            android:gravity="center_vertical"
+            android:paddingLeft="10sp"
+            android:text="D.O.B"
+            android:textColor="#fff"
+            android:textSize="@dimen/editName_textSize"
+            app:layout_constraintEnd_toStartOf="@+id/spinnerGender"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/edit_email" />
+
+        <ImageView
+            android:id="@+id/imageView2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/date_range"
+            app:layout_constraintBottom_toBottomOf="@+id/tv_dateOfBirth"
+            app:layout_constraintEnd_toEndOf="@+id/tv_dateOfBirth"
+            app:layout_constraintHorizontal_bias="0.89"
+            app:layout_constraintStart_toStartOf="@+id/tv_dateOfBirth"
+            app:layout_constraintTop_toTopOf="@+id/tv_dateOfBirth" />
+
+        <TextView
+            android:id="@+id/textView17"
+            android:layout_width="0dp"
+            android:layout_height="@dimen/name_text_height"
+            android:layout_marginLeft="32dp"
+            android:layout_marginStart="32dp"
+            android:layout_marginTop="@dimen/continue_marginTop"
+            android:background="#f92e2e"
+            android:gravity="center"
+            android:paddingLeft="5sp"
+            android:text="Continue"
+            android:textColor="#fff"
+            android:textSize="@dimen/editName_textSize"
+            app:layout_constraintEnd_toStartOf="@+id/textView18"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/edit_healthProfile" />
+
+        <TextView
+            android:id="@+id/textView18"
+            android:layout_width="0dp"
+            android:layout_height="@dimen/name_text_height"
+            android:layout_marginEnd="32dp"
+            android:layout_marginLeft="8sp"
+            android:layout_marginRight="32dp"
+            android:layout_marginStart="8sp"
+            android:layout_marginTop="@dimen/continue_marginTop"
+            android:background="#546a74"
+            android:gravity="center"
+            android:paddingLeft="5sp"
+            android:text="Book Instantly"
+            android:textColor="#fff"
+            android:textSize="@dimen/editName_textSize"
+            android:textStyle=""
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@+id/textView17"
+            app:layout_constraintTop_toBottomOf="@+id/edit_healthProfile" />
+
+        <ImageView
+            android:id="@+id/location_icon"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:layout_constraintBottom_toTopOf="@+id/edit_healthProfile"
+            app:layout_constraintEnd_toEndOf="@+id/edit_address"
+            app:layout_constraintHorizontal_bias="0.95"
+            app:layout_constraintStart_toStartOf="@+id/edit_address"
+            app:layout_constraintTop_toTopOf="@+id/edit_address"
+            app:layout_constraintVertical_bias="0.45999998"
+            app:srcCompat="@drawable/location_on"
+            tools:ignore="VectorDrawableCompat" />
+
+    </android.support.constraint.ConstraintLayout>
+
+
+</android.support.constraint.ConstraintLayout>

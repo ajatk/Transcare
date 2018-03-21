@@ -1,340 +1,146 @@
-<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    tools:ignore="MissingConstraints"
-    tools:layout_editor_absoluteX="8dp"
-    tools:layout_editor_absoluteY="8dp">
+    android:layout_height="wrap_content"
+    android:background="#60dddddd"
+    android:theme="@style/AppTheme1"
+    tools:layout_editor_absoluteY="25dp">
+
+    <android.support.v7.widget.Toolbar
+        android:id="@+id/toolbar2"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/base_app_color"
+        android:gravity="center"
+        android:padding="5sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:navigationIcon="@drawable/arrow_back"
+        app:title="CHOOSE TEST PANEL"
+        app:titleTextColor="#FFF"></android.support.v7.widget.Toolbar>
+
+    <TextView
+        android:id="@+id/textView13"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="32dp"
+        android:layout_marginLeft="5dp"
+        android:layout_marginRight="32dp"
+        android:layout_marginStart="5dp"
+        android:layout_marginTop="8dp"
+        android:paddingLeft="5sp"
+        android:text="Select your test panel"
+        android:textSize="16sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/toolbar2" />
+
+    <android.support.constraint.ConstraintLayout
+        android:id="@+id/constraintLayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:background="@color/base_app_color"
+        android:paddingBottom="10sp"
+        android:paddingLeft="15sp"
+        android:paddingRight="15sp"
+        android:paddingTop="10sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView13">
+
+        <android.support.v7.widget.SearchView
+            android:id="@+id/searchView"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="#fff" />
+    </android.support.constraint.ConstraintLayout>
+
+    <android.support.v7.widget.RecyclerView
+        android:id="@+id/recyclerview_testPanels"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:background="#ddd"
+        app:layout_constraintTop_toBottomOf="@+id/constraintLayout"
+        tools:ignore="MissingConstraints"
+        tools:layout_editor_absoluteX="0dp" />
 
     <android.support.constraint.ConstraintLayout
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:background="#fff"
-        android:theme="@style/AppTheme1"
-        tools:layout_editor_absoluteY="25dp">
+        android:layout_height="100sp"
+        android:background="#FFF"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/recyclerview_testPanels"
+        tools:ignore="MissingConstraints">
 
-        <de.hdodenhof.circleimageview.CircleImageView
-            android:id="@+id/editProfile_circleImage"
-            android:layout_width="@dimen/EditImageHeight"
-            android:layout_height="@dimen/EditImageHeight"
-            android:layout_marginEnd="28dp"
-            android:layout_marginRight="28dp"
-            android:src="@drawable/edit_black"
-            app:layout_constraintEnd_toEndOf="@+id/profile_imageView"
-            app:layout_constraintTop_toBottomOf="@+id/profile_imageView"
-            tools:ignore="MissingConstraints" />
 
-        <info.abdolahi.CircularMusicProgressBar
-            android:id="@+id/profile_imageView"
-            android:layout_width="@dimen/ProfileImageWidth"
-            android:layout_height="@dimen/ProfileImageHeight"
-            android:layout_marginTop="28dp"
-            android:src="@drawable/ic_launcher_background"
-            app:animateProgress="false"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent"
-            tools:ignore="MissingConstraints" />
-
-        <com.jackandphantom.circularprogressbar.CircleProgressbar
-            android:id="@+id/yourCircularProgressbar"
-            android:layout_width="@dimen/progress_bar_width"
-            android:layout_height="@dimen/progress_bar_height"
-            android:layout_marginBottom="8dp"
-            android:layout_marginEnd="8dp"
-            android:layout_marginStart="8dp"
-            android:layout_marginTop="8dp"
-
-            app:cpb_foregroundProgressColor="#1864c2"
-            app:cpb_foregroundProgressWidth="15"
-            app:cpb_progress="50"
-            app:cpb_roundedCorner="true"
-            app:cpb_touchEnabled="true"
-            app:layout_constraintBottom_toBottomOf="@+id/profile_imageView"
-            app:layout_constraintEnd_toEndOf="@+id/profile_imageView"
-            app:layout_constraintStart_toStartOf="@+id/profile_imageView"
-            app:layout_constraintTop_toTopOf="@+id/profile_imageView" />
         <TextView
-            android:id="@+id/textView"
+            android:id="@+id/textView21"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginTop="16dp"
-            android:gravity="center"
-            android:text="@string/personal_information"
-            android:textColor="#000"
-            android:textSize="20sp"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.503"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/editProfile"
-            tools:ignore="MissingConstraints" />
-
-        <EditText
-            android:id="@+id/edit_Name"
-            android:layout_width="match_parent"
-            android:layout_height="40sp"
-            android:layout_marginEnd="32dp"
-            android:layout_marginStart="32dp"
-            android:layout_marginTop="16dp"
-            android:background="#ddd"
-            android:gravity="center_vertical"
-            android:hint="@string/your_full_name"
-            android:inputType="text"
-            android:paddingLeft="5sp"
-            android:paddingStart="5sp"
-            android:textColor="#fff"
-            android:textSize="16sp"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.57"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/textView"
-            tools:ignore="MissingConstraints" />
-
-        <EditText
-            android:id="@+id/edit_address"
-            android:layout_width="match_parent"
-            android:layout_height="40sp"
-            android:layout_marginEnd="32dp"
-            android:layout_marginStart="32dp"
-            android:layout_marginTop="8dp"
-            android:background="#ddd"
-            android:gravity="center_vertical"
-            android:hint="@string/address"
-            android:inputType="text"
-            android:paddingLeft="5sp"
-            android:textColor="#fff"
-            android:textSize="16sp"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/edit_Name"
-            tools:ignore="MissingConstraints" />
-
-        <EditText
-            android:id="@+id/edit_email"
-            android:layout_width="match_parent"
-            android:layout_height="40sp"
-            android:layout_marginEnd="32dp"
-            android:layout_marginStart="32dp"
-            android:layout_marginTop="8dp"
-            android:background="#ddd"
-            android:gravity="center_vertical"
-            android:hint="@string/your_email"
-            android:inputType="textEmailAddress"
-            android:paddingLeft="5sp"
-            android:textColor="#fff"
-            android:textSize="16sp"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.25"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/edit_address"
-            tools:ignore="MissingConstraints" />
-
-        <EditText
-            android:id="@+id/edit_phoneNo"
-            android:layout_width="match_parent"
-            android:layout_height="40sp"
-            android:layout_marginEnd="32dp"
-            android:layout_marginStart="32dp"
-            android:layout_marginTop="8dp"
-            android:background="#ddd"
-            android:gravity="center_vertical"
-            android:hint="@string/mobile_number"
-            android:inputType="phone"
-            android:paddingLeft="5sp"
-            android:textColor="#fff"
-            android:textSize="16sp"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.0"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/edit_email"
-            tools:ignore="MissingConstraints" />
-
-        <Spinner
-            android:id="@+id/spinnerGender"
-            android:layout_width="0dp"
-            android:layout_height="44dp"
-            android:layout_gravity="center"
-            android:layout_marginEnd="32dp"
-            android:layout_marginLeft="8dp"
-            android:layout_marginRight="32dp"
-            android:layout_marginStart="8dp"
-            android:layout_marginTop="8dp"
-            android:background="#ddd"
-            android:gravity="left"
-            android:spinnerMode="dropdown"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toEndOf="@+id/tv_dateOfBirth"
-            app:layout_constraintTop_toBottomOf="@+id/edit_phoneNo" />
-
-
-        <TextView
-            android:id="@+id/editProfile"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="4dp"
-            android:text="@string/edit_profile"
-            android:textSize="16sp"
-            app:layout_constraintEnd_toStartOf="@+id/editProfile_circleImage"
-            app:layout_constraintHorizontal_bias="0.96"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/profile_imageView" />
-
-
-        <TextView
-            android:id="@+id/tv_dateOfBirth"
-            android:layout_width="0dp"
-            android:layout_height="44dp"
-            android:layout_marginEnd="8dp"
-            android:layout_marginLeft="32dp"
-            android:layout_marginRight="8dp"
-            android:layout_marginStart="32dp"
-            android:layout_marginTop="8dp"
-            android:background="#ddd"
-            android:ems="10"
-            android:gravity="center_vertical"
-            android:paddingLeft="5sp"
-            android:text="@string/date_of_birth"
-            app:layout_constraintEnd_toStartOf="@+id/spinnerGender"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/edit_phoneNo" />
-
-        <ImageView
-            android:id="@+id/imageView2"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginLeft="8dp"
-            android:layout_marginStart="8dp"
-            android:layout_marginTop="8dp"
-            android:src="@drawable/edit"
-            app:layout_constraintEnd_toEndOf="@+id/tv_dateOfBirth"
-            app:layout_constraintHorizontal_bias="0.97"
-            app:layout_constraintStart_toStartOf="@+id/tv_dateOfBirth"
-            app:layout_constraintTop_toTopOf="@+id/tv_dateOfBirth" />
-
-        <TextView
-            android:id="@+id/textView17"
-            android:layout_width="0dp"
-            android:layout_height="44dp"
-            android:layout_marginEnd="8dp"
-            android:layout_marginLeft="32dp"
-            android:layout_marginRight="8dp"
-            android:layout_marginStart="32dp"
-            android:layout_marginTop="8dp"
-            android:background="#ddd"
-            android:gravity="center_vertical"
-            android:paddingLeft="5sp"
-            android:text="@string/height"
-            app:layout_constraintEnd_toStartOf="@+id/textView18"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/textView19" />
-
-        <TextView
-            android:id="@+id/textView18"
-            android:layout_width="0dp"
-            android:layout_height="44sp"
-            android:layout_marginEnd="32dp"
-            android:layout_marginLeft="8dp"
-            android:layout_marginRight="32dp"
-            android:layout_marginStart="8dp"
-            android:layout_marginTop="8dp"
-            android:background="#ddd"
-            android:gravity="center_vertical"
-            android:paddingLeft="5sp"
-            android:text="@string/weight"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toEndOf="@+id/textView17"
-            app:layout_constraintTop_toBottomOf="@+id/textView19" />
-
-        <TextView
-            android:id="@+id/textView19"
-            android:layout_width="0dp"
-            android:layout_height="30sp"
-            android:layout_marginEnd="32dp"
-            android:layout_marginStart="32dp"
-            android:layout_marginTop="8dp"
-            android:gravity="bottom"
-            android:text="@string/optional"
-            android:textSize="16sp"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/spinnerGender" />
-
-        <EditText
-            android:id="@+id/tv_height"
-            android:layout_width="wrap_content"
-            android:layout_height="26sp"
             android:layout_marginEnd="8dp"
             android:layout_marginStart="8dp"
-            android:layout_marginTop="8dp"
-            android:background="#fff"
-            android:hint="@string/_6_7_ft"
-            android:inputType="textPersonName"
-            android:paddingBottom="2sp"
-            android:paddingLeft="8sp"
-            android:paddingRight="8sp"
-            android:paddingTop="2sp"
-            android:textSize="12sp"
+            android:layout_marginTop="14dp"
+            android:text="Amount"
+            android:textSize="18sp"
             android:textStyle="bold"
-            app:layout_constraintEnd_toEndOf="@+id/textView17"
-            app:layout_constraintHorizontal_bias="0.602"
-            app:layout_constraintStart_toStartOf="@+id/textView17"
-            app:layout_constraintTop_toTopOf="@+id/textView17" />
-
-        <EditText
-            android:id="@+id/weight"
-            android:layout_width="wrap_content"
-            android:layout_height="26sp"
-            android:layout_marginBottom="8dp"
-            android:layout_marginEnd="8dp"
-            android:layout_marginStart="8dp"
-            android:layout_marginTop="12dp"
-            android:background="#fff"
-            android:hint="@string/_50_kg"
-            android:paddingBottom="2sp"
-            android:paddingLeft="8sp"
-            android:paddingRight="8sp"
-            android:paddingTop="2sp"
-            android:textSize="12sp"
-            android:textStyle="bold"
-            app:layout_constraintBottom_toBottomOf="@+id/textView18"
-            app:layout_constraintEnd_toEndOf="@+id/textView18"
-            app:layout_constraintHorizontal_bias="0.62"
-            app:layout_constraintStart_toStartOf="@+id/textView18"
-            app:layout_constraintTop_toTopOf="@+id/textView18"
-            app:layout_constraintVertical_bias="1.0" />
-
-        <Button
-            android:id="@+id/button_submit"
-            android:layout_width="0dp"
-            android:layout_height="wrap_content"
-            android:layout_marginEnd="32dp"
-            android:layout_marginStart="32dp"
-            android:layout_marginTop="32dp"
-
-            android:background="@color/base_app_color"
-            android:text="Submit"
-            android:textColor="#fff"
             app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.07"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/tv_height" />
+            app:layout_constraintTop_toTopOf="parent" />
 
-        <View
-            android:id="@+id/view2"
-            android:layout_width="360dp"
+        <TextView
+            android:id="@+id/textView25"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:gravity="center_vertical"
+            android:text="@string/rupeetext"
+            android:textSize="22sp"
+            android:textStyle="bold"
+            app:layout_constraintEnd_toStartOf="@+id/textView21"
+            tools:layout_editor_absoluteY="45dp" />
+
+        <TextView
+            android:id="@+id/textView26"
+            android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginBottom="16dp"
-            android:layout_marginEnd="32dp"
-            android:layout_marginStart="32dp"
-            android:background="#fff"
-            android:elevation="10sp"
+            android:text="4,569"
+            android:textSize="22sp"
+            android:textStyle="bold"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/button" />
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toEndOf="@+id/textView25"
+            app:layout_constraintTop_toTopOf="parent" />
 
-
+        <Button
+            android:id="@+id/button"
+            android:layout_width="120sp"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="24dp"
+            android:layout_marginEnd="20dp"
+            android:layout_marginTop="8dp"
+            android:background="@drawable/checkout_button"
+            android:paddingLeft="5sp"
+            android:paddingRight="5sp"
+            android:text="Checkout"
+            android:textColor="#fff"
+            android:textSize="18sp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.68"
+            app:layout_constraintStart_toEndOf="@+id/textView21"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="1.0" />
     </android.support.constraint.ConstraintLayout>
 
 
-</ScrollView>
+</android.support.constraint.ConstraintLayout>
+
+

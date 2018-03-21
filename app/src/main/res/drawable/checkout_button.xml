@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<shape xmlns:android="http://schemas.android.com/apk/res/android"
+    android:shape="rectangle">
+    <size
+        android:width="@dimen/add_toCart_button_width"
+        android:height="@dimen/add_toCart_button_height" />
+    <gradient android:color="#d71515" />
+    <solid android:color="@color/base_app_color" />
+    <corners android:radius="5sp" />
+    <stroke
+        android:width="1px"
+        android:color="#fff" />
+</shape>

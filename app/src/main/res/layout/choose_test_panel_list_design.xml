@@ -1,0 +1,426 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="#3fdddddd">
+
+    <android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:id="@+id/constraintLayout5"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/white">
+
+        <TextView
+            android:id="@+id/kidneyPanel_text"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="8dp"
+            android:layout_marginStart="8dp"
+            android:layout_marginTop="@dimen/kidneyPanel_marginTop"
+            android:text="Kidney Panel"
+            android:textColor="@color/black"
+            android:textSize="@dimen/kidneyPanel_textSize"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/creatinine_txtView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="13dp"
+            android:layout_marginLeft="@dimen/Creatinine_marginStart"
+            android:layout_marginRight="13dp"
+            android:layout_marginStart="@dimen/Creatinine_marginStart"
+            android:paddingLeft="@dimen/Creatinine_paddingLeft"
+            android:text="Creatinine"
+
+            android:textSize="@dimen/Ceatinine_Potassium_Routin_textSize"
+            app:layout_constraintBaseline_toBaselineOf="@+id/potassium_text"
+            app:layout_constraintEnd_toStartOf="@+id/view4"
+            app:layout_constraintStart_toStartOf="parent"
+            tools:ignore="MissingConstraints" />
+
+        <View
+            android:id="@+id/view4"
+            android:layout_width="1sp"
+            android:layout_height="10sp"
+            android:layout_marginLeft="@dimen/view_marginStart"
+            android:layout_marginStart="@dimen/view_marginStart"
+            android:layout_marginTop="@dimen/view_marginTop"
+            android:background="#767575"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            tools:ignore="MissingConstraints" />
+
+        <TextView
+            android:id="@+id/potassium_text"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/poatassium_marginStart"
+            android:layout_marginStart="@dimen/poatassium_marginStart"
+            android:layout_marginTop="8dp"
+            android:text="Potassium"
+            android:textSize="@dimen/Ceatinine_Potassium_Routin_textSize"
+            app:layout_constraintEnd_toStartOf="@+id/view5"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toEndOf="@+id/view4"
+            app:layout_constraintTop_toBottomOf="@+id/kidneyPanel_text"
+            tools:ignore="MissingConstraints" />
+
+        <View
+            android:id="@+id/view5"
+            android:layout_width="1sp"
+            android:layout_height="10sp"
+            android:layout_marginEnd="@dimen/view2_marginRight"
+            android:layout_marginLeft="@dimen/view2_marginStart"
+            android:layout_marginRight="@dimen/view2_marginRight"
+            android:layout_marginStart="@dimen/view2_marginStart"
+            android:layout_marginTop="@dimen/view_marginTop"
+            android:background="#767575"
+            app:layout_constraintEnd_toStartOf="@+id/constraintLayout3"
+            app:layout_constraintHorizontal_bias="0.6"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            tools:ignore="MissingConstraints" />
+
+        <TextView
+            android:id="@+id/urineRoutine_textView"
+            android:layout_width="wrap_content"
+            android:layout_height="22dp"
+            android:layout_marginLeft="@dimen/urine_routine_marginStart"
+            android:layout_marginStart="@dimen/urine_routine_marginStart"
+            android:text="Urine Routine"
+            android:textSize="@dimen/Ceatinine_Potassium_Routin_textSize"
+            app:layout_constraintBaseline_toBaselineOf="@+id/potassium_text"
+            app:layout_constraintStart_toEndOf="@+id/view5"
+            tools:ignore="MissingConstraints" />
+
+        <android.support.constraint.ConstraintLayout
+            android:id="@+id/constraintLayout3"
+            android:layout_width="@dimen/circular_shape_background_height"
+            android:layout_height="@dimen/circular_shape_background_height"
+            android:layout_marginEnd="8dp"
+            android:layout_marginStart="8dp"
+            android:layout_marginTop="@dimen/circilarShape_marginTop"
+            android:background="@drawable/circular_sahpe_icon"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.94"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            tools:ignore="MissingConstraints">
+
+            <TextView
+                android:id="@+id/textView27"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/inCircle_textMarginTop"
+                android:gravity="center"
+                android:text="18"
+                android:textColor="@color/white"
+                android:textSize="@dimen/inCircle_textSize"
+                android:textStyle="bold"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <TextView
+                android:id="@+id/textView28"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:text="Test"
+                android:textColor="@color/white"
+                android:textSize="@dimen/test_textSize"
+                app:layout_constraintEnd_toEndOf="@+id/textView27"
+                app:layout_constraintStart_toStartOf="@+id/textView27"
+                app:layout_constraintTop_toBottomOf="@+id/textView27" />
+        </android.support.constraint.ConstraintLayout>
+
+        <android.support.constraint.ConstraintLayout
+            android:id="@+id/bottom_layout"
+            android:layout_width="0dp"
+            android:layout_height="49dp"
+            android:layout_marginTop="16dp"
+            android:background="@color/base_app_color"
+            android:paddingLeft="20sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/constraintLayout3">
+
+            <TextView
+                android:id="@+id/textView32"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="12dp"
+                android:layout_marginEnd="@dimen/addToCart_marginRight"
+                android:layout_marginRight="@dimen/addToCart_marginRight"
+                android:background="@drawable/add_to_cart_button_shape"
+                android:padding="5sp"
+                android:text="Add To Cart"
+                android:textColor="@color/white"
+                android:textSize="@dimen/addToCart_textSize"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent" />
+
+            <TextView
+                android:id="@+id/item_Price"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_marginLeft="8dp"
+                android:layout_marginStart="8dp"
+                android:gravity="center_vertical"
+                android:text="4,569"
+                android:textColor="@color/white"
+                android:textSize="@dimen/inCircle_textSize"
+                android:textStyle="bold"
+                app:layout_constraintStart_toEndOf="@+id/textView31"
+                app:layout_constraintTop_toTopOf="parent"
+                tools:ignore="MissingConstraints" />
+
+            <TextView
+                android:id="@+id/textView31"
+                android:layout_width="12dp"
+                android:layout_height="match_parent"
+                android:gravity="center_vertical"
+                android:text="@string/rupeetext"
+                android:textColor="@color/white"
+                android:textSize="@dimen/inCircle_textSize"
+                android:textStyle="bold"
+                app:layout_constraintBaseline_toBaselineOf="@+id/item_Price"
+                app:layout_constraintEnd_toEndOf="@+id/bottom_layout"
+                app:layout_constraintHorizontal_bias="0.0"
+                app:layout_constraintStart_toStartOf="@+id/bottom_layout"
+                tools:ignore="MissingConstraints" />
+
+        </android.support.constraint.ConstraintLayout>
+
+    </android.support.constraint.ConstraintLayout>
+
+    <View
+        android:id="@+id/view6"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/view6_height"
+        android:background="#ddd"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/constraintLayout5"
+        tools:ignore="MissingConstraints"></View>
+
+    <android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="2dp"
+        android:background="#ddd"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/view6"
+        tools:ignore="MissingConstraints">
+
+        <TextView
+            android:id="@+id/kidneypanel_text2"
+            android:layout_width="0dp"
+            android:layout_height="29dp"
+            android:layout_marginEnd="8dp"
+            android:layout_marginStart="8dp"
+            android:layout_marginTop="@dimen/kidneyPanel_marginTop"
+            android:text="Kidney Panel"
+            android:textColor="@color/black"
+            android:textSize="@dimen/kidneyPanel_textSize"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/creatinine_txtView2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="13dp"
+            android:layout_marginLeft="@dimen/Creatinine_marginStart"
+            android:layout_marginRight="13dp"
+            android:layout_marginStart="@dimen/Creatinine_marginStart"
+            android:paddingLeft="@dimen/Creatinine_paddingLeft"
+            android:text="Creatinine"
+            android:textSize="@dimen/Ceatinine_Potassium_Routin_textSize"
+            app:layout_constraintBaseline_toBaselineOf="@+id/potassium_textView2"
+            app:layout_constraintEnd_toStartOf="@+id/view2"
+            app:layout_constraintStart_toStartOf="parent"
+            tools:ignore="MissingConstraints" />
+
+        <View
+            android:id="@+id/view2"
+            android:layout_width="1sp"
+            android:layout_height="10sp"
+            android:layout_marginLeft="@dimen/view_marginStart"
+            android:layout_marginStart="@dimen/view_marginStart"
+            android:layout_marginTop="@dimen/view_marginTop"
+            android:background="#767575"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            tools:ignore="MissingConstraints" />
+
+        <TextView
+            android:id="@+id/potassium_textView2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/poatassium_marginStart"
+            android:layout_marginStart="@dimen/poatassium_marginStart"
+            android:layout_marginTop="8dp"
+            android:text="Potassium"
+            android:textSize="@dimen/Ceatinine_Potassium_Routin_textSize"
+            app:layout_constraintEnd_toStartOf="@+id/view22"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toEndOf="@+id/view2"
+            app:layout_constraintTop_toBottomOf="@+id/kidneypanel_text2"
+            tools:ignore="MissingConstraints" />
+
+        <View
+            android:id="@+id/view22"
+            android:layout_width="1sp"
+            android:layout_height="10sp"
+            android:layout_marginEnd="@dimen/view2_marginRight"
+            android:layout_marginLeft="@dimen/view2_marginStart"
+            android:layout_marginRight="@dimen/view2_marginRight"
+            android:layout_marginStart="@dimen/view2_marginStart"
+            android:layout_marginTop="@dimen/view_marginTop"
+            android:background="#767575"
+            app:layout_constraintEnd_toStartOf="@+id/constraintLayout4"
+            app:layout_constraintHorizontal_bias="0.6"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            tools:ignore="MissingConstraints" />
+
+        <TextView
+            android:id="@+id/urineRoutine_textView2"
+            android:layout_width="wrap_content"
+            android:layout_height="22dp"
+            android:layout_marginLeft="@dimen/urine_routine_marginStart"
+            android:layout_marginStart="@dimen/urine_routine_marginStart"
+            android:text="Urine Routine"
+            android:textSize="@dimen/Ceatinine_Potassium_Routin_textSize"
+            app:layout_constraintBaseline_toBaselineOf="@+id/potassium_textView2"
+            app:layout_constraintStart_toEndOf="@+id/view22"
+            tools:ignore="MissingConstraints" />
+
+        <android.support.constraint.ConstraintLayout
+            android:id="@+id/constraintLayout4"
+            android:layout_width="@dimen/circular_shape_background_height"
+            android:layout_height="@dimen/circular_shape_background_height"
+            android:layout_marginEnd="8dp"
+            android:layout_marginStart="8dp"
+            android:layout_marginTop="@dimen/circilarShape_marginTop"
+            android:background="@drawable/circular_sahpe_icon2"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.94"
+
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            tools:ignore="MissingConstraints">
+
+            <TextView
+                android:id="@+id/textView22"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="4dp"
+                android:gravity="center"
+                android:text="18"
+                android:textColor="#fff"
+                android:textSize="18sp"
+                android:textStyle="bold"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <TextView
+                android:id="@+id/textView23"
+                android:layout_width="wrap_content"
+                android:layout_height="17dp"
+                android:gravity="center"
+                android:text="Test"
+                android:textColor="#fff"
+                android:textSize="16sp"
+                app:layout_constraintEnd_toEndOf="@+id/textView22"
+                app:layout_constraintStart_toStartOf="@+id/textView22"
+                app:layout_constraintTop_toBottomOf="@+id/textView22" />
+        </android.support.constraint.ConstraintLayout>
+
+        <android.support.constraint.ConstraintLayout
+            android:id="@+id/bottom_layout2"
+            android:layout_width="0dp"
+            android:layout_height="49dp"
+            android:layout_marginTop="16dp"
+            android:background="@color/base_app_color"
+            android:paddingLeft="20sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/constraintLayout4">
+
+            <TextView
+                android:id="@+id/textView33"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="12dp"
+                android:layout_marginEnd="@dimen/addToCart_marginRight"
+                android:layout_marginRight="@dimen/addToCart_marginRight"
+                android:background="@drawable/add_to_cart_button_shape"
+                android:padding="5sp"
+                android:text="Add To Cart"
+                android:textColor="#fff"
+                android:textSize="@dimen/addToCart_textSize"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent" />
+
+            <TextView
+                android:id="@+id/item_Price2"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_marginLeft="8dp"
+                android:layout_marginStart="8dp"
+                android:gravity="center_vertical"
+                android:text="4,569"
+                android:textColor="@color/white"
+                android:textSize="@dimen/inCircle_textSize"
+                android:textStyle="bold"
+                app:layout_constraintStart_toEndOf="@+id/textViewa"
+                app:layout_constraintTop_toTopOf="parent"
+                tools:ignore="MissingConstraints" />
+
+            <TextView
+                android:id="@+id/textViewa"
+                android:layout_width="12dp"
+                android:layout_height="match_parent"
+                android:gravity="center_vertical"
+                android:text="@string/rupeetext"
+                android:textColor="#fff"
+                android:textSize="@dimen/inCircle_textSize"
+                android:textStyle="bold"
+                app:layout_constraintBaseline_toBaselineOf="@+id/item_Price2"
+                app:layout_constraintEnd_toEndOf="@+id/bottom_layout2"
+                app:layout_constraintHorizontal_bias="0.0"
+                app:layout_constraintStart_toStartOf="@+id/bottom_layout2"
+                tools:ignore="MissingConstraints" />
+
+        </android.support.constraint.ConstraintLayout>
+
+        <View
+            android:id="@+id/view7"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/view6_height"
+            android:background="#ddd"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/bottom_layout2"
+            tools:ignore="MissingConstraints"></View>
+
+    </android.support.constraint.ConstraintLayout>
+</android.support.constraint.ConstraintLayout>

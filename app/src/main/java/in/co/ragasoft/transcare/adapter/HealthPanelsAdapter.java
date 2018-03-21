@@ -84,17 +84,17 @@ public class HealthPanelsAdapter extends RecyclerView.Adapter<HealthPanelsAdapte
                     filterList = list;
                 } else {
 
-                    ArrayList<ModelClass> filterList = new ArrayList<>();
+                    ArrayList<ModelClass> filteredList = new ArrayList<>();
 
                     for (ModelClass state : list) {
 
                         if (state.getDiscriptions().toLowerCase().contains(charString)) {
 
-                            filterList.add(state);
+                            filteredList.add(state);
                         }
                     }
 
-                    filterList = filterList;
+                    filterList = filteredList;
                 }
 
                 FilterResults filterResults = new FilterResults();

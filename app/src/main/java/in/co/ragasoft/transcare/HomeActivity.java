@@ -1,6 +1,7 @@
 package in.co.ragasoft.transcare;
 
 import android.content.Context;
+import android.content.Intent;
 import android.net.Uri;
 import android.os.Bundle;
 import android.os.Handler;
@@ -17,7 +18,6 @@ import android.support.v7.app.ActionBarDrawerToggle;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
 import android.view.MenuItem;
-import android.view.View;
 import android.widget.Toast;
 
 import in.co.ragasoft.transcare.fragments.EditProfile;
@@ -179,6 +179,8 @@ public class HomeActivity extends AppCompatActivity
             }
             break;
             case R.id.my_order: {
+                Intent intent = new Intent(HomeActivity.this, MainActivity1.class);
+                startActivity(intent);
                 Toast.makeText(this, "My Order", Toast.LENGTH_SHORT).show();
             }
             break;
@@ -192,13 +194,15 @@ public class HomeActivity extends AppCompatActivity
             }
             break;
             case R.id.wallet: {
+
                 Toast.makeText(this, "Wallet", Toast.LENGTH_SHORT).show();
             }
             break;
             case R.id.call_us: {
                 //toolbar.setVisibility(View.GONE);
-                toolbar.setTitle("EDIT PROFILE");
-                srchToolbarLayout.setVisibility(View.GONE);
+                // toolbar.setTitle("EDIT PROFILE");
+
+                //srchToolbarLayout.setVisibility(View.GONE);
                 EditProfile editProfile = new EditProfile();
                 fragmentTransaction = getSupportFragmentManager().beginTransaction();
                 fragmentTransaction.replace(R.id.frame, editProfile);
@@ -209,6 +213,8 @@ public class HomeActivity extends AppCompatActivity
             }
             break;
             case R.id.feed_back: {
+                Intent intent = new Intent(HomeActivity.this, CreateAccount.class);
+                startActivity(intent);
                 Toast.makeText(this, "Feed Back", Toast.LENGTH_SHORT).show();
             }
             break;

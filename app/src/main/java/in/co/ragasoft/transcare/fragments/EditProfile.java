@@ -2,7 +2,10 @@ package in.co.ragasoft.transcare.fragments;
 
 import android.content.Context;
 import android.graphics.Color;
+import android.os.Build;
 import android.os.Bundle;
+import android.support.annotation.RequiresApi;
+import android.support.constraint.ConstraintLayout;
 import android.support.v4.app.Fragment;
 import android.util.Log;
 import android.view.LayoutInflater;
@@ -66,7 +69,9 @@ public class EditProfile extends Fragment implements AdapterView.OnItemSelectedL
     @BindView(R.id.button_submit)
     Button buttonSubmit;
     Toolbar toolbar;
+    ConstraintLayout srchlocationLayout;
 
+    @RequiresApi(api = Build.VERSION_CODES.LOLLIPOP)
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
@@ -74,9 +79,11 @@ public class EditProfile extends Fragment implements AdapterView.OnItemSelectedL
         View view = inflater.inflate(R.layout.fragment_edit_profile, container, false);
         context = getActivity();
         ButterKnife.bind(getActivity());
-
+        // srchlocationLayout =(ConstraintLayout)getActivity().findViewById(R.id.srch_toolbar_layout);
+        // srchlocationLayout.setVisibility(View.GONE);
         //locationT = view.findViewById(R.id.location_text);
-
+//        Toolbar toolbar = (Toolbar) getActivity().findViewById(R.id.toolbar);
+        //  toolbar.setTitle("EDIT PROFILE");
         spinnerGender = view.findViewById(R.id.spinnerGender);
         //  spinnerGender.setPrompt("sex");
         spinnerGender.setOnItemSelectedListener(this);
@@ -128,8 +135,7 @@ public class EditProfile extends Fragment implements AdapterView.OnItemSelectedL
         circleProgressbar.setRoundedCorner(true);
         circleProgressbar.setClockwise(true);
         int animationDuration = 2500; // 2500ms = 2,5s
-        circleProgressbar.setProgressWithAnimation(65, animationDuration);
-
+        circleProgressbar.setProgressWithAnimation(100, animationDuration);
         return view;
     }
 
@@ -161,22 +167,5 @@ public class EditProfile extends Fragment implements AdapterView.OnItemSelectedL
         super.onDestroyView();
 
     }
-
-
-   /* @Override
-    public void onItemSelected(AdapterView<?> adapterView, View view, int i, long id) {
-        Spinner spinner = (Spinner) adapterView;
-
-        if (spinner.getId() == R.id.spinnerGender)
-
-        {
-            spinnerG = adapterView.getItemAtPosition(i).toString();
-        }
-    }
-
-    @Override
-    public void onNothingSelected(AdapterView<?> parent) {
-
-    }*/
 
 }
