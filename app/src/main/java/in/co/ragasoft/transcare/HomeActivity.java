@@ -179,7 +179,7 @@ public class HomeActivity extends AppCompatActivity
             }
             break;
             case R.id.my_order: {
-                Intent intent = new Intent(HomeActivity.this, MainActivity1.class);
+                Intent intent = new Intent(HomeActivity.this, ChooseTestPanel.class);
                 startActivity(intent);
                 Toast.makeText(this, "My Order", Toast.LENGTH_SHORT).show();
             }
@@ -194,7 +194,8 @@ public class HomeActivity extends AppCompatActivity
             }
             break;
             case R.id.wallet: {
-
+                Intent intent1 = new Intent(HomeActivity.this, PopularTestActivity.class);
+                startActivity(intent1);
                 Toast.makeText(this, "Wallet", Toast.LENGTH_SHORT).show();
             }
             break;

@@ -3,282 +3,476 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="#e9e9e9"
-    tools:context="in.co.ragasoft.transcare.fragments.HomeFragment">
+    android:background="@drawable/background">
 
-
-    <android.support.constraint.ConstraintLayout
-        android:id="@+id/constraintLayout2"
-        android:layout_width="0dp"
-        android:layout_height="@dimen/profile_layout_height"
-        android:layout_marginTop="4dp"
-        android:background="@color/white"
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent">
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.51">
 
-
-        <de.hdodenhof.circleimageview.CircleImageView xmlns:app="http://schemas.android.com/apk/res-auto"
-            android:id="@+id/profile_image"
-            android:layout_width="@dimen/circula_image_height_width"
-            android:layout_height="@dimen/circula_image_height_width"
-            android:layout_marginEnd="20dp"
-            android:layout_marginLeft="16dp"
-            android:layout_marginRight="20dp"
-            android:layout_marginStart="16dp"
-            android:layout_marginTop="8dp"
-            android:src="@mipmap/ic_launcher_round"
-            app:civ_border_color="@color/base_app_color"
-            app:civ_border_width="7dp"
-            app:layout_constraintBottom_toTopOf="@+id/textView23"
-            app:layout_constraintEnd_toStartOf="@+id/textView20"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent" />
-
-        <View
-            android:id="@+id/view3"
-            android:layout_width="2dp"
-            android:layout_height="match_parent"
-            android:layout_marginBottom="@dimen/top_bottom_margin_line"
-            android:layout_marginLeft="24dp"
-
-            android:layout_marginStart="24dp"
-            android:layout_marginTop="@dimen/top_bottom_margin_line"
-            android:background="@drawable/faded_line"
-            app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintEnd_toStartOf="@+id/textView20"
-            app:layout_constraintStart_toEndOf="@+id/profile_image"
-            app:layout_constraintTop_toTopOf="parent"
-            app:layout_constraintVertical_bias="0.47000003" />
-
-        <TextView
-            android:id="@+id/textView20"
-            android:layout_width="0dp"
+        <android.support.constraint.ConstraintLayout
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_marginEnd="8dp"
-            android:layout_marginLeft="16dp"
-            android:layout_marginRight="8dp"
-            android:layout_marginStart="16dp"
-            android:layout_marginTop="50dp"
-            android:text="Do You Want to"
-            android:textSize="@dimen/rebook_text_size"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toEndOf="@+id/view3"
-            app:layout_constraintTop_toTopOf="parent" />
+            android:layout_marginBottom="10sp"
+            app:layout_constraintBottom_toBottomOf="parent">
 
-        <TextView
-            android:id="@+id/rebook"
-            android:layout_width="0dp"
-            android:layout_height="wrap_content"
-            android:layout_marginEnd="8dp"
-            android:layout_marginStart="16dp"
-            android:text="Re-Book"
-            android:textColor="@color/base_app_color"
-            android:textSize="@dimen/rebook_text_size"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toEndOf="@+id/view3"
-            app:layout_constraintTop_toBottomOf="@+id/textView20" />
+            <android.support.constraint.ConstraintLayout
+                android:id="@+id/constraintLayout2"
+                android:layout_width="0dp"
+                android:layout_height="@dimen/constraintLayout_height"
+                android:layout_marginTop="16dp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.0"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintRight_toRightOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent">
 
-        <TextView
-            android:id="@+id/textView23"
-            android:layout_width="0dp"
-            android:layout_height="wrap_content"
-            android:layout_marginBottom="8dp"
-            android:layout_marginEnd="5dp"
-            android:layout_marginLeft="18dp"
-            android:layout_marginRight="5dp"
-            android:layout_marginStart="18dp"
-            android:text="@string/profile_complete_text"
-            android:textAlignment="center"
-            android:textSize="@dimen/cmplt_profile_text_size"
-            app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintEnd_toStartOf="@+id/view3"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/profile_image" />
+                <info.abdolahi.CircularMusicProgressBar xmlns:app="http://schemas.android.com/apk/res-auto"
+                    android:id="@+id/profile_imageView"
+                    android:layout_width="@dimen/circularProfileImage_width_height"
+                    android:layout_height="@dimen/circularProfileImage_width_height"
+                    android:layout_marginEnd="8dp"
+                    android:layout_marginStart="8dp"
+                    android:elevation="10sp"
+                    android:src="@mipmap/ic_launcher_round"
+                    app:border_color="@color/white"
+                    app:border_width="2sp"
+                    app:civ_border_color="@color/base_app_color"
+                    app:civ_border_width="7dp"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintHorizontal_bias="0.07"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    tools:ignore="MissingConstraints" />
 
+                <ImageView
+                    android:id="@+id/imageView"
+                    android:layout_width="@dimen/dashboard_Baner_width"
+                    android:layout_height="@dimen/dashboard_Baner_height"
+                    android:layout_marginBottom="8dp"
+                    android:layout_marginEnd="@dimen/dashboard_Baner_marginRight"
+                    android:layout_marginRight="@dimen/dashboard_Baner_marginRight"
+                    android:layout_marginTop="16dp"
+                    android:background="@drawable/transcareme"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
 
-    </android.support.constraint.ConstraintLayout>
+                <TextView
+                    android:id="@+id/profileName"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="8dp"
+                    android:layout_marginStart="8dp"
+                    android:layout_marginTop="8dp"
+                    android:text="Hi, Vikas"
+                    android:textColor="@color/white"
+                    android:textSize="@dimen/signin_text_size"
+                    android:textStyle="bold"
+                    app:layout_constraintStart_toEndOf="@+id/profile_imageView"
+                    app:layout_constraintTop_toTopOf="@+id/imageView" />
 
-    <TextView
-        android:id="@+id/textView24"
-        android:layout_width="0dp"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="8dp"
-        android:text="Not sure what text to take?"
-        android:textAlignment="center"
-        android:textColor="#6d6d6d"
-        android:textSize="@dimen/notsure_text_size"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.0"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/layout_criticalError" />
+                <TextView
+                    android:id="@+id/banner_text"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginEnd="8dp"
+                    android:layout_marginRight="8dp"
+                    android:layout_marginTop="8dp"
+                    android:maxLines="4"
+                    android:text="Your nearrest skilled transcare sample collector is 15 min away from your location."
+                    android:textColor="@color/white"
+                    android:textSize="@dimen/BannerLong_textSize"
+                    app:layout_constraintEnd_toEndOf="@+id/imageView"
+                    app:layout_constraintStart_toStartOf="@+id/profileName"
+                    app:layout_constraintTop_toBottomOf="@+id/profileName"
+                    tools:ignore="SpUsage" />
 
-    <android.support.constraint.ConstraintLayout
-        android:id="@+id/layout_bookTest"
-        android:layout_width="0dp"
-        android:layout_height="90dp"
-        android:layout_marginEnd="2dp"
-        android:layout_marginLeft="5dp"
-        android:layout_marginRight="2dp"
-        android:layout_marginStart="5dp"
-        android:layout_marginTop="7dp"
-        android:background="@color/white"
-        app:layout_constraintEnd_toStartOf="@+id/layout_criticalError"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/constraintLayout2">
+                <Button
+                    android:id="@+id/book_now_btn"
+                    android:layout_width="@dimen/bookNow_btnWidth"
+                    android:layout_height="@dimen/bookNow_btnHeight"
+                    android:layout_marginLeft="8dp"
+                    android:layout_marginStart="8dp"
+                    android:background="@color/white"
+                    android:text="Book Now"
+                    android:textSize="@dimen/bookNow_btnTextSize"
+                    app:layout_constraintBottom_toBottomOf="@+id/imageView"
+                    app:layout_constraintStart_toStartOf="@+id/banner_text"
+                    app:layout_constraintTop_toBottomOf="@+id/banner_text"
+                    tools:ignore="MissingConstraints" />
+            </android.support.constraint.ConstraintLayout>
 
-        <ImageView
-            android:id="@+id/booktest_image"
-            android:layout_width="0dp"
-            android:layout_height="0dp"
-            android:layout_marginTop="8dp"
-            android:src="@drawable/testbook"
-            app:layout_constraintBottom_toTopOf="@+id/book_test"
-            app:layout_constraintDimensionRatio="9:5"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="1.0"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent" />
+            <android.support.constraint.ConstraintLayout
+                android:id="@+id/layout_bookTest"
+                android:layout_width="0dp"
+                android:layout_height="@dimen/booktestLayout_height"
+                android:layout_marginEnd="2dp"
+                android:layout_marginLeft="5dp"
+                android:layout_marginRight="2dp"
 
-        <TextView
-            android:id="@+id/book_test"
-            android:layout_width="0dp"
-            android:layout_height="0dp"
-            android:paddingTop="5dp"
-            android:text="Book a Test"
-            android:textAlignment="center"
-            android:textColor="#6d6d6d"
-            android:textSize="@dimen/text_size_four_menu"
-            app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/booktest_image" />
-    </android.support.constraint.ConstraintLayout>
+                android:layout_marginStart="5dp"
+                android:layout_marginTop="@dimen/bookTest_Layout_MarginTop"
+                app:layout_constraintEnd_toStartOf="@+id/layout_criticalError"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/constraintLayout2">
 
-    <android.support.constraint.ConstraintLayout
-        android:id="@+id/layout_criticalError"
-        android:layout_width="0dp"
-        android:layout_height="90dp"
-        android:layout_marginEnd="2dp"
-        android:layout_marginStart="2dp"
+                <ImageView
+                    android:id="@+id/booktest_image"
+                    android:layout_width="0dp"
+                    android:layout_height="0dp"
+                    android:layout_marginTop="8dp"
+                    android:src="@drawable/callbook"
+                    app:layout_constraintBottom_toTopOf="@+id/book_test"
+                    app:layout_constraintDimensionRatio="9:5"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintHorizontal_bias="1.0"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
 
-        android:layout_marginTop="7dp"
-        android:background="@color/white"
-        app:layout_constraintEnd_toStartOf="@+id/layout_healthTracker"
-        app:layout_constraintStart_toEndOf="@+id/layout_bookTest"
-        app:layout_constraintTop_toBottomOf="@+id/constraintLayout2">
+                <TextView
+                    android:id="@+id/book_test"
+                    android:layout_width="0dp"
+                    android:layout_height="0dp"
+                    android:paddingTop="5dp"
+                    android:text="Book a Test"
+                    android:textAlignment="center"
+                    android:textColor="@color/white"
+                    android:textSize="@dimen/text_size_four_menu"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/booktest_image" />
+            </android.support.constraint.ConstraintLayout>
 
-        <ImageView
-            android:id="@+id/criticaler_image"
-            android:layout_width="0dp"
-            android:layout_height="0dp"
-            android:layout_marginTop="8dp"
-            android:src="@drawable/critical"
-            app:layout_constraintBottom_toTopOf="@+id/critical_error"
-            app:layout_constraintDimensionRatio="9:5"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent" />
+            <android.support.constraint.ConstraintLayout
+                android:id="@+id/layout_criticalError"
+                android:layout_width="0dp"
+                android:layout_height="@dimen/booktestLayout_height"
+                android:layout_marginEnd="2dp"
+                android:layout_marginStart="2dp"
+                android:layout_marginTop="@dimen/bookTest_Layout_MarginTop"
+                app:layout_constraintEnd_toStartOf="@+id/layout_healthTracker"
+                app:layout_constraintStart_toEndOf="@+id/layout_bookTest"
+                app:layout_constraintTop_toBottomOf="@+id/constraintLayout2">
 
-        <TextView
-            android:id="@+id/critical_error"
-            android:layout_width="0dp"
-            android:layout_height="0dp"
-            android:paddingTop="5dp"
-            android:text="Critical Error"
-            android:textAlignment="center"
+                <ImageView
+                    android:id="@+id/criticaler_image"
+                    android:layout_width="0dp"
+                    android:layout_height="0dp"
+                    android:layout_marginTop="8dp"
+                    android:src="@drawable/reports"
+                    app:layout_constraintBottom_toTopOf="@+id/critical_error"
+                    app:layout_constraintDimensionRatio="9:5"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
 
-            android:textColor="#6d6d6d"
-            android:textSize="@dimen/text_size_four_menu"
-            app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/criticaler_image" />
-    </android.support.constraint.ConstraintLayout>
+                <TextView
+                    android:id="@+id/critical_error"
+                    android:layout_width="0dp"
+                    android:layout_height="0dp"
+                    android:paddingTop="5dp"
+                    android:text="Reports"
+                    android:textAlignment="center"
 
-    <android.support.constraint.ConstraintLayout
-        android:id="@+id/layout_healthTracker"
-        android:layout_width="0dp"
-        android:layout_height="90dp"
-        android:layout_marginEnd="2dp"
-        android:layout_marginStart="2dp"
-        android:layout_marginTop="7dp"
+                    android:textColor="@color/white"
+                    android:textSize="@dimen/text_size_four_menu"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/criticaler_image" />
+            </android.support.constraint.ConstraintLayout>
 
-        android:background="@color/white"
-        app:layout_constraintEnd_toStartOf="@+id/layout_callToBook"
-        app:layout_constraintStart_toEndOf="@+id/layout_criticalError"
-        app:layout_constraintTop_toBottomOf="@+id/constraintLayout2">
+            <android.support.constraint.ConstraintLayout
+                android:id="@+id/layout_healthTracker"
+                android:layout_width="0dp"
+                android:layout_height="@dimen/booktestLayout_height"
+                android:layout_marginEnd="2dp"
+                android:layout_marginStart="2dp"
+                android:layout_marginTop="@dimen/bookTest_Layout_MarginTop"
+                app:layout_constraintEnd_toStartOf="@+id/layout_callToBook"
+                app:layout_constraintStart_toEndOf="@+id/layout_criticalError"
+                app:layout_constraintTop_toBottomOf="@+id/constraintLayout2">
 
-        <ImageView
-            android:id="@+id/healthtracker_image"
-            android:layout_width="0dp"
-            android:layout_height="0dp"
-            android:layout_marginTop="8dp"
-            android:src="@drawable/heathtracker"
-            app:layout_constraintBottom_toTopOf="@+id/health_tracker"
-            app:layout_constraintDimensionRatio="9:5"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent" />
+                <ImageView
+                    android:id="@+id/healthtracker_image"
+                    android:layout_width="0dp"
+                    android:layout_height="0dp"
+                    android:layout_marginTop="8dp"
+                    android:src="@drawable/callbook"
+                    app:layout_constraintBottom_toTopOf="@+id/health_tracker"
+                    app:layout_constraintDimensionRatio="9:5"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
 
-        <TextView
-            android:id="@+id/health_tracker"
-            android:layout_width="0dp"
-            android:layout_height="0dp"
-            android:paddingTop="5dp"
-            android:text="Health Tracker"
-            android:textAlignment="center"
+                <TextView
+                    android:id="@+id/health_tracker"
+                    android:layout_width="0dp"
+                    android:layout_height="0dp"
+                    android:paddingTop="5dp"
+                    android:text="Health Trends"
+                    android:textAlignment="center"
+                    android:textColor="@color/white"
+                    android:textSize="@dimen/text_size_four_menu"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/healthtracker_image" />
+            </android.support.constraint.ConstraintLayout>
 
-            android:textColor="#6d6d6d"
-            android:textSize="@dimen/text_size_four_menu"
-            app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/healthtracker_image" />
-    </android.support.constraint.ConstraintLayout>
+            <android.support.constraint.ConstraintLayout
+                android:id="@+id/layout_callToBook"
+                android:layout_width="0dp"
+                android:layout_height="@dimen/booktestLayout_height"
+                android:layout_marginEnd="1dp"
+                android:layout_marginLeft="2dp"
+                android:layout_marginRight="1dp"
+                android:layout_marginStart="2dp"
+                android:layout_marginTop="@dimen/bookTest_Layout_MarginTop"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toEndOf="@+id/layout_healthTracker"
+                app:layout_constraintTop_toBottomOf="@+id/constraintLayout2">
 
-    <android.support.constraint.ConstraintLayout
-        android:id="@+id/layout_callToBook"
-        android:layout_width="0dp"
-        android:layout_height="90dp"
-        android:layout_marginEnd="1dp"
-        android:layout_marginStart="2dp"
+                <ImageView
+                    android:id="@+id/call_image"
+                    android:layout_width="0dp"
+                    android:layout_height="0dp"
+                    android:layout_marginTop="8dp"
+                    android:src="@drawable/callbook"
+                    app:layout_constraintBottom_toTopOf="@+id/call_to_book"
+                    app:layout_constraintDimensionRatio="9:5"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
 
-        android:layout_marginTop="7dp"
-        android:background="@color/white"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toEndOf="@+id/layout_healthTracker"
-        app:layout_constraintTop_toBottomOf="@+id/constraintLayout2">
+                <TextView
+                    android:id="@+id/call_to_book"
+                    android:layout_width="0dp"
+                    android:layout_height="0dp"
+                    android:paddingTop="5dp"
+                    android:text="My Family"
+                    android:textAlignment="center"
 
-        <ImageView
-            android:id="@+id/call_image"
-            android:layout_width="0dp"
-            android:layout_height="0dp"
-            android:layout_marginTop="8dp"
-            android:src="@drawable/callbook"
-            app:layout_constraintBottom_toTopOf="@+id/call_to_book"
-            app:layout_constraintDimensionRatio="9:5"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent" />
+                    android:textColor="@color/white"
+                    android:textSize="@dimen/text_size_four_menu"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintHorizontal_bias="0.0"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/call_image" />
+            </android.support.constraint.ConstraintLayout>
 
-        <TextView
-            android:id="@+id/call_to_book"
-            android:layout_width="0dp"
-            android:layout_height="0dp"
-            android:paddingTop="5dp"
-            android:text="Call to Book"
-            android:textAlignment="center"
+            <TextView
+                android:id="@+id/textView24"
+                android:layout_width="0dp"
+                android:layout_height="41dp"
+                android:layout_marginTop="@dimen/healthPackages_marginTop"
+                android:paddingTop="10sp"
+                android:text="Health Packages"
+                android:textAlignment="center"
+                android:textColor="@color/white"
+                android:textSize="@dimen/notsure_text_size"
+                android:textStyle="bold"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="1.0"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/layout_bookTest" />
 
-            android:textColor="#6d6d6d"
-            android:textSize="@dimen/text_size_four_menu"
-            app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.0"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/call_image" />
-    </android.support.constraint.ConstraintLayout>
+            <android.support.constraint.ConstraintLayout
+                android:id="@+id/layout_priventive"
+                android:layout_width="0dp"
+                android:layout_height="@dimen/booktestLayout_height"
+                android:layout_marginLeft="4dp"
+                android:layout_marginStart="4dp"
+                android:layout_marginTop="@dimen/bookTest_Layout_MarginTop2"
+                app:layout_constraintEnd_toStartOf="@+id/layout_lifeStyle"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/textView24">
 
+                <ImageView
+                    android:id="@+id/priventive_image"
+                    android:layout_width="0dp"
+                    android:layout_height="0dp"
+                    android:layout_marginTop="8dp"
+                    android:src="@drawable/callbook"
+                    app:layout_constraintBottom_toTopOf="@+id/priventive_test"
+                    app:layout_constraintDimensionRatio="9:5"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintHorizontal_bias="0.35"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
 
+                <TextView
+                    android:id="@+id/priventive_test"
+                    android:layout_width="0dp"
+                    android:layout_height="0dp"
+                    android:paddingTop="5dp"
+                    android:text="Preventive"
+                    android:textAlignment="center"
+                    android:textColor="@color/white"
+                    android:textSize="@dimen/text_size_four_menu"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/priventive_image" />
+            </android.support.constraint.ConstraintLayout>
+
+            <android.support.constraint.ConstraintLayout
+                android:id="@+id/layout_lifeStyle"
+                android:layout_width="0dp"
+                android:layout_height="@dimen/booktestLayout_height"
+                android:layout_marginLeft="4dp"
+                android:layout_marginStart="4dp"
+                android:layout_marginTop="@dimen/bookTest_Layout_MarginTop2"
+                app:layout_constraintEnd_toStartOf="@+id/layout_testPanel"
+                app:layout_constraintStart_toEndOf="@+id/layout_priventive"
+                app:layout_constraintTop_toBottomOf="@+id/textView24">
+
+                <ImageView
+                    android:id="@+id/lifeStyle_image"
+                    android:layout_width="0dp"
+                    android:layout_height="0dp"
+                    android:layout_marginTop="8dp"
+                    android:src="@drawable/callbook"
+                    app:layout_constraintBottom_toTopOf="@+id/lifeStyle_tv"
+                    app:layout_constraintDimensionRatio="9:5"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintHorizontal_bias="0.35"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <TextView
+                    android:id="@+id/lifeStyle_tv"
+                    android:layout_width="0dp"
+                    android:layout_height="0dp"
+                    android:paddingTop="5dp"
+                    android:text="Life Style"
+                    android:textAlignment="center"
+                    android:textColor="@color/white"
+                    android:textSize="@dimen/text_size_four_menu"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/lifeStyle_image" />
+            </android.support.constraint.ConstraintLayout>
+
+            <android.support.constraint.ConstraintLayout
+                android:id="@+id/layout_testPanel"
+                android:layout_width="0dp"
+                android:layout_height="@dimen/booktestLayout_height"
+                android:layout_marginLeft="4dp"
+                android:layout_marginStart="4dp"
+                android:layout_marginTop="@dimen/bookTest_Layout_MarginTop2"
+                app:layout_constraintEnd_toStartOf="@+id/layout_more"
+                app:layout_constraintStart_toEndOf="@+id/layout_lifeStyle"
+                app:layout_constraintTop_toBottomOf="@+id/textView24"
+                tools:ignore="MissingConstraints">
+
+                <ImageView
+                    android:id="@+id/testPanel_image"
+                    android:layout_width="0dp"
+                    android:layout_height="0dp"
+                    android:layout_marginTop="8dp"
+                    android:src="@drawable/callbook"
+                    app:layout_constraintBottom_toTopOf="@+id/testPanel_tv"
+                    app:layout_constraintDimensionRatio="9:5"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintHorizontal_bias="0.35"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <TextView
+                    android:id="@+id/testPanel_tv"
+                    android:layout_width="0dp"
+                    android:layout_height="0dp"
+                    android:paddingTop="5dp"
+                    android:text="Test Panel"
+                    android:textAlignment="center"
+                    android:textColor="@color/white"
+                    android:textSize="@dimen/text_size_four_menu"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/testPanel_image" />
+            </android.support.constraint.ConstraintLayout>
+
+            <android.support.constraint.ConstraintLayout
+                android:id="@+id/layout_more"
+                android:layout_width="0dp"
+                android:layout_height="@dimen/booktestLayout_height"
+                android:layout_marginEnd="4sp"
+                android:layout_marginLeft="4dp"
+                android:layout_marginRight="4sp"
+                android:layout_marginStart="4dp"
+                android:layout_marginTop="@dimen/bookTest_Layout_MarginTop2"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toEndOf="@+id/layout_testPanel"
+                app:layout_constraintTop_toBottomOf="@+id/textView24">
+
+                <ImageView
+                    android:id="@+id/more_image"
+                    android:layout_width="0dp"
+                    android:layout_height="0dp"
+                    android:layout_marginTop="8dp"
+                    android:src="@drawable/callbook"
+                    app:layout_constraintBottom_toTopOf="@+id/more"
+                    app:layout_constraintDimensionRatio="9:5"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <TextView
+                    android:id="@+id/more"
+                    android:layout_width="0dp"
+                    android:layout_height="0dp"
+                    android:paddingTop="5dp"
+                    android:text="More"
+                    android:textAlignment="center"
+
+                    android:textColor="@color/white"
+                    android:textSize="@dimen/text_size_four_menu"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintHorizontal_bias="0.0"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/more_image" />
+            </android.support.constraint.ConstraintLayout>
+
+            <android.support.v4.view.ViewPager
+                android:id="@+id/viewPager_Dashboard"
+                android:layout_width="@dimen/viewpager_width"
+                android:layout_height="@dimen/viewPager_height"
+                android:layout_marginEnd="30dp"
+                android:layout_marginStart="30dp"
+                android:layout_marginTop="16dp"
+                android:background="@color/white"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/layout_priventive"
+                tools:ignore="MissingConstraints" />
+
+            <LinearLayout
+                android:id="@+id/dot_layout"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/LinearLayout_circleIndicator_height"
+                android:gravity="center"
+                android:orientation="horizontal"
+                android:padding="5sp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.0"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent">
+
+            </LinearLayout>
+        </android.support.constraint.ConstraintLayout>
+    </ScrollView>
 </android.support.constraint.ConstraintLayout>

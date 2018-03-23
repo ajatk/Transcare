@@ -32,6 +32,7 @@
                     android:layout_marginEnd="8dp"
                     android:layout_marginStart="8dp"
                     android:ems="10"
+                    android:focusable="false"
                     android:hint="@string/location_text"
                     android:inputType="textPersonName"
                     android:paddingLeft="10dp"
@@ -71,7 +72,17 @@
                     app:layout_constraintTop_toTopOf="parent"
                     app:srcCompat="@drawable/locationicon"
                     tools:ignore="VectorDrawableCompat" />
+
             </android.support.constraint.ConstraintLayout>
+
+            <ImageView
+                android:layout_width="50sp"
+                android:layout_height="50sp"
+                android:layout_marginEnd="8dp"
+                android:layout_marginStart="8dp"
+                android:src="@drawable/callbook"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toEndOf="parent" />
         </android.support.v7.widget.Toolbar>
 
     </android.support.design.widget.AppBarLayout>

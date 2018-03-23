@@ -15,7 +15,7 @@ import butterknife.ButterKnife;
 import in.co.ragasoft.transcare.adapter.TestPanelAdapter;
 import in.co.ragasoft.transcare.modelClasses.TestPanelModel;
 
-public class MainActivity1 extends AppCompatActivity {
+public class ChooseTestPanel extends AppCompatActivity {
     private static final String TAG = "MainActivity";
     TestPanelAdapter madapter;
     List<TestPanelModel> list = new ArrayList<TestPanelModel>();

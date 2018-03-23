@@ -2,7 +2,6 @@ package in.co.ragasoft.transcare.adapter;
 
 import android.content.Context;
 import android.support.annotation.NonNull;
-import android.support.constraint.ConstraintLayout;
 import android.support.v7.widget.RecyclerView;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -14,51 +13,45 @@ import java.util.List;
 import in.co.ragasoft.transcare.R;
 import in.co.ragasoft.transcare.modelClasses.TestPanelModel;
 
-/**
- * Created by Rajat on 3/21/2018.
- */
+public class PopularListDesignAdapter extends RecyclerView.Adapter<PopularListDesignAdapter.MyViewHolder> {
 
-public class TestPanelAdapter extends RecyclerView.Adapter<TestPanelAdapter.MyViewHolder> {
-
-    List<TestPanelModel> list;
+    List<TestPanelModel> alist;
     Context context;
 
-
-    public TestPanelAdapter(Context context, List<TestPanelModel> list) {
-        this.list = list;
+    public PopularListDesignAdapter(Context context, List<TestPanelModel> list) {
+        this.alist = list;
         this.context = context;
     }
 
     @NonNull
     @Override
     public MyViewHolder onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
-        View view = LayoutInflater.from(parent.getContext()).inflate(R.layout.choose_test_panel_list_design, parent, false);
+
+        View view = LayoutInflater.from(parent.getContext()).inflate(R.layout.list_design_popular_test, parent, false);
 
         return new MyViewHolder(view);
     }
 
     @Override
     public void onBindViewHolder(@NonNull MyViewHolder holder, int position) {
-        TestPanelModel tmodel = list.get(position);
-        holder.itemprice.setText(tmodel.getRupee());
+        TestPanelModel tmodel = alist.get(position);
+        holder.itemPrice.setText(tmodel.getRupee());
+
     }
 
     @Override
     public int getItemCount() {
-        if (list == null)
-            return 0;
-        else
-            return list.size();
+        return alist.size();
     }
 
     public class MyViewHolder extends RecyclerView.ViewHolder {
+        TextView itemOnIndex, itemPrice, addToCart;
 
-        TextView itemprice;
-        ConstraintLayout item2Layout;
         public MyViewHolder(View itemView) {
             super(itemView);
-            itemprice = itemView.findViewById(R.id.item_Price);
-            item2Layout = itemView.findViewById(R.id.item2_constraintLayout);
+            itemOnIndex = itemView.findViewById(R.id.itemOnIndex);
+            itemPrice = itemView.findViewById(R.id.itemList_Price);
+            addToCart = itemView.findViewById(R.id.addToCart);
         }
     }
 }

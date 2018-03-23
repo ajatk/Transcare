@@ -203,23 +203,26 @@
 
     </android.support.constraint.ConstraintLayout>
 
-    <View
+    <LinearLayout
         android:id="@+id/view6"
         android:layout_width="match_parent"
         android:layout_height="@dimen/view6_height"
-        android:background="#ddd"
+        android:background="#4bd2cfcf"
+        android:orientation="horizontal"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/constraintLayout5"
-        tools:ignore="MissingConstraints"></View>
+        tools:ignore="MissingConstraints"></LinearLayout>
 
     <android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
         xmlns:app="http://schemas.android.com/apk/res-auto"
         xmlns:tools="http://schemas.android.com/tools"
+        android:id="@+id/item2_constraintLayout"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginTop="2dp"
+        android:layout_marginTop="5sp"
         android:background="#ddd"
+        android:visibility="gone"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/view6"
         tools:ignore="MissingConstraints">
@@ -415,7 +418,7 @@
             android:id="@+id/view7"
             android:layout_width="match_parent"
             android:layout_height="@dimen/view6_height"
-            android:background="#ddd"
+            android:background="#53dddddd"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintHorizontal_bias="0.0"
             app:layout_constraintStart_toStartOf="parent"
