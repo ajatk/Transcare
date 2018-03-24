@@ -3,7 +3,8 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@drawable/background">
+    android:background="@drawable/background"
+    app:layout_behavior="@string/appbar_scrolling_view_behavior">
 
     <ScrollView
         android:layout_width="match_parent"
@@ -49,6 +50,7 @@
                     app:layout_constraintHorizontal_bias="0.07"
                     app:layout_constraintStart_toStartOf="parent"
                     app:layout_constraintTop_toTopOf="parent"
+
                     tools:ignore="MissingConstraints" />
 
                 <ImageView
@@ -59,7 +61,8 @@
                     android:layout_marginEnd="@dimen/dashboard_Baner_marginRight"
                     android:layout_marginRight="@dimen/dashboard_Baner_marginRight"
                     android:layout_marginTop="16dp"
-                    android:background="@drawable/transcareme"
+
+                    android:background="@color/white"
                     app:layout_constraintBottom_toBottomOf="parent"
                     app:layout_constraintEnd_toEndOf="parent"
                     app:layout_constraintTop_toTopOf="parent" />
@@ -119,7 +122,7 @@
 
                 android:layout_marginStart="5dp"
                 android:layout_marginTop="@dimen/bookTest_Layout_MarginTop"
-                app:layout_constraintEnd_toStartOf="@+id/layout_criticalError"
+                app:layout_constraintEnd_toStartOf="@+id/layout_reports"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toBottomOf="@+id/constraintLayout2">
 
@@ -152,18 +155,18 @@
             </android.support.constraint.ConstraintLayout>
 
             <android.support.constraint.ConstraintLayout
-                android:id="@+id/layout_criticalError"
+                android:id="@+id/layout_reports"
                 android:layout_width="0dp"
                 android:layout_height="@dimen/booktestLayout_height"
                 android:layout_marginEnd="2dp"
                 android:layout_marginStart="2dp"
                 android:layout_marginTop="@dimen/bookTest_Layout_MarginTop"
-                app:layout_constraintEnd_toStartOf="@+id/layout_healthTracker"
+                app:layout_constraintEnd_toStartOf="@+id/layout_healthTrends"
                 app:layout_constraintStart_toEndOf="@+id/layout_bookTest"
                 app:layout_constraintTop_toBottomOf="@+id/constraintLayout2">
 
                 <ImageView
-                    android:id="@+id/criticaler_image"
+                    android:id="@+id/reports_image"
                     android:layout_width="0dp"
                     android:layout_height="0dp"
                     android:layout_marginTop="8dp"
@@ -187,34 +190,34 @@
                     app:layout_constraintBottom_toBottomOf="parent"
                     app:layout_constraintEnd_toEndOf="parent"
                     app:layout_constraintStart_toStartOf="parent"
-                    app:layout_constraintTop_toBottomOf="@+id/criticaler_image" />
+                    app:layout_constraintTop_toBottomOf="@+id/reports_image" />
             </android.support.constraint.ConstraintLayout>
 
             <android.support.constraint.ConstraintLayout
-                android:id="@+id/layout_healthTracker"
+                android:id="@+id/layout_healthTrends"
                 android:layout_width="0dp"
                 android:layout_height="@dimen/booktestLayout_height"
                 android:layout_marginEnd="2dp"
                 android:layout_marginStart="2dp"
                 android:layout_marginTop="@dimen/bookTest_Layout_MarginTop"
                 app:layout_constraintEnd_toStartOf="@+id/layout_callToBook"
-                app:layout_constraintStart_toEndOf="@+id/layout_criticalError"
+                app:layout_constraintStart_toEndOf="@+id/layout_reports"
                 app:layout_constraintTop_toBottomOf="@+id/constraintLayout2">
 
                 <ImageView
-                    android:id="@+id/healthtracker_image"
+                    android:id="@+id/healthtrends_image"
                     android:layout_width="0dp"
                     android:layout_height="0dp"
                     android:layout_marginTop="8dp"
                     android:src="@drawable/callbook"
-                    app:layout_constraintBottom_toTopOf="@+id/health_tracker"
+                    app:layout_constraintBottom_toTopOf="@+id/health_trends"
                     app:layout_constraintDimensionRatio="9:5"
                     app:layout_constraintEnd_toEndOf="parent"
                     app:layout_constraintStart_toStartOf="parent"
                     app:layout_constraintTop_toTopOf="parent" />
 
                 <TextView
-                    android:id="@+id/health_tracker"
+                    android:id="@+id/health_trends"
                     android:layout_width="0dp"
                     android:layout_height="0dp"
                     android:paddingTop="5dp"
@@ -225,7 +228,7 @@
                     app:layout_constraintBottom_toBottomOf="parent"
                     app:layout_constraintEnd_toEndOf="parent"
                     app:layout_constraintStart_toStartOf="parent"
-                    app:layout_constraintTop_toBottomOf="@+id/healthtracker_image" />
+                    app:layout_constraintTop_toBottomOf="@+id/healthtrends_image" />
             </android.support.constraint.ConstraintLayout>
 
             <android.support.constraint.ConstraintLayout
@@ -238,7 +241,7 @@
                 android:layout_marginStart="2dp"
                 android:layout_marginTop="@dimen/bookTest_Layout_MarginTop"
                 app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintStart_toEndOf="@+id/layout_healthTracker"
+                app:layout_constraintStart_toEndOf="@+id/layout_healthTrends"
                 app:layout_constraintTop_toBottomOf="@+id/constraintLayout2">
 
                 <ImageView
@@ -454,6 +457,7 @@
                 android:layout_marginStart="30dp"
                 android:layout_marginTop="16dp"
                 android:background="@color/white"
+
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toBottomOf="@+id/layout_priventive"

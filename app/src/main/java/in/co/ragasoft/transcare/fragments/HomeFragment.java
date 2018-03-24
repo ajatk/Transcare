@@ -5,7 +5,10 @@ import android.graphics.Color;
 import android.graphics.drawable.Drawable;
 import android.net.Uri;
 import android.os.Bundle;
+import android.support.constraint.ConstraintLayout;
 import android.support.v4.app.Fragment;
+import android.support.v4.app.FragmentManager;
+import android.support.v4.app.FragmentTransaction;
 import android.support.v4.view.ViewPager;
 import android.text.Html;
 import android.view.LayoutInflater;
@@ -18,11 +21,17 @@ import android.widget.TextView;
 import in.co.ragasoft.transcare.R;
 import in.co.ragasoft.transcare.adapter.DashboardSliderAdapter;
 
-public class HomeFragment extends Fragment {
+public class HomeFragment extends Fragment implements View.OnClickListener {
     LinearLayout layoutDot;
     DashboardSliderAdapter pagerAdapter;
     ImageView bookATest, healthTrends;
     View view;
+    ConstraintLayout bookTestLayout, reports;
+    Fragment fragment = null;
+    FragmentManager fragmentManager;
+    FragmentTransaction fragmentTransaction;
+    BookForFrag bookFor;
+    Context context;
     private int[] layouts;
     private Drawable[] drawable;
     private TextView[] dotstv;
@@ -40,6 +49,8 @@ public class HomeFragment extends Fragment {
         view = inflater.inflate(R.layout.fragment_home, container, false);
         // bookATest =view.findViewById(R.id.booktest_image); bookATest.setImageResource(R.drawable.book_test);
         // healthTrends = view.findViewById(R.id.healthtracker_image);healthTrends.setImageResource(R.drawable.health_trends);
+        bookTestLayout = view.findViewById(R.id.layout_bookTest);
+        bookTestLayout.setOnClickListener(this);
         viewPager = view.findViewById(R.id.viewPager_Dashboard);
         layoutDot = view.findViewById(R.id.dot_layout);
         layouts = new int[]{R.layout.dashboard_slide1, R.layout.dashboard_slide2, R.layout.dashboard_slide3};
@@ -114,6 +125,27 @@ public class HomeFragment extends Fragment {
     public void onDetach() {
         super.onDetach();
         mListener = null;
+    }
+
+    @Override
+    public void onClick(View v) {
+        switch (v.getId()) {
+            case R.id.layout_bookTest:
+                if (bookFor == null) {
+                    bookFor = new BookForFrag();
+                    //fragmentManager = getFragmentManager();
+                    fragmentTransaction = getActivity().getSupportFragmentManager().beginTransaction();
+                    fragmentTransaction.replace(R.id.frame, bookFor);
+                    fragmentTransaction.commit();
+                } else {
+                    fragmentTransaction = getActivity().getSupportFragmentManager().beginTransaction();
+                    fragmentTransaction.replace(R.id.frame, bookFor);
+                    fragmentTransaction.commit();
+                }
+                fragmentTransaction.addToBackStack(null);
+
+        }
+
     }
 
 

@@ -172,6 +172,11 @@
 
     <dimen name="emailText_marginTop1">8dp</dimen>
     <dimen name="healthPackages_marginTop">4dp</dimen>
+    <dimen name="ToolbarTitle">20sp</dimen>
+    <dimen name="ToolbarTitle_marginRight">30sp</dimen>
+    <dimen name="self_textView_marginTop">2dp</dimen>
+    <dimen name="marginTop_2constraint_to_1">8dp</dimen>
+    <dimen name="self_second_layout_margin_top">2dp</dimen>
 
 
 </resources>

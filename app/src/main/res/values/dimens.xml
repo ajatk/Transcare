@@ -149,7 +149,7 @@
     <dimen name="amount_textSize">14sp</dimen>
     <dimen name="onBanner_longTextSize">160sp</dimen>
     //// home fragment === --------------------/////////
-    <dimen name="constraintLayout_height">169dp</dimen>
+    <dimen name="constraintLayout_height">149dp</dimen>
     <dimen name="circularProfileImage_width_height">80sp</dimen>
     <dimen name="dashboard_Baner_width">270dp</dimen>
     <dimen name="dashboard_Baner_height">138dp</dimen>
@@ -169,7 +169,12 @@
     <dimen name="bookTest_Layout_MarginTop2">10dp</dimen>
     <dimen name="EditTextWidth">70dp</dimen>
     <dimen name="EditTextHeight">70dp</dimen>
-    <dimen name="healthPackages_marginTop">12dp</dimen>
+    <dimen name="healthPackages_marginTop">8dp</dimen>
+    <dimen name="ToolbarTitle">20sp</dimen>
+    <dimen name="ToolbarTitle_marginRight">40sp</dimen>
+    <dimen name="self_textView_marginTop">6dp</dimen>
+    <dimen name="marginTop_2constraint_to_1">30dp</dimen>
+    <dimen name="self_second_layout_margin_top">2dp</dimen>
 
 
 </resources>
