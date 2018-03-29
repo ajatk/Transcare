@@ -1,0 +1,82 @@
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/blue_base_app_color"
+    android:theme="@style/AppTheme1"
+    tools:layout_editor_absoluteY="25dp">
+
+    <ImageView
+        android:id="@+id/arrow_back"
+        android:layout_width="@dimen/Back_arrow_width"
+        android:layout_height="@dimen/back_arrow_height"
+        android:layout_marginLeft="16dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="@dimen/arrow_back_marginTop"
+        android:src="@drawable/arrow_back"
+        app:layout_constraintBottom_toTopOf="@+id/sliding_tabs"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/textView13"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="32dp"
+        android:layout_marginRight="32dp"
+        android:layout_marginTop="@dimen/arrow_back_marginTop"
+        android:padding="4sp"
+        android:paddingLeft="5sp"
+        android:text="Select your test panel"
+        android:textColor="@color/white"
+        android:textSize="16sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toTopOf="@+id/sliding_tabs"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/arrow_back"
+        app:layout_constraintTop_toBottomOf="@+id/toolbar2" />
+
+    <android.support.design.widget.TabLayout
+        android:id="@+id/sliding_tabs"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView13"
+        app:tabIndicatorColor="@color/base_app_color"
+        app:tabMode="fixed"
+        app:tabTextColor="@color/white">
+
+        <android.support.design.widget.TabItem
+            android:id="@+id/popularTes"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Poular Test" />
+
+        <android.support.design.widget.TabItem
+            android:id="@+id/testPanels"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Test panels" />
+
+        <android.support.design.widget.TabItem
+            android:id="@+id/healthPackages"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Health Packages" />
+    </android.support.design.widget.TabLayout>
+
+    <android.support.v4.view.ViewPager
+        android:id="@+id/viewPagerTest"
+        android:layout_width="0sp"
+        android:layout_height="wrap_content"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/sliding_tabs" />
+
+
+</android.support.constraint.ConstraintLayout>
+
+

@@ -37,4 +37,5 @@ dependencies {
     implementation 'com.budiyev.android:circular-progress-bar:1.1.8'
     //    compile 'com.jackandphantom.android:circularprogressbar:1.2.0'
     implementation project(':subProject:circularprogressbar')
+    compile 'com.github.bumptech.glide:glide:3.7.0'
 }

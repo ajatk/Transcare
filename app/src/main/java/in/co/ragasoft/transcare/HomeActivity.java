@@ -18,21 +18,25 @@ import android.support.v7.app.ActionBarDrawerToggle;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
 import android.view.MenuItem;
+import android.view.View;
 import android.widget.Toast;
 
 import in.co.ragasoft.transcare.fragments.EditProfile;
 import in.co.ragasoft.transcare.fragments.HealthPanelsFrag;
 import in.co.ragasoft.transcare.fragments.HomeFragment;
+import in.co.ragasoft.transcare.fragments.MyReports;
+import in.co.ragasoft.transcare.fragments.MyReportsView;
 
 public class HomeActivity extends AppCompatActivity
         implements NavigationView.OnNavigationItemSelectedListener, HealthPanelsFrag.OnFragmentInteractionListener,
-        HomeFragment.OnFragmentInteractionListener {
+        HomeFragment.OnFragmentInteractionListener, MyReportsView.OnFragmentInteractionListener {
 
     private static int navItemIndex = 0;
     Fragment fragment = null;
     FragmentManager fragmentManager;
     FragmentTransaction fragmentTransaction;
     HomeFragment homeFragment;
+    MyReports myReports;
     Context context;
     Toolbar toolbar;
     DrawerLayout drawer;
@@ -47,8 +51,10 @@ public class HomeActivity extends AppCompatActivity
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_home);
         toolbar = findViewById(R.id.toolbar);
+        toolbar.setVisibility(View.VISIBLE);
         srchToolbarLayout = findViewById(R.id.srch_toolbar_layout);
         toolbar.inflateMenu(R.menu.toolbar_menu_item);
+
         toolbar.setOnMenuItemClickListener(new Toolbar.OnMenuItemClickListener() {
             @Override
             public boolean onMenuItemClick(MenuItem item) {
@@ -84,12 +90,25 @@ public class HomeActivity extends AppCompatActivity
                             fragmentTransaction.commit();
                         }
                     }
+                    case R.id.reports: {
+                        if (myReports == null) {
+                            myReports = new MyReports();
+
+                            toolbar.setVisibility(View.GONE);
+                            fragmentTransaction = getSupportFragmentManager().beginTransaction();
+                            fragmentTransaction.replace(R.id.frame, myReports);
+                            fragmentTransaction.commit();
+                        } else {
+                            fragmentTransaction = getSupportFragmentManager().beginTransaction();
+                            fragmentTransaction.replace(R.id.frame, myReports);
+                            fragmentTransaction.commit();
+                        }
+                    }
                 }
 
                 return false;
             }
         });
-
 
         if (homeFragment == null) {
             homeFragment = new HomeFragment();
@@ -102,7 +121,7 @@ public class HomeActivity extends AppCompatActivity
             fragmentTransaction.commit();
         }
 
-
+        toolbar.setNavigationIcon(R.drawable.menu);
 //        displaySelectedScreen(R.id.my_family);
     }
 

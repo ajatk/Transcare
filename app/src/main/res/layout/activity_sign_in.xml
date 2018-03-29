@@ -54,6 +54,7 @@
             android:drawableLeft="@drawable/mobile"
             android:drawablePadding="20dp"
             android:ems="10"
+            android:focusable="false"
             android:hint="Mobile Number"
             android:inputType="phone"
             android:textColorHint="@color/transparent_text_color"

@@ -1,0 +1,280 @@
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/background">
+
+    <android.support.v7.widget.Toolbar
+        android:layout_width="match_parent"
+        android:layout_height="50sp"
+        android:background="@drawable/header">
+
+        <android.support.constraint.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <ImageView
+                android:id="@+id/back_btn"
+                android:layout_width="40sp"
+                android:layout_height="match_parent"
+                android:src="@drawable/arrow_back"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toStartOf="@+id/textView40"
+                app:layout_constraintHorizontal_bias="0.0"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintVertical_bias="0.0" />
+
+            <TextView
+                android:id="@+id/textView40"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_marginRight="58sp"
+                android:gravity="center"
+                android:text="My Reports"
+                android:textColor="@color/white"
+                android:textSize="@dimen/ToolbarTitle"
+                android:textStyle="bold"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toEndOf="@+id/back_btn"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintVertical_bias="0.523" />
+
+            <ImageView
+                android:id="@+id/share"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_marginEnd="16dp"
+                android:layout_marginRight="16dp"
+                android:src="@drawable/share"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+        </android.support.constraint.ConstraintLayout>
+    </android.support.v7.widget.Toolbar>
+
+    <android.support.constraint.ConstraintLayout
+        android:id="@+id/constraintLayout7"
+        android:layout_width="match_parent"
+        android:layout_height="170dp"
+        android:layout_marginTop="70dp"
+        android:theme="@style/AppTheme1"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:ignore="MissingConstraints"
+        tools:layout_editor_absoluteX="0dp">
+
+        <de.hdodenhof.circleimageview.CircleImageView
+            android:id="@+id/profile_imageView"
+            android:layout_width="@dimen/ProfileImageWidth"
+            android:layout_height="@dimen/ProfileImageHeight"
+            android:layout_marginLeft="20dp"
+            android:layout_marginStart="20dp"
+            android:layout_marginTop="8dp"
+            android:src="@drawable/my_report_image"
+            app:animateProgress="false"
+            app:civ_border_color="@color/white"
+            app:civ_border_width="2sp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.35000002"
+            tools:ignore="MissingConstraints" />
+
+        <TextView
+            android:id="@+id/reportsProfileName"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:text="Sandeep Sharma"
+            android:textColor="@color/white"
+            android:textSize="@dimen/my_last_reports_name_text_size"
+            android:textStyle="bold"
+            app:layout_constraintEnd_toEndOf="@+id/profile_imageView"
+            app:layout_constraintStart_toStartOf="@+id/profile_imageView"
+            app:layout_constraintTop_toBottomOf="@+id/profile_imageView" />
+
+        <View
+            android:id="@+id/view3"
+            android:layout_width="1sp"
+            android:layout_height="120sp"
+            android:layout_marginLeft="24dp"
+            android:layout_marginStart="24dp"
+            android:background="@drawable/my_reports_line_view"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toEndOf="@+id/profile_imageView"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <android.support.constraint.ConstraintLayout
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:layout_marginEnd="8dp"
+            android:layout_marginLeft="7dp"
+            android:layout_marginRight="8dp"
+            android:layout_marginStart="7dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@+id/view3"
+            app:layout_constraintTop_toTopOf="parent">
+
+            <de.hdodenhof.circleimageview.CircleImageView
+                android:id="@+id/redCircleView"
+                android:layout_width="0dp"
+                android:layout_height="@dimen/report_circle_height"
+                android:layout_marginLeft="16dp"
+                android:layout_marginStart="16dp"
+                android:layout_marginTop="8dp"
+                android:src="@drawable/circle_red_my_reports"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toStartOf="@+id/circleImageView"
+                app:layout_constraintStart_toEndOf="@+id/view3"
+                app:layout_constraintTop_toTopOf="parent"
+                tools:ignore="NotSibling,UnknownId" />
+
+            <de.hdodenhof.circleimageview.CircleImageView
+                android:id="@+id/yellowCircleView"
+                android:layout_width="0dp"
+                android:layout_height="0dp"
+                android:layout_marginLeft="8dp"
+                android:layout_marginStart="8dp"
+                android:src="@drawable/yellow_circle_my_reports"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toStartOf="@+id/greenCircleView"
+                app:layout_constraintStart_toEndOf="@+id/redCircleView"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <de.hdodenhof.circleimageview.CircleImageView
+                android:id="@+id/greenCircleView"
+                android:layout_width="0dp"
+                android:layout_height="@dimen/report_circle_height"
+                android:layout_marginEnd="8dp"
+                android:layout_marginRight="24dp"
+                android:layout_marginTop="8dp"
+                android:src="@drawable/green_circle_my_report"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toEndOf="@+id/yellowCircleView"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <TextView
+                android:id="@+id/textView29"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="8dp"
+                android:layout_marginEnd="8dp"
+                android:layout_marginStart="8dp"
+                android:layout_marginTop="8dp"
+                android:text="0"
+                android:textSize="@dimen/reports_count_incircle_text_size"
+                android:textStyle="bold"
+                app:layout_constraintBottom_toBottomOf="@+id/redCircleView"
+                app:layout_constraintEnd_toEndOf="@+id/redCircleView"
+                app:layout_constraintStart_toStartOf="@+id/redCircleView"
+                app:layout_constraintTop_toTopOf="@+id/redCircleView" />
+
+            <TextView
+                android:id="@+id/yellowReport"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="8dp"
+                android:layout_marginEnd="8dp"
+                android:layout_marginStart="8dp"
+                android:layout_marginTop="8dp"
+                android:text="0"
+                android:textSize="@dimen/onClick_reports_count_incircle_text_size"
+                android:textStyle="bold"
+                app:layout_constraintBottom_toBottomOf="@+id/yellowCircleView"
+                app:layout_constraintEnd_toStartOf="@+id/greenCircleView"
+                app:layout_constraintStart_toStartOf="@+id/yellowCircleView"
+                app:layout_constraintTop_toTopOf="@+id/yellowCircleView" />
+
+            <TextView
+                android:id="@+id/textView34"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="8dp"
+                android:layout_marginEnd="8dp"
+                android:layout_marginStart="8dp"
+                android:layout_marginTop="8dp"
+                android:text="0"
+                android:textSize="@dimen/reports_count_incircle_text_size"
+                android:textStyle="bold"
+                app:layout_constraintBottom_toBottomOf="@+id/greenCircleView"
+                app:layout_constraintEnd_toEndOf="@+id/greenCircleView"
+                app:layout_constraintStart_toStartOf="@+id/greenCircleView"
+                app:layout_constraintTop_toTopOf="@+id/greenCircleView" />
+
+            <TextView
+                android:id="@+id/critical"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/critical_text_height"
+                android:text="Critical"
+                android:textColor="@color/white"
+                android:textSize="@dimen/reports_out_circle_text_size"
+                app:layout_constraintEnd_toEndOf="@+id/textView29"
+                app:layout_constraintStart_toStartOf="@+id/textView29"
+                app:layout_constraintTop_toBottomOf="@+id/textView29" />
+
+            <TextView
+                android:id="@+id/abnormal"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="3dp"
+                android:layout_marginTop="@dimen/critical_text_height2"
+                android:text="Abnormal"
+                android:textColor="@color/white"
+                android:textSize="@dimen/reports_out_circle_text_size"
+                app:layout_constraintEnd_toEndOf="@+id/yellowReport"
+                app:layout_constraintStart_toStartOf="@+id/yellowReport"
+                app:layout_constraintTop_toBottomOf="@+id/yellowReport" />
+
+            <TextView
+                android:id="@+id/normal"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="20dp"
+                android:layout_marginRight="20dp"
+                android:layout_marginTop="@dimen/critical_text_height"
+                android:text="Normal"
+                android:textColor="@color/white"
+                android:textSize="@dimen/reports_out_circle_text_size"
+                app:layout_constraintEnd_toEndOf="@+id/textView34"
+                app:layout_constraintHorizontal_bias="0.285"
+                app:layout_constraintStart_toStartOf="@+id/textView34"
+                app:layout_constraintTop_toBottomOf="@+id/textView34" />
+
+
+        </android.support.constraint.ConstraintLayout>
+    </android.support.constraint.ConstraintLayout>
+
+    <TextView
+        android:id="@+id/textView39"
+        android:layout_width="0sp"
+        android:layout_height="50sp"
+        android:layout_marginEnd="10dp"
+        android:layout_marginStart="10dp"
+        android:layout_marginTop="42dp"
+        android:background="#3dffffff"
+        android:gravity="center_vertical"
+        android:paddingLeft="10sp"
+        android:text="Your Reports Detail"
+        android:textColor="@color/white"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/constraintLayout7" />
+
+    <android.support.v7.widget.RecyclerView
+        android:id="@+id/recyclerView_yourReportsDetail"
+        android:layout_width="0dp"
+        android:layout_height="321dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="8dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView39" />
+
+</android.support.constraint.ConstraintLayout>

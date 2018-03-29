@@ -50,7 +50,10 @@ public class PopularTestFrag extends Fragment {
         list.add(tmodle);
         tmodle = new TestPanelModel("4,569", "");
         list.add(tmodle);
-
+        tmodle = new TestPanelModel("4,569", "");
+        list.add(tmodle);
+        tmodle = new TestPanelModel("4,569", "");
+        list.add(tmodle);
     }
 
 }

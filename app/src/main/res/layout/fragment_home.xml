@@ -25,7 +25,7 @@
                 android:id="@+id/constraintLayout2"
                 android:layout_width="0dp"
                 android:layout_height="@dimen/constraintLayout_height"
-                android:layout_marginTop="16dp"
+                android:layout_marginTop="76dp"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintHorizontal_bias="0.0"
                 app:layout_constraintLeft_toLeftOf="parent"
@@ -33,18 +33,17 @@
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toTopOf="parent">
 
-                <info.abdolahi.CircularMusicProgressBar xmlns:app="http://schemas.android.com/apk/res-auto"
+                <de.hdodenhof.circleimageview.CircleImageView xmlns:app="http://schemas.android.com/apk/res-auto"
                     android:id="@+id/profile_imageView"
                     android:layout_width="@dimen/circularProfileImage_width_height"
                     android:layout_height="@dimen/circularProfileImage_width_height"
                     android:layout_marginEnd="8dp"
                     android:layout_marginStart="8dp"
                     android:elevation="10sp"
-                    android:src="@mipmap/ic_launcher_round"
-                    app:border_color="@color/white"
-                    app:border_width="2sp"
-                    app:civ_border_color="@color/base_app_color"
-                    app:civ_border_width="7dp"
+                    android:src="@drawable/profile"
+
+                    app:civ_border_color="@color/white"
+                    app:civ_border_width="2dp"
                     app:layout_constraintBottom_toBottomOf="parent"
                     app:layout_constraintEnd_toEndOf="parent"
                     app:layout_constraintHorizontal_bias="0.07"
@@ -60,9 +59,10 @@
                     android:layout_marginBottom="8dp"
                     android:layout_marginEnd="@dimen/dashboard_Baner_marginRight"
                     android:layout_marginRight="@dimen/dashboard_Baner_marginRight"
-                    android:layout_marginTop="16dp"
-
+                    android:layout_marginTop="26dp"
                     android:background="@color/white"
+                    android:foregroundGravity="top"
+                    android:src="@drawable/banner1"
                     app:layout_constraintBottom_toBottomOf="parent"
                     app:layout_constraintEnd_toEndOf="parent"
                     app:layout_constraintTop_toTopOf="parent" />
@@ -131,7 +131,7 @@
                     android:layout_width="0dp"
                     android:layout_height="0dp"
                     android:layout_marginTop="8dp"
-                    android:src="@drawable/callbook"
+                    android:src="@drawable/book_test"
                     app:layout_constraintBottom_toTopOf="@+id/book_test"
                     app:layout_constraintDimensionRatio="9:5"
                     app:layout_constraintEnd_toEndOf="parent"
@@ -170,7 +170,7 @@
                     android:layout_width="0dp"
                     android:layout_height="0dp"
                     android:layout_marginTop="8dp"
-                    android:src="@drawable/reports"
+                    android:src="@drawable/report_s"
                     app:layout_constraintBottom_toTopOf="@+id/critical_error"
                     app:layout_constraintDimensionRatio="9:5"
                     app:layout_constraintEnd_toEndOf="parent"
@@ -209,7 +209,7 @@
                     android:layout_width="0dp"
                     android:layout_height="0dp"
                     android:layout_marginTop="8dp"
-                    android:src="@drawable/callbook"
+                    android:src="@drawable/health_trends"
                     app:layout_constraintBottom_toTopOf="@+id/health_trends"
                     app:layout_constraintDimensionRatio="9:5"
                     app:layout_constraintEnd_toEndOf="parent"
@@ -249,7 +249,7 @@
                     android:layout_width="0dp"
                     android:layout_height="0dp"
                     android:layout_marginTop="8dp"
-                    android:src="@drawable/callbook"
+                    android:src="@drawable/life_style"
                     app:layout_constraintBottom_toTopOf="@+id/call_to_book"
                     app:layout_constraintDimensionRatio="9:5"
                     app:layout_constraintEnd_toEndOf="parent"
@@ -283,7 +283,6 @@
                 android:textAlignment="center"
                 android:textColor="@color/white"
                 android:textSize="@dimen/notsure_text_size"
-                android:textStyle="bold"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintHorizontal_bias="1.0"
                 app:layout_constraintStart_toStartOf="parent"
@@ -305,7 +304,7 @@
                     android:layout_width="0dp"
                     android:layout_height="0dp"
                     android:layout_marginTop="8dp"
-                    android:src="@drawable/callbook"
+                    android:src="@drawable/preventive"
                     app:layout_constraintBottom_toTopOf="@+id/priventive_test"
                     app:layout_constraintDimensionRatio="9:5"
                     app:layout_constraintEnd_toEndOf="parent"
@@ -344,7 +343,7 @@
                     android:layout_width="0dp"
                     android:layout_height="0dp"
                     android:layout_marginTop="8dp"
-                    android:src="@drawable/callbook"
+                    android:src="@drawable/my_family"
                     app:layout_constraintBottom_toTopOf="@+id/lifeStyle_tv"
                     app:layout_constraintDimensionRatio="9:5"
                     app:layout_constraintEnd_toEndOf="parent"
@@ -384,7 +383,7 @@
                     android:layout_width="0dp"
                     android:layout_height="0dp"
                     android:layout_marginTop="8dp"
-                    android:src="@drawable/callbook"
+                    android:src="@drawable/test_panel"
                     app:layout_constraintBottom_toTopOf="@+id/testPanel_tv"
                     app:layout_constraintDimensionRatio="9:5"
                     app:layout_constraintEnd_toEndOf="parent"
@@ -425,7 +424,7 @@
                     android:layout_width="0dp"
                     android:layout_height="0dp"
                     android:layout_marginTop="8dp"
-                    android:src="@drawable/callbook"
+                    android:src="@drawable/more"
                     app:layout_constraintBottom_toTopOf="@+id/more"
                     app:layout_constraintDimensionRatio="9:5"
                     app:layout_constraintEnd_toEndOf="parent"
@@ -449,32 +448,38 @@
                     app:layout_constraintTop_toBottomOf="@+id/more_image" />
             </android.support.constraint.ConstraintLayout>
 
-            <android.support.v4.view.ViewPager
-                android:id="@+id/viewPager_Dashboard"
-                android:layout_width="@dimen/viewpager_width"
-                android:layout_height="@dimen/viewPager_height"
-                android:layout_marginEnd="30dp"
-                android:layout_marginStart="30dp"
-                android:layout_marginTop="16dp"
-                android:background="@color/white"
-
+            <LinearLayout
+                android:id="@+id/linearLayout3"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/LinearLayout_circleIndicator_height"
+                android:gravity="center_horizontal"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/layout_priventive"
-                tools:ignore="MissingConstraints" />
+                app:layout_constraintTop_toTopOf="parent">
+
+                <android.support.v4.view.ViewPager
+                    android:id="@+id/viewPager_Dashboard"
+                    android:layout_width="@dimen/viewpager_width"
+                    android:layout_height="@dimen/viewPager_height"
+                    android:background="@color/white"
+                    android:foregroundGravity="center"
+                    tools:ignore="MissingConstraints"
+                    tools:layout_editor_absoluteY="526dp" />
+            </LinearLayout>
 
             <LinearLayout
                 android:id="@+id/dot_layout"
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
-                android:layout_marginTop="@dimen/LinearLayout_circleIndicator_height"
+                android:layout_marginTop="8dp"
                 android:gravity="center"
                 android:orientation="horizontal"
                 android:padding="5sp"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintHorizontal_bias="0.0"
                 app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toTopOf="parent">
+                app:layout_constraintTop_toBottomOf="@+id/linearLayout3">
 
             </LinearLayout>
         </android.support.constraint.ConstraintLayout>

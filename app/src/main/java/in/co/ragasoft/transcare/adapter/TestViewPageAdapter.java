@@ -7,6 +7,7 @@ import android.support.v4.app.FragmentStatePagerAdapter;
 
 import in.co.ragasoft.transcare.fragments.HealthPackagesFragment;
 import in.co.ragasoft.transcare.fragments.PopularTestFrag;
+import in.co.ragasoft.transcare.fragments.TestPanelsFragment;
 
 /**
  * Created by Rajat on 3/22/2018.
@@ -14,7 +15,7 @@ import in.co.ragasoft.transcare.fragments.PopularTestFrag;
 
 public class TestViewPageAdapter extends FragmentStatePagerAdapter {
 
-    String a[] = {"Poular Test", "Health Packages"};
+    String a[] = {"Poular Test", "Test Panels", "Health Packages"};
     private Context mContext;
 
 
@@ -28,15 +29,18 @@ public class TestViewPageAdapter extends FragmentStatePagerAdapter {
         if (position == 0) {
 
             return new PopularTestFrag();
-        } else {
+        } else if (position == 2) {
             return new HealthPackagesFragment();
 
+        } else {
+
+            return new TestPanelsFragment();
         }
     }
 
     @Override
     public int getCount() {
-        return 2;
+        return 3;
     }
 
     @Nullable
@@ -49,6 +53,8 @@ public class TestViewPageAdapter extends FragmentStatePagerAdapter {
 
         } else if (position == 1) {
             title = a[1];
+        } else {
+            title = a[2];
         }
 
         return title;

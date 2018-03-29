@@ -22,4 +22,8 @@ public class TestPanelModel {
     public void setRupee(String rupee) {
         this.rupee = rupee;
     }
+
+    public String getName() {
+        return name;
+    }
 }

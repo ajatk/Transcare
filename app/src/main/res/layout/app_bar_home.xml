@@ -11,79 +11,6 @@
         android:layout_height="wrap_content"
         android:theme="@style/AppTheme.AppBarOverlay">
 
-        <android.support.v7.widget.Toolbar
-            android:id="@+id/toolbar"
-            android:layout_width="match_parent"
-            android:layout_height="@dimen/toolbar_height"
-            android:background="@color/base_app_color"
-            app:popupTheme="@style/AppTheme.PopupOverlay">
-
-            <android.support.constraint.ConstraintLayout
-                android:id="@+id/srch_toolbar_layout"
-                android:layout_width="@dimen/edittext_layout_width"
-                android:layout_height="@dimen/edittext_layout_height"
-                android:background="@drawable/toolbar_location_background">
-
-
-                <EditText
-                    android:id="@+id/location_text"
-                    android:layout_width="0dp"
-                    android:layout_height="0dp"
-                    android:layout_marginEnd="8dp"
-                    android:layout_marginStart="8dp"
-                    android:ems="10"
-                    android:focusable="false"
-                    android:hint="@string/location_text"
-                    android:inputType="textPersonName"
-                    android:paddingLeft="10dp"
-                    android:textColor="#d6d3d3"
-                    android:textColorHint="#d6d3d3"
-                    android:textSize="@dimen/editText_text_size"
-                    app:layout_constraintBottom_toBottomOf="parent"
-                    app:layout_constraintEnd_toStartOf="@+id/view2"
-                    app:layout_constraintStart_toStartOf="parent"
-                    app:layout_constraintTop_toTopOf="parent" />
-
-                <View
-                    android:id="@+id/view2"
-                    android:layout_width="1dp"
-                    android:layout_height="match_parent"
-                    android:layout_marginBottom="8dp"
-                    android:layout_marginTop="8dp"
-                    android:background="#d6d3d3"
-                    app:layout_constraintBottom_toBottomOf="parent"
-                    app:layout_constraintEnd_toStartOf="@+id/imageView7"
-                    app:layout_constraintStart_toEndOf="@+id/location_text"
-                    app:layout_constraintTop_toTopOf="parent" />
-
-                <ImageView
-                    android:id="@+id/imageView7"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_marginBottom="8dp"
-                    android:layout_marginEnd="8dp"
-                    android:layout_marginLeft="5dp"
-                    android:layout_marginRight="8dp"
-                    android:layout_marginStart="5dp"
-                    android:layout_marginTop="8dp"
-                    app:layout_constraintBottom_toBottomOf="parent"
-                    app:layout_constraintEnd_toEndOf="parent"
-                    app:layout_constraintStart_toEndOf="@+id/view2"
-                    app:layout_constraintTop_toTopOf="parent"
-                    app:srcCompat="@drawable/locationicon"
-                    tools:ignore="VectorDrawableCompat" />
-
-            </android.support.constraint.ConstraintLayout>
-
-            <ImageView
-                android:layout_width="50sp"
-                android:layout_height="50sp"
-                android:layout_marginEnd="8dp"
-                android:layout_marginStart="8dp"
-                android:src="@drawable/callbook"
-                app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintStart_toEndOf="parent" />
-        </android.support.v7.widget.Toolbar>
 
     </android.support.design.widget.AppBarLayout>
 
@@ -95,6 +22,138 @@
         android:layout_height="match_parent"
         app:layout_behavior="@string/appbar_scrolling_view_behavior">
 
+        <android.support.v7.widget.Toolbar
+            android:id="@+id/toolbar"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/toolbar_height"
+            android:background="@drawable/header"
+            android:minHeight="?attr/actionBarSize"
+            android:visibility="gone"
+            app:navigationIcon="@drawable/menu"
+            app:popupTheme="@style/AppTheme.PopupOverlay">
+
+            <android.support.constraint.ConstraintLayout
+                android:id="@+id/srch_toolbar_layout"
+                android:layout_width="@dimen/edittext_layout_width"
+                android:layout_height="@dimen/edittext_layout_height"
+                android:background="@drawable/location_text_background">
+
+                <TextView
+                    android:id="@+id/location_text"
+                    android:layout_width="0dp"
+                    android:layout_height="0dp"
+                    android:gravity="center_vertical"
+                    android:maxLines="1"
+                    android:paddingLeft="5sp"
+                    android:text="@string/location_text"
+                    android:textColor="#d6d3d3"
+                    android:textColorHint="#d6d3d3"
+                    android:textSize="@dimen/location_text_size"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toStartOf="@+id/view2"
+                    app:layout_constraintHorizontal_bias="0.9"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <View
+                    android:id="@+id/view2"
+                    android:layout_width="1dp"
+                    android:layout_height="match_parent"
+                    android:layout_marginBottom="2dp"
+                    android:layout_marginTop="8dp"
+                    android:background="#d6d3d3"
+                    android:paddingBottom="7sp"
+                    android:paddingTop="5sp"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toStartOf="@+id/imageView7"
+                    app:layout_constraintStart_toEndOf="@+id/location_text"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <ImageView
+                    android:id="@+id/imageView7"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="8dp"
+                    android:layout_marginEnd="2dp"
+                    android:layout_marginStart="2dp"
+                    android:layout_marginTop="8dp"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toEndOf="@+id/view2"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:srcCompat="@drawable/google_pin"
+                    tools:ignore="VectorDrawableCompat" />
+
+            </android.support.constraint.ConstraintLayout>
+
+            <android.support.constraint.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginRight="10sp">
+
+                <ImageView
+                    android:id="@+id/imageView4"
+                    android:layout_width="@dimen/cart_icon_width"
+                    android:layout_height="@dimen/cart_icon_height"
+                    android:layout_marginLeft="4dp"
+                    android:layout_marginStart="4dp"
+                    android:src="@drawable/cart"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintHorizontal_bias="0.0"
+                    app:layout_constraintStart_toStartOf="parent"
+                    tools:ignore="MissingConstraints"
+                    tools:layout_editor_absoluteY="0dp" />
+
+                <ImageView
+                    android:id="@+id/imageView5"
+                    android:layout_width="@dimen/cart_icon_width"
+                    android:layout_height="@dimen/cart_icon_height"
+                    android:src="@drawable/notification"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintHorizontal_bias="0.225"
+                    app:layout_constraintStart_toEndOf="@+id/imageView4"
+                    tools:ignore="MissingConstraints"
+                    tools:layout_editor_absoluteY="0dp" />
+
+
+                <TextView
+                    android:id="@+id/cartItems"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="8dp"
+                    android:layout_marginLeft="@dimen/cart_Text_margin_left"
+                    android:background="@drawable/background_cart"
+                    android:gravity="center"
+                    android:text="@string/Total_items_cart"
+                    android:textColor="@color/white"
+                    android:textSize="@dimen/notification_count_text_sixe"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toStartOf="@+id/imageView5"
+                    app:layout_constraintHorizontal_bias="0.6"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:layout_constraintVertical_bias="0.07999998"
+                    tools:ignore="SmallSp" />
+
+                <TextView
+                    android:id="@+id/notificationCount"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginRight="@dimen/notification_count_margin_right"
+                    android:gravity="center"
+                    android:text="@string/total_notification"
+                    android:textColor="@color/Redd"
+                    android:textSize="@dimen/notification_count_text_sixe"
+                    app:layout_constraintBottom_toBottomOf="@+id/imageView5"
+                    app:layout_constraintEnd_toEndOf="@+id/imageView5"
+                    app:layout_constraintHorizontal_bias="0.95"
+                    app:layout_constraintStart_toEndOf="@+id/imageView4"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:layout_constraintVertical_bias="0.19" />
+            </android.support.constraint.ConstraintLayout>
+
+
+        </android.support.v7.widget.Toolbar>
     </FrameLayout>
 
 </android.support.design.widget.CoordinatorLayout>

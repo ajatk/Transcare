@@ -30,6 +30,7 @@
 
 
     <string name="personal_information">Personal Information</string>
+    <string name="personal_information1">Person Name</string>
     <string name="your_full_name">Your Full Name</string>
     <string name="address">Address</string>
     <string name="your_email">Your Email</string>
@@ -42,6 +43,10 @@
     <string name="_6_7_ft">6-7/ft</string>
     <string name="_50_kg">50/kg</string>
     <string name="enter_name">Enter Name</string>
+    <string name="Total_items_cart">20</string>
+    <string name="total_notification">10</string>
+    <string name="view_reports">View Reports</string>
+    <string name="march_month">mar</string>
 
 
 </resources>

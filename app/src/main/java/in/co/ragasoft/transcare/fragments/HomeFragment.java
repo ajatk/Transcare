@@ -26,8 +26,9 @@ public class HomeFragment extends Fragment implements View.OnClickListener {
     DashboardSliderAdapter pagerAdapter;
     ImageView bookATest, healthTrends;
     View view;
-    ConstraintLayout bookTestLayout, reports;
+    ConstraintLayout bookTestLayout, reports, testPanelLayout;
     Fragment fragment = null;
+    SelectYourTestPanel testPanel;
     FragmentManager fragmentManager;
     FragmentTransaction fragmentTransaction;
     BookForFrag bookFor;
@@ -51,6 +52,9 @@ public class HomeFragment extends Fragment implements View.OnClickListener {
         // healthTrends = view.findViewById(R.id.healthtracker_image);healthTrends.setImageResource(R.drawable.health_trends);
         bookTestLayout = view.findViewById(R.id.layout_bookTest);
         bookTestLayout.setOnClickListener(this);
+        testPanelLayout = view.findViewById(R.id.layout_testPanel);
+        testPanelLayout.setOnClickListener(this);
+
         viewPager = view.findViewById(R.id.viewPager_Dashboard);
         layoutDot = view.findViewById(R.id.dot_layout);
         layouts = new int[]{R.layout.dashboard_slide1, R.layout.dashboard_slide2, R.layout.dashboard_slide3};
@@ -143,7 +147,21 @@ public class HomeFragment extends Fragment implements View.OnClickListener {
                     fragmentTransaction.commit();
                 }
                 fragmentTransaction.addToBackStack(null);
-
+                break;
+            case R.id.layout_testPanel:
+                if (testPanel == null) {
+                    testPanel = new SelectYourTestPanel();
+                    //fragmentManager = getFragmentManager();
+                    fragmentTransaction = getActivity().getSupportFragmentManager().beginTransaction();
+                    fragmentTransaction.replace(R.id.frame, testPanel);
+                    fragmentTransaction.commit();
+                } else {
+                    fragmentTransaction = getActivity().getSupportFragmentManager().beginTransaction();
+                    fragmentTransaction.replace(R.id.frame, testPanel);
+                    fragmentTransaction.commit();
+                }
+                fragmentTransaction.addToBackStack(null);
+                break;
         }
 
     }

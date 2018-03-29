@@ -2,15 +2,14 @@
 <resources>
 
     //// edit profile ==============--------------------------//
-    <dimen name="ProfileImageWidth">150sp</dimen>
-    <dimen name="ProfileImageHeight">110sp</dimen>
+    <dimen name="ProfileImageWidth">100sp</dimen>
+    <dimen name="ProfileImageHeight">90sp</dimen>
     <dimen name="EditImageWidth">30sp</dimen>
     <dimen name="EditImageHeight">25sp</dimen>
 
 
-    //lsjdgjdsfg
-    <dimen name="progress_bar_width">76dp</dimen>
-    <dimen name="progress_bar_height">74dp</dimen>
+    <dimen name="progress_bar_width">120dp</dimen>
+    <dimen name="progress_bar_height">100dp</dimen>
     /// //HealthPanelsFragment-------------------------------------//
 
 
@@ -90,10 +89,11 @@
     //Toolbar Layout dimensions-----------------------------------////
 
     <dimen name="toolbar_height">60dp</dimen>
-    <dimen name="edittext_layout_width">260dp</dimen>
+    <dimen name="edittext_layout_width">200dp</dimen>
     <dimen name="edittext_layout_height">40dp</dimen>
     <dimen name="editText_width">200dp</dimen>
-    <dimen name="editText_text_size">12sp</dimen>
+    <dimen name="editText_text_size">11sp</dimen>
+    <dimen name="location_text_size">11sp</dimen>
 
 
     //HomeFragment diemnsions----------------------------------/////
@@ -109,6 +109,7 @@
     <dimen name="name_text_height">40sp</dimen>
     <dimen name="personal_info_margin_top">16dp</dimen>
     <dimen name="personal_information_textsize">20sp</dimen>
+    <dimen name="personal_information_textsize1">16sp</dimen>
     <dimen name="editProfile_textSize">16sp</dimen>
     <dimen name="editName_textSize">16sp</dimen>
     <dimen name="submitButton_marginTop">26dp</dimen>
@@ -122,7 +123,8 @@
     ////// Choose test panel ----//////////////
     <dimen name="add_toCart_button_height">20sp</dimen>
     <dimen name="add_toCart_button_width">60sp</dimen>
-    <dimen name="circular_shape_background_height">60sp</dimen>
+    <dimen name="circular_shape_background_height">50sp</dimen>
+
     <dimen name="addToCart_marginRight">16dp</dimen>
     <dimen name="kidneyPanel_marginTop">4dp</dimen>
     <dimen name="kidneyPanel_textSize">20sp</dimen>
@@ -159,22 +161,69 @@
     <dimen name="bookNow_btnHeight">25sp</dimen>
     <dimen name="bookNow_btnTextSize">12sp</dimen>
     <dimen name="booktestLayout_height">90dp</dimen>
-    <dimen name="text_size_four_menu">12sp</dimen>
+
+    <dimen name="text_size_four_menu">10sp</dimen>
     <dimen name="bookTestMarginTop">16dp</dimen>
-    <dimen name="notsure_text_size">20sp</dimen>
+    <dimen name="notsure_text_size">18sp</dimen>
     <dimen name="viewpager_width">300dp</dimen>
     <dimen name="viewPager_height">160dp</dimen>
-    <dimen name="LinearLayout_circleIndicator_height">630dp</dimen>
+    <dimen name="LinearLayout_circleIndicator_height">515dp</dimen>
     <dimen name="bookTest_Layout_MarginTop">36dp</dimen>
     <dimen name="bookTest_Layout_MarginTop2">10dp</dimen>
     <dimen name="EditTextWidth">70dp</dimen>
     <dimen name="EditTextHeight">70dp</dimen>
     <dimen name="healthPackages_marginTop">8dp</dimen>
+
+
     <dimen name="ToolbarTitle">20sp</dimen>
     <dimen name="ToolbarTitle_marginRight">40sp</dimen>
     <dimen name="self_textView_marginTop">6dp</dimen>
     <dimen name="marginTop_2constraint_to_1">30dp</dimen>
     <dimen name="self_second_layout_margin_top">2dp</dimen>
+    <dimen name="Back_arrow_width">30sp</dimen>
+    <dimen name="back_arrow_height">30sp</dimen>
+    <dimen name="Toolbar_Height">56dp</dimen>
+    <dimen name="text_size_bookee_for">12sp</dimen>
+    <dimen name="text_size_self_for">12sp</dimen>
+    <dimen name="arrow_back_marginTop">66dp</dimen>
 
+    //// select test panel --- ..............///
+    <dimen name="viewpager_margin_top">26dp</dimen>
+    <dimen name="view_pager_margin_strart">32dp</dimen>
+
+    ///App bar home ---------------/////////////////////
+    <dimen name="notification_count_text_sixe">8sp</dimen>
+    <dimen name="circular_shape_cart_background_height">12sp</dimen>
+    <dimen name="cart_icon_width">40dp</dimen>
+    <dimen name="cart_icon_height">40sp</dimen>
+    <dimen name="notifiaication_count_margin_right">5dp</dimen>
+    <dimen name="cart_Text_margin_left">10sp</dimen>
+
+    ///Spalch Screen==========/////////////////////
+    <dimen name="Welcome_Splash_text_size">18sp</dimen>
+    <dimen name="labsFuture_Splash_text_size">24sp</dimen>
+    <dimen name="notification_count_margin_right">9dp</dimen>
+
+    /////////// my reports list design -----------------////
+
+    <dimen name="my_reports_list_text_size">10sp</dimen>
+    <dimen name="list_text_layout_width">280dp</dimen>
+    <dimen name="text_view4_margin_end">100dp</dimen>
+    <dimen name="date_and_time_layout_width">50sp</dimen>
+    <dimen name="date_text_size">24sp</dimen>
+    <dimen name="month_text_size">16sp</dimen>
+    <dimen name="view1_margin_Left">12dp</dimen>
+    /////////// my reports (last report) -----------------////
+
+
+    <dimen name="report_circle_height">50sp</dimen>
+    <dimen name="reports_out_circle_text_size">12sp</dimen>
+    <dimen name="reports_count_incircle_text_size">22sp</dimen>
+    <dimen name="my_last_reports_name_text_size">14sp</dimen>
+    <dimen name="my_reports_recyclerview_width">328dp</dimen>
+    <dimen name="my_reports_recyclerview_height">240sp</dimen>
+    <dimen name="critical_text_height">16dp</dimen>
+    <dimen name="critical_text_height2">16dp</dimen>
+    <dimen name="onClick_reports_count_incircle_text_size">30sp</dimen>
 
 </resources>

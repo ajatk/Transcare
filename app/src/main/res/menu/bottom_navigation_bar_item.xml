@@ -6,11 +6,11 @@
         android:title="Home" />
     <item
         android:id="@+id/reports"
-        android:icon="@drawable/reports"
+        android:icon="@drawable/report_s"
         android:title="Reports" />
     <item
         android:id="@+id/my_family"
-        android:icon="@drawable/family"
-        android:title="My Family" />
+        android:icon="@drawable/call_to_book"
+        android:title="Call to Book" />
 
 </menu>
