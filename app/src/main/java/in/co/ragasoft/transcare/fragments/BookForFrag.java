@@ -14,7 +14,7 @@ import in.co.ragasoft.transcare.R;
 public class BookForFrag extends Fragment implements View.OnClickListener {
 
     ConstraintLayout layoutBookTest;
-    SelectYourTestPanel testPanel;
+    BookYourAppointment bookYourAppointment;
     FragmentTransaction fragmentTransaction;
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
@@ -30,15 +30,15 @@ public class BookForFrag extends Fragment implements View.OnClickListener {
     public void onClick(View v) {
         switch (v.getId()) {
             case R.id.layout_bookeeName:
-                if (testPanel == null) {
-                    testPanel = new SelectYourTestPanel();
+                if (bookYourAppointment == null) {
+                    bookYourAppointment = new BookYourAppointment();
                     //fragmentManager = getFragmentManager();
                     fragmentTransaction = getActivity().getSupportFragmentManager().beginTransaction();
-                    fragmentTransaction.replace(R.id.frame, testPanel);
+                    fragmentTransaction.replace(R.id.frame, bookYourAppointment);
                     fragmentTransaction.commit();
                 } else {
                     fragmentTransaction = getActivity().getSupportFragmentManager().beginTransaction();
-                    fragmentTransaction.replace(R.id.frame, testPanel);
+                    fragmentTransaction.replace(R.id.frame, bookYourAppointment);
                     fragmentTransaction.commit();
                 }
                 fragmentTransaction.addToBackStack(null);

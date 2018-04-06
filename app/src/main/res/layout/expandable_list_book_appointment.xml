@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <TextView
+        android:id="@+id/spinner_whatsapp"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/textView_Height_selectTime"
+        android:layout_marginEnd="16dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="1dp"
+        android:background="@color/blue_base_app_color"
+        android:drawableRight="@drawable/arrow_drop_down"
+        android:gravity="center_vertical"
+        android:paddingLeft="20sp"
+        android:paddingRight="20sp"
+        android:text="Report Delivery Prefrences"
+        android:textColor="@color/white" />
+
+</android.support.constraint.ConstraintLayout>
+
+    <!--<TextView
+            android:id="@+id/spinner_whatsapp"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/textView_Height_selectTime"
+            android:layout_marginEnd="16dp"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="1dp"
+            android:background="@color/blue_base_app_color"
+            android:drawableLeft="@drawable/arrow_drop_down"
+            android:drawableRight="@drawable/arrow_drop_down"
+            android:paddingRight="20sp"
+            android:textColor="@color/white"
+            android:gravity="center_vertical"
+            android:text="Whatsapp" />-->

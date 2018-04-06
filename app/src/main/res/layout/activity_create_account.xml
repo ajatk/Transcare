@@ -16,7 +16,7 @@
             android:layout_width="@dimen/ProfileImageWidth"
             android:layout_height="@dimen/ProfileImageHeight"
             android:layout_marginTop="@dimen/profileImage_marginTop"
-            android:src="@drawable/ic_launcher_background"
+            android:src="@drawable/profile_camera"
             app:animateProgress="false"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"

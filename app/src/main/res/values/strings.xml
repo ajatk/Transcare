@@ -19,7 +19,11 @@
         <item>female</item>
         <item>other</item>
     </string-array>
-    <string name="slider1_text">Loreun Ipsum is simply dummy text of printing and type setting industry. Loreum Ipsum has been the  Industry\'s standard dummy text book.</string>
+    <string name="slider1_text">Labs that not only analyses but alters you</string>
+    <string name="slider2_text">Sample &amp; reports anywhere / anytime</string>
+    <string name="slider3_text">Customized health packages that suit you  /Critical call alters for test that matter</string>
+    <string name="slider4_text">Reputed clinicians, pathologists and advisors</string>
+    <string name="slider5_text">High quality preciuse and specizesd daignostic platforms</string>
     <string name="transcaretext">What is Transcare</string>
 
     <string name="location_text">location 55 sector chandigarh</string>

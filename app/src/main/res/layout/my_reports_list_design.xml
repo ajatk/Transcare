@@ -6,7 +6,7 @@
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
     android:layout_marginTop="5sp"
-    android:background="#28f78f8f"
+    android:background="#4df19393"
     android:padding="10sp"
     tools:layout_editor_absoluteY="25dp">
 

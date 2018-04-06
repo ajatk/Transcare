@@ -43,7 +43,7 @@
 
     //Intro Slider Activity
     <dimen name="getstarted_text_size">40sp</dimen>
-    <dimen name="dotlayout_top_margin">750dp</dimen>
+    <dimen name="dotlayout_top_margin">850dp</dimen>
 
 
     //Slider 1 dimesions------------------------------------------////
@@ -227,6 +227,33 @@
     <dimen name="critical_text_height">26dp</dimen>
     <dimen name="critical_text_height2">26dp</dimen>
 
+    //// Add Member (My family) -------------------------------------------////
+    <dimen name="ProfileImageWidth1">100sp</dimen>
+    <dimen name="profileImage_marginTop1">100dp</dimen>
+    <dimen name="my_reports_list_text_size11">18sp</dimen>
 
+    /// Book Y0ur Appointment -------------------------///////////////
+
+    <dimen name="radioButton_textSize">24sp</dimen>
+    <dimen name="textView_Height_selectTime">60sp</dimen>
+    <dimen name="email_image_width">50sp</dimen>
+    <dimen name="email_text_padding_left">60sp</dimen>
+    <dimen name="report_delivery_prefrences">60dp</dimen>
+    <dimen name="radio_group_parent_layout_height">115sp</dimen>
+    <dimen name="map_image_view_height">350sp</dimen>
+
+    <dimen name="address_parent_layout_height1">180sp</dimen>
+    <dimen name="full_address_view_width">370dp</dimen>
+    <dimen name="email_padding_left">40sp</dimen>
+    <dimen name="view_margin_right">102dp</dimen>
+    <dimen name="view_margin_top">27dp</dimen>
+    <dimen name="view_margin_height">38sp</dimen>
+    <dimen name="location_icon_padding_right">25sp</dimen>
+    <dimen name="address_parent_layout_height">120sp</dimen>
+    <dimen name="full_address__parent_layout_height">210sp</dimen>
+    <dimen name="radio_group_padding_left">15sp</dimen>
+    <dimen name="google_map_margin_top">170dp</dimen>
+    <dimen name="expandable_list_select_time_margin_top">170sp</dimen>
+    <dimen name="discount_tax_amount_text_size">10sp</dimen>
 </resources>
 

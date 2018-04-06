@@ -1,0 +1,383 @@
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/background"
+    app:layout_constraintBottom_toBottomOf="parent">
+
+    <android.support.v7.widget.Toolbar
+        android:id="@+id/toolbar_bookFor"
+        android:layout_width="0dp"
+        android:layout_height="@dimen/Toolbar_Height"
+        android:background="@drawable/header"
+        android:gravity="center"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent">
+
+        <ImageView
+            android:id="@+id/arrow_back"
+            android:layout_width="@dimen/Back_arrow_width"
+            android:layout_height="@dimen/back_arrow_height"
+            android:src="@drawable/arrow_back" />
+
+        <TextView
+            android:id="@+id/bookFor_title"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginRight="@dimen/ToolbarTitle_marginRight"
+            android:gravity="center"
+            android:text="My Family"
+            android:textColor="@color/white"
+            android:textSize="@dimen/ToolbarTitle"
+            android:textStyle="bold"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+    </android.support.v7.widget.Toolbar>
+
+    <android.support.constraint.ConstraintLayout
+        android:id="@+id/layout_bookeeName"
+        android:layout_width="0dp"
+        android:layout_height="@dimen/booktestLayout_height"
+        android:layout_marginEnd="2dp"
+
+        android:layout_marginLeft="5dp"
+        android:layout_marginRight="2dp"
+        android:layout_marginStart="5dp"
+        android:layout_marginTop="@dimen/bookTest_Layout_MarginTop"
+        app:layout_constraintEnd_toStartOf="@+id/layout_reports"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/toolbar_bookFor">
+
+        <ImageView
+            android:id="@+id/name_image1"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:src="@drawable/my_report_image"
+            app:layout_constraintBottom_toTopOf="@+id/bookeeName1_test"
+            app:layout_constraintDimensionRatio="9:5"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="1.0"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_chainStyle="spread_inside" />
+
+        <TextView
+            android:id="@+id/bookeeName1_test"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:paddingTop="2dp"
+            android:text="Sandeep kumar"
+            android:textAlignment="center"
+            android:textColor="@color/white"
+            android:textSize="@dimen/text_size_bookee_for"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/name_image1" />
+    </android.support.constraint.ConstraintLayout>
+
+    <TextView
+        android:id="@+id/relation_tv1"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="8dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="@dimen/self_textView_marginTop"
+        android:gravity="center"
+        android:text="Self1"
+        android:textAlignment="center"
+        android:textColor="@color/white"
+        android:textSize="@dimen/text_size_self_for"
+        app:layout_constraintEnd_toStartOf="@+id/relation_tv2"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/layout_bookeeName"
+        tools:ignore="MissingConstraints" />
+
+    <android.support.constraint.ConstraintLayout
+        android:id="@+id/layout_reports"
+        android:layout_width="0dp"
+        android:layout_height="@dimen/booktestLayout_height"
+        android:layout_marginEnd="2dp"
+        android:layout_marginStart="2dp"
+        android:layout_marginTop="@dimen/bookTest_Layout_MarginTop"
+        app:layout_constraintEnd_toStartOf="@+id/layout_healthTracker"
+        app:layout_constraintStart_toEndOf="@+id/layout_bookeeName"
+        app:layout_constraintTop_toBottomOf="@+id/toolbar_bookFor">
+
+        <ImageView
+            android:id="@+id/name_image2"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:src="@drawable/my_report_image"
+            app:layout_constraintBottom_toTopOf="@+id/bookeeName2_test"
+            app:layout_constraintDimensionRatio="9:5"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/bookeeName2_test"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:paddingTop="2dp"
+            android:text="Reports"
+            android:textAlignment="center"
+
+            android:textColor="@color/white"
+            android:textSize="@dimen/text_size_bookee_for"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/name_image2" />
+    </android.support.constraint.ConstraintLayout>
+
+    <TextView
+        android:id="@+id/relation_tv2"
+        android:layout_width="0dp"
+
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="8dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="@dimen/self_textView_marginTop"
+        android:gravity="center"
+        android:text="Self2"
+        android:textAlignment="center"
+        android:textColor="@color/white"
+        android:textSize="@dimen/text_size_self_for"
+        app:layout_constraintEnd_toStartOf="@+id/relation_tv3"
+        app:layout_constraintStart_toEndOf="@+id/relation_tv1"
+        app:layout_constraintTop_toBottomOf="@+id/layout_reports"
+        tools:ignore="MissingConstraints" />
+
+    <android.support.constraint.ConstraintLayout
+        android:id="@+id/layout_healthTracker"
+        android:layout_width="0dp"
+        android:layout_height="@dimen/booktestLayout_height"
+        android:layout_marginEnd="8dp"
+        android:layout_marginLeft="2dp"
+        android:layout_marginRight="8dp"
+        android:layout_marginStart="2dp"
+        android:layout_marginTop="@dimen/bookTest_Layout_MarginTop"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/layout_reports"
+        app:layout_constraintTop_toBottomOf="@+id/toolbar_bookFor">
+
+        <ImageView
+            android:id="@+id/name_image3"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:src="@drawable/my_report_image"
+            app:layout_constraintBottom_toTopOf="@+id/bookeeName3_test"
+            app:layout_constraintDimensionRatio="9:5"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.52" />
+
+        <TextView
+            android:id="@+id/bookeeName3_test"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="3sp"
+            android:paddingTop="5dp"
+            android:text="Health Trends"
+            android:textAlignment="center"
+            android:textColor="@color/white"
+            android:textSize="@dimen/text_size_bookee_for"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/name_image3" />
+    </android.support.constraint.ConstraintLayout>
+
+    <TextView
+        android:id="@+id/relation_tv3"
+        android:layout_width="0dp"
+
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="8dp"
+        android:layout_marginLeft="24dp"
+        android:layout_marginRight="8dp"
+        android:layout_marginTop="@dimen/self_textView_marginTop"
+        android:gravity="center"
+        android:text="Self3"
+        android:textAlignment="center"
+        android:textColor="@color/white"
+        android:textSize="@dimen/text_size_self_for"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.064"
+        app:layout_constraintStart_toEndOf="@+id/relation_tv2"
+        app:layout_constraintTop_toBottomOf="@+id/layout_healthTracker"
+        tools:ignore="MissingConstraints" />
+
+    <android.support.constraint.ConstraintLayout
+        android:id="@+id/layout_priventive"
+        android:layout_width="0dp"
+        android:layout_height="@dimen/booktestLayout_height"
+        android:layout_marginEnd="2dp"
+        android:layout_marginStart="2dp"
+        android:layout_marginTop="@dimen/marginTop_2constraint_to_1"
+        app:layout_constraintEnd_toStartOf="@+id/layout_addMember"
+        app:layout_constraintStart_toEndOf="@+id/layout_callToBook"
+        app:layout_constraintTop_toBottomOf="@+id/relation_tv2"
+        tools:ignore="MissingConstraints">
+
+        <ImageView
+            android:id="@+id/priventive_image"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:src="@drawable/my_report_image"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintDimensionRatio="9:5"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.0" />
+
+        <TextView
+            android:id="@+id/name_image5"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:paddingTop="4dp"
+            android:text="Preventive"
+            android:textAlignment="center"
+            android:textColor="@color/white"
+            android:textSize="@dimen/text_size_four_menu"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/priventive_image" />
+    </android.support.constraint.ConstraintLayout>
+
+    <TextView
+        android:id="@+id/relation_tv4"
+        android:layout_width="0dp"
+
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/self_second_layout_margin_top"
+        android:gravity="center"
+        android:text="Self4"
+        android:textAlignment="center"
+        android:textColor="@color/white"
+        android:textSize="@dimen/text_size_four_menu"
+        app:layout_constraintEnd_toStartOf="@+id/relation_tv5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/layout_callToBook"
+        tools:ignore="MissingConstraints" />
+
+    <android.support.constraint.ConstraintLayout
+        android:id="@+id/layout_addMember"
+        android:layout_width="0dp"
+        android:layout_height="@dimen/booktestLayout_height"
+        android:layout_marginEnd="8sp"
+        android:layout_marginRight="8sp"
+        android:layout_marginTop="@dimen/marginTop_2constraint_to_1"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/layout_priventive"
+        app:layout_constraintTop_toBottomOf="@+id/relation_tv3"
+        tools:ignore="MissingConstraints">
+
+        <ImageView
+            android:id="@+id/addMember_image2"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:src="@drawable/more"
+            app:layout_constraintBottom_toTopOf="@+id/name_image6"
+            app:layout_constraintDimensionRatio="9:5"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.06999999" />
+
+        <TextView
+            android:id="@+id/name_image6"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:paddingTop="4dp"
+            android:text="Add Member"
+            android:textAlignment="center"
+            android:textColor="@color/white"
+            android:textSize="@dimen/text_size_four_menu"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/addMember_image2" />
+
+
+    </android.support.constraint.ConstraintLayout>
+
+    <TextView
+        android:id="@+id/relation_tv5"
+        android:layout_width="0dp"
+
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/self_second_layout_margin_top"
+        android:gravity="center"
+        android:text="Self5"
+        android:textAlignment="center"
+        android:textColor="@color/white"
+        android:textSize="@dimen/text_size_four_menu"
+        app:layout_constraintEnd_toStartOf="@+id/relation_tv6"
+        app:layout_constraintStart_toEndOf="@+id/relation_tv4"
+        app:layout_constraintTop_toBottomOf="@+id/layout_addMember"
+        tools:ignore="MissingConstraints" />
+
+    <android.support.constraint.ConstraintLayout
+        android:id="@+id/layout_callToBook"
+        android:layout_width="0dp"
+        android:layout_height="@dimen/booktestLayout_height"
+        android:layout_marginLeft="5dp"
+        android:layout_marginStart="5dp"
+        android:layout_marginTop="@dimen/marginTop_2constraint_to_1"
+        app:layout_constraintEnd_toStartOf="@+id/layout_priventive"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/relation_tv1"
+        tools:ignore="MissingConstraints">
+
+        <ImageView
+            android:id="@+id/name_image4"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:src="@drawable/my_report_image"
+            app:layout_constraintBottom_toTopOf="@+id/bookeeName4_test"
+            app:layout_constraintDimensionRatio="9:5"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.00999999" />
+
+        <TextView
+            android:id="@+id/bookeeName4_test"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:paddingTop="4dp"
+            android:text="My Family"
+            android:textAlignment="center"
+            android:textColor="@color/white"
+            android:textSize="@dimen/text_size_four_menu"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="1.0"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/name_image4" />
+    </android.support.constraint.ConstraintLayout>
+
+    <TextView
+        android:id="@+id/relation_tv6"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/self_second_layout_margin_top"
+        android:gravity="center"
+        android:textAlignment="center"
+        android:textColor="@color/white"
+        android:textSize="@dimen/text_size_four_menu"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/relation_tv5"
+        app:layout_constraintTop_toBottomOf="@+id/layout_addMember"
+        tools:ignore="MissingConstraints" />
+</android.support.constraint.ConstraintLayout>

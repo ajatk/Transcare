@@ -28,11 +28,11 @@ public class Intro_SliderActivity extends AppCompatActivity implements View.OnCl
         setContentView(R.layout.activity_intro__slider);
         viewPager = findViewById(R.id.view_Pager);
         layoutDot = findViewById(R.id.dot_layout);
-        getStarted = findViewById(R.id.getstarted);
+        getStarted = findViewById(R.id.skip);
         getStarted.setOnClickListener(this);
         setStatusBarTransparent();
 
-        layouts = new int[]{R.layout.slider1, R.layout.slider2, R.layout.slider3};
+        layouts = new int[]{R.layout.slider1, R.layout.slider2, R.layout.slider3, R.layout.slider4, R.layout.slider5};
         pagerAdapter = new Intro_Slider_Adapter(layouts, getApplicationContext());
         viewPager.setAdapter(pagerAdapter);
 
@@ -73,6 +73,7 @@ public class Intro_SliderActivity extends AppCompatActivity implements View.OnCl
 
     private void setDotStatus(int page) {
         layoutDot.removeAllViews();
+
         dotstv = new TextView[layouts.length];
         for (int i = 0; i < layouts.length; i++) {
             dotstv[i] = new TextView(this);

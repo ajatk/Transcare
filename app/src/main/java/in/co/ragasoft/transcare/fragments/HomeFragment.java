@@ -26,12 +26,13 @@ public class HomeFragment extends Fragment implements View.OnClickListener {
     DashboardSliderAdapter pagerAdapter;
     ImageView bookATest, healthTrends;
     View view;
-    ConstraintLayout bookTestLayout, reports, testPanelLayout;
+    ConstraintLayout bookTestLayout, reports, testPanelLayout, myFamily;
     Fragment fragment = null;
     SelectYourTestPanel testPanel;
     FragmentManager fragmentManager;
     FragmentTransaction fragmentTransaction;
     BookForFrag bookFor;
+    MyFamily mfamily;
     Context context;
     private int[] layouts;
     private Drawable[] drawable;
@@ -54,10 +55,13 @@ public class HomeFragment extends Fragment implements View.OnClickListener {
         bookTestLayout.setOnClickListener(this);
         testPanelLayout = view.findViewById(R.id.layout_testPanel);
         testPanelLayout.setOnClickListener(this);
+        myFamily = view.findViewById(R.id.layout_myFamily);
+        myFamily.setOnClickListener(this);
+
 
         viewPager = view.findViewById(R.id.viewPager_Dashboard);
         layoutDot = view.findViewById(R.id.dot_layout);
-        layouts = new int[]{R.layout.dashboard_slide1, R.layout.dashboard_slide2, R.layout.dashboard_slide3};
+        layouts = new int[]{R.layout.dashboard_slide1, R.layout.dashboard_slide2, R.layout.dashboard_slide3, R.layout.dashboard_slide4, R.layout.dashboard_slide5};
         pagerAdapter = new DashboardSliderAdapter(layouts, getContext());
         viewPager.setAdapter(pagerAdapter);
         viewPager.addOnPageChangeListener(new ViewPager.OnPageChangeListener() {
@@ -158,6 +162,21 @@ public class HomeFragment extends Fragment implements View.OnClickListener {
                 } else {
                     fragmentTransaction = getActivity().getSupportFragmentManager().beginTransaction();
                     fragmentTransaction.replace(R.id.frame, testPanel);
+                    fragmentTransaction.commit();
+                }
+                fragmentTransaction.addToBackStack(null);
+                break;
+
+            case R.id.layout_myFamily:
+                if (mfamily == null) {
+                    mfamily = new MyFamily();
+                    //fragmentManager = getFragmentManager();
+                    fragmentTransaction = getActivity().getSupportFragmentManager().beginTransaction();
+                    fragmentTransaction.replace(R.id.frame, mfamily);
+                    fragmentTransaction.commit();
+                } else {
+                    fragmentTransaction = getActivity().getSupportFragmentManager().beginTransaction();
+                    fragmentTransaction.replace(R.id.frame, mfamily);
                     fragmentTransaction.commit();
                 }
                 fragmentTransaction.addToBackStack(null);

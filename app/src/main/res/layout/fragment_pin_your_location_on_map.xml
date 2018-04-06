@@ -1,0 +1,285 @@
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/background"
+    app:layout_behavior="@string/appbar_scrolling_view_behavior">
+
+    <ScrollView
+        android:id="@+id/scrollview"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="100sp"
+        android:layout_marginTop="10sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.51">
+
+        <android.support.constraint.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginBottom="100sp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toStartOf="parent">
+            <!--<android.support.constraint.ConstraintLayout
+                android:id="@+id/constraintLayout9"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="15sp"
+                android:layout_marginEnd="16dp"
+                android:layout_marginStart="16dp"
+                android:layout_marginTop="4dp"
+                android:background="@color/blue_base_app_color1"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent">
+
+                <RadioGroup
+                    android:id="@+id/selectTime_radioGroup1"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginEnd="8dp"
+                    android:layout_marginLeft="16dp"
+                    android:layout_marginRight="8dp"
+                    android:layout_marginStart="16dp"
+                    android:backgroundTint="@color/white"
+                    android:orientation="vertical"
+                    app:layout_constraintEnd_toStartOf="@+id/selectAddress_radioGroup2"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent">
+
+                    <RadioButton
+                        android:id="@+id/sheduleAppt"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:backgroundTint="@color/white"
+                        android:buttonTint="@color/white"
+                        android:text="Schedule Appt."
+                        android:textColor="@color/white"
+                        android:textSize="@dimen/radioButton_textSize" />
+
+                    <RadioButton
+                        android:id="@+id/bookNow"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:backgroundTint="@color/white"
+                        android:buttonTint="@color/white"
+                        android:checked="true"
+                        android:text="Book Now"
+                        android:textColor="@color/white"
+                        android:textSize="@dimen/radioButton_textSize" />
+                </RadioGroup>
+
+                <RadioGroup
+                    android:id="@+id/selectAddress_radioGroup2"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginEnd="16dp"
+                    android:backgroundTint="@color/white"
+                    android:orientation="vertical"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toEndOf="@+id/selectTime_radioGroup1"
+                    app:layout_constraintTop_toTopOf="parent"
+                    tools:ignore="MissingConstraints">
+
+                    <RadioButton
+                        android:id="@+id/visitLab"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:backgroundTint="@color/white"
+                        android:buttonTint="@color/white"
+                        android:checked="true"
+                        android:text="Schedule Appt."
+                        android:textColor="@color/white"
+                        android:textSize="@dimen/radioButton_textSize" />
+
+                    <RadioButton
+                        android:id="@+id/onSite"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:backgroundTint="@color/white"
+                        android:buttonTint="@color/white"
+                        android:text="On Site / Home Collection"
+                        android:textColor="@color/white"
+                        android:textSize="@dimen/radioButton_textSize" />
+                </RadioGroup>
+
+            </android.support.constraint.ConstraintLayout>-->
+
+            <TextView
+                android:id="@+id/pinYourLocation"
+                android:layout_width="0dp"
+                android:layout_height="@dimen/textView_Height_selectTime"
+                android:layout_marginEnd="16dp"
+                android:layout_marginStart="16dp"
+                android:layout_marginTop="@dimen/google_map_margin_top"
+                android:background="@color/blue_base_app_color"
+                android:gravity="center_vertical"
+                android:paddingLeft="15sp"
+                android:text="Pin Your Location On map"
+                android:textColor="@color/white"
+                android:textSize="@dimen/radioButton_textSize"
+                android:textStyle="bold"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <ImageView
+                android:id="@+id/google_map"
+                android:layout_width="0dp"
+                android:layout_height="@dimen/map_image_view_height"
+                android:layout_marginEnd="16dp"
+                android:layout_marginStart="16dp"
+                android:background="@drawable/google_map"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.0"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/pinYourLocation" />
+
+            <EditText
+                android:id="@+id/map_address"
+                android:layout_width="0dp"
+                android:layout_height="@dimen/textView_Height_selectTime"
+                android:layout_marginEnd="16dp"
+                android:layout_marginStart="16dp"
+                android:layout_marginTop="15dp"
+                android:background="@color/blue_base_app_color"
+                android:drawableRight="@drawable/location_pointer"
+                android:gravity="center_vertical"
+                android:hint="Enter your Nearest Land Mark"
+                android:paddingLeft="@dimen/email_padding_left"
+                android:paddingRight="@dimen/location_icon_padding_right"
+                android:textColor="@color/white"
+                android:textColorHint="@color/white"
+                android:textSize="@dimen/radioButton_textSize"
+                android:textStyle="bold"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.0"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/google_map" />
+
+            <View
+                android:layout_width="1sp"
+                android:layout_height="@dimen/view_margin_height"
+                android:layout_marginEnd="@dimen/view_margin_right"
+                android:layout_marginRight="@dimen/view_margin_right"
+                android:layout_marginTop="@dimen/view_margin_top"
+                android:background="@drawable/my_reports_line_view"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/google_map" />
+
+            <android.support.constraint.ConstraintLayout
+
+                android:id="@+id/constraintLayout10"
+                android:layout_width="0dp"
+                android:layout_height="@dimen/full_address__parent_layout_height"
+                android:layout_marginEnd="16dp"
+                android:layout_marginStart="16dp"
+                android:layout_marginTop="3dp"
+
+                android:background="@color/blue_base_app_color1"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/map_address">
+
+                <TextView
+                    android:id="@+id/textView42"
+                    android:layout_width="match_parent"
+                    android:layout_height="18dp"
+                    android:layout_marginTop="3dp"
+                    android:paddingLeft="@dimen/email_padding_left"
+                    android:paddingRight="@dimen/location_icon_padding_right"
+                    android:text="Select from Added"
+                    android:textColor="@color/white"
+                    android:textColorHint="@color/white"
+                    android:textSize="@dimen/radioButton_textSize"
+                    android:textStyle="bold"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/findOnMap" />
+
+                <TextView
+                    android:id="@+id/findOnMap"
+                    android:layout_width="0dp"
+                    android:layout_height="@dimen/textView_Height_selectTime"
+                    android:background="@color/blue_base_app_color"
+                    android:gravity="center_vertical"
+                    android:hint="Cant Find on Map :"
+                    android:paddingLeft="@dimen/email_padding_left"
+                    android:paddingRight="@dimen/location_icon_padding_right"
+                    android:textColor="@color/white"
+                    android:textColorHint="@color/white"
+                    android:textSize="@dimen/radioButton_textSize"
+                    android:textStyle="bold"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <RadioButton
+                    android:id="@+id/address"
+                    android:layout_width="@dimen/full_address_view_width"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="6dp"
+                    android:buttonTint="@color/white"
+                    android:paddingLeft="10sp"
+                    android:text="# 403 Sec-82 JLPL Industrial Area, Mohali (160044)"
+                    android:textColor="@color/white"
+                    android:textSize="@dimen/radioButton_textSize"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintHorizontal_bias="0.0"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/textView42"
+                    tools:ignore="MissingConstraints" />
+
+
+                <RadioButton
+                    android:id="@+id/homeDelevery"
+                    android:layout_width="@dimen/full_address_view_width"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="8sp"
+                    android:buttonTint="@color/white"
+                    android:paddingLeft="10sp"
+                    android:text="# 403 Sec-82 JLPL Industrial Area, Mohali (160044)"
+                    android:textColor="@color/white"
+                    android:textSize="@dimen/radioButton_textSize"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintHorizontal_bias="0.0"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/address" />
+
+            </android.support.constraint.ConstraintLayout>
+
+            <EditText
+                android:id="@+id/enterNewLocation"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/textView_Height_selectTime"
+                android:layout_marginBottom="70sp"
+                android:layout_marginLeft="16sp"
+                android:layout_marginRight="16sp"
+                android:layout_marginTop="4sp"
+                android:background="@color/blue_base_app_color1"
+                android:focusable="false"
+                android:gravity="center_vertical"
+                android:hint="Add New Address"
+                android:paddingLeft="24sp"
+                android:paddingRight="24sp"
+                android:textColor="@color/white"
+                android:textColorHint="@color/white"
+                android:textSize="@dimen/radioButton_textSize"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.0"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/constraintLayout10" />
+        </android.support.constraint.ConstraintLayout>
+
+    </ScrollView>
+</android.support.constraint.ConstraintLayout>
+
+
+
+
+

@@ -46,27 +46,12 @@
         app:layout_constraintRight_toRightOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/textView13"
-        app:tabIndicatorColor="@color/base_app_color"
+        app:tabIndicatorColor="@color/white"
         app:tabMode="fixed"
+        app:tabSelectedTextColor="@color/white"
         app:tabTextColor="@color/white">
 
-        <android.support.design.widget.TabItem
-            android:id="@+id/popularTes"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="Poular Test" />
 
-        <android.support.design.widget.TabItem
-            android:id="@+id/testPanels"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="Test panels" />
-
-        <android.support.design.widget.TabItem
-            android:id="@+id/healthPackages"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="Health Packages" />
     </android.support.design.widget.TabLayout>
 
     <android.support.v4.view.ViewPager

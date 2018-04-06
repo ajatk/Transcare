@@ -6,5 +6,5 @@
     <ImageView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:src="@drawable/banner" />
+        android:src="@drawable/home_slider1" />
 </android.support.constraint.ConstraintLayout>

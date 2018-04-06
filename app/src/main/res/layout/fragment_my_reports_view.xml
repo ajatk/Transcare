@@ -58,7 +58,7 @@
     <android.support.constraint.ConstraintLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginTop="70dp"
+        android:layout_marginTop="72dp"
         android:theme="@style/AppTheme1"
         app:layout_constraintTop_toTopOf="parent"
         tools:ignore="MissingConstraints"

@@ -72,7 +72,7 @@
             android:layout_height="wrap_content"
             android:layout_marginTop="3dp"
             android:gravity="center"
-            android:text="@string/personal_information"
+            android:text="@string/personal_information1"
             android:textColor="@color/white"
             android:textSize="@dimen/personal_information_textsize1"
             app:layout_constraintEnd_toEndOf="parent"
@@ -115,6 +115,7 @@
             tools:ignore="MissingConstraints">
 
             <RadioGroup
+                android:id="@+id/radioGroup"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:orientation="horizontal">
@@ -151,6 +152,24 @@
             android:text="Submit"
             android:textColor="#fff"
             android:textSize="@dimen/editName_textSize"
+            android:visibility="gone"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/edit_address"
+            app:layout_constraintVertical_bias="0.583" />
+
+        <ExpandableListView
+            android:id="@+id/recyclerView_byTestName"
+            android:layout_width="@dimen/my_reports_recyclerview_width"
+            android:layout_height="@dimen/my_reports_recyclerview_height"
+            android:layout_marginBottom="16dp"
+            android:layout_marginEnd="16dp"
+            android:layout_marginStart="16dp"
+            android:text="Submit"
+            android:textColor="#fff"
+            android:textSize="@dimen/editName_textSize"
+            android:visibility="gone"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"

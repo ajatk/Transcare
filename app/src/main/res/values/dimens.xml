@@ -68,21 +68,23 @@
 
     // nav header dimensions
 
-    <dimen name="navheader_userName_text_size">13sp</dimen>
+    <dimen name="navheader_userName_text_size">16sp</dimen>
     <dimen name="navheader_mail_text_size">10sp</dimen>
 
 
     //Intro Slider Activity
     <dimen name="getstarted_text_size">20sp</dimen>
-    <dimen name="dotlayout_top_margin">500dp</dimen>
-    <dimen name="dotlayout_top_margin1">570dp</dimen>
+    <dimen name="dotlayout_top_margin">560dp</dimen>
+    <dimen name="dotlayout_top_margin1">568dp</dimen>
 
 
     //Slider 1 dimesions------------------------------------------////
 
     <dimen name="transcare_text_size">25sp</dimen>
     <dimen name="transcare_body_text_size">14sp</dimen>
-    <dimen name="margin_left_right">20dp</dimen>
+    <dimen name="margin_left_right">33dp</dimen>
+    <dimen name="margin_left_right1">53dp</dimen>
+    <dimen name="margin_left_right2">63dp</dimen>
     <dimen name="margin_bottom_parent">140dp</dimen>
 
 
@@ -182,7 +184,7 @@
     <dimen name="self_second_layout_margin_top">2dp</dimen>
     <dimen name="Back_arrow_width">30sp</dimen>
     <dimen name="back_arrow_height">30sp</dimen>
-    <dimen name="Toolbar_Height">56dp</dimen>
+    <dimen name="Toolbar_Height">50dp</dimen>
     <dimen name="text_size_bookee_for">12sp</dimen>
     <dimen name="text_size_self_for">12sp</dimen>
     <dimen name="arrow_back_marginTop">66dp</dimen>
@@ -200,17 +202,19 @@
     <dimen name="cart_Text_margin_left">10sp</dimen>
 
     ///Spalch Screen==========/////////////////////
-    <dimen name="Welcome_Splash_text_size">18sp</dimen>
-    <dimen name="labsFuture_Splash_text_size">24sp</dimen>
+    <dimen name="Welcome_Splash_text_size">20sp</dimen>
+    <dimen name="labsFuture_Splash_text_size">20sp</dimen>
     <dimen name="notification_count_margin_right">9dp</dimen>
 
     /////////// my reports list design -----------------////
 
     <dimen name="my_reports_list_text_size">10sp</dimen>
+    <dimen name="my_reports_list_text_size1">14sp</dimen>
     <dimen name="list_text_layout_width">280dp</dimen>
     <dimen name="text_view4_margin_end">100dp</dimen>
     <dimen name="date_and_time_layout_width">50sp</dimen>
     <dimen name="date_text_size">24sp</dimen>
+    <dimen name="date_text_size1">28sp</dimen>
     <dimen name="month_text_size">16sp</dimen>
     <dimen name="view1_margin_Left">12dp</dimen>
     /////////// my reports (last report) -----------------////
@@ -225,5 +229,35 @@
     <dimen name="critical_text_height">16dp</dimen>
     <dimen name="critical_text_height2">16dp</dimen>
     <dimen name="onClick_reports_count_incircle_text_size">30sp</dimen>
+
+    //// Add Member (My family) -------------------------------------------////
+    <dimen name="ProfileImageWidth1">100sp</dimen>
+    <dimen name="profileImage_marginTop1">78dp</dimen>
+    <dimen name="my_reports_list_text_size11">12sp</dimen>
+    //// Select Time (Book your Appointment) -------------------------------------------////
+    <dimen name="radioButton_textSize">14sp</dimen>
+    <dimen name="textView_Height_selectTime">40sp</dimen>
+    <dimen name="email_image_width">30sp</dimen>
+    <dimen name="email_padding_left">10sp</dimen>
+    <dimen name="report_delivery_prefrences">40dp</dimen>
+    <dimen name="radio_group_parent_layout_height">75sp</dimen>
+    <dimen name="map_image_view_height">210sp</dimen>
+
+    <dimen name="full_address_view_width">230dp</dimen>
+    <dimen name="view_margin_right">82dp</dimen>
+    <dimen name="view_margin_top">23dp</dimen>
+    <dimen name="view_margin_height">26sp</dimen>
+    <dimen name="location_icon_padding_right">15sp</dimen>
+    <dimen name="address_parent_layout_height1">110sp</dimen>
+    <dimen name="address_parent_layout_height">80sp</dimen>
+    <dimen name="full_address__parent_layout_height">160sp</dimen>
+    <dimen name="radio_group_padding_left">15sp</dimen>
+    <dimen name="google_map_margin_top">1dp</dimen>
+    <dimen name="expandable_list_select_time_margin_top">110sp</dimen>
+
+    //// My Cart -------------------------------------------////
+
+    <dimen name="discount_tax_amount_text_size">12sp</dimen>
+
 
 </resources>

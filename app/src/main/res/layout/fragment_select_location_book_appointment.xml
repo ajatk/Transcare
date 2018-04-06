@@ -1,0 +1,113 @@
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/background"
+    app:layout_behavior="@string/appbar_scrolling_view_behavior">
+
+    <ScrollView
+        android:id="@+id/scrollView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.51">
+
+        <android.support.constraint.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="250sp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toStartOf="parent">
+
+            <ImageView
+                android:id="@+id/google_map"
+                android:layout_width="0dp"
+                android:layout_height="@dimen/map_image_view_height"
+                android:layout_marginEnd="16dp"
+                android:layout_marginStart="16dp"
+                android:layout_marginTop="@dimen/google_map_margin_top"
+                android:background="@drawable/google_map"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.781"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <EditText
+                android:id="@+id/map_address"
+                android:layout_width="0dp"
+                android:layout_height="@dimen/textView_Height_selectTime"
+                android:layout_marginEnd="16dp"
+                android:layout_marginStart="16dp"
+                android:layout_marginTop="15dp"
+                android:background="@color/blue_base_app_color"
+                android:gravity="center_vertical"
+                android:paddingLeft="@dimen/email_padding_left"
+                android:text="Address"
+                android:textColor="@color/white"
+                android:textSize="@dimen/radioButton_textSize"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.0"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/google_map"
+                tools:ignore="MissingConstraints" />
+
+            <android.support.constraint.ConstraintLayout
+
+                android:layout_width="0dp"
+                android:layout_height="@dimen/address_parent_layout_height"
+                android:layout_marginBottom="200sp"
+                android:layout_marginEnd="16dp"
+                android:layout_marginStart="16dp"
+                android:layout_marginTop="3dp"
+                android:background="@color/blue_base_app_color1"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/map_address">
+
+
+                <TextView
+                    android:id="@+id/address"
+                    android:layout_width="@dimen/full_address_view_width"
+                    android:layout_height="wrap_content"
+                    android:drawableLeft="@drawable/location_pointer"
+                    android:drawablePadding="8sp"
+                    android:gravity="center_vertical"
+                    android:maxLines="3"
+                    android:paddingLeft="10sp"
+                    android:text="# 403 Sec-82 JLPL Industrial Area, Mohali (160044)"
+                    android:textColor="@color/white"
+                    android:textSize="@dimen/radioButton_textSize"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintHorizontal_bias="0.0"
+                    app:layout_constraintStart_toStartOf="parent"
+                    tools:ignore="MissingConstraints"
+                    tools:layout_editor_absoluteY="0dp" />
+
+
+                <TextView
+                    android:id="@+id/homeDelevery"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="8dp"
+                    android:drawableLeft="@drawable/phone"
+                    android:drawablePadding="8sp"
+                    android:gravity="center_vertical"
+                    android:paddingLeft="10sp"
+                    android:text="0172-xxxxxx"
+                    android:textColor="@color/white"
+                    android:textSize="@dimen/radioButton_textSize"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/address" />
+
+            </android.support.constraint.ConstraintLayout>
+        </android.support.constraint.ConstraintLayout>
+    </ScrollView>
+</android.support.constraint.ConstraintLayout>
+

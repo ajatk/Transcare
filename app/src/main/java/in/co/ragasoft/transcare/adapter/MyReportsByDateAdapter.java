@@ -5,23 +5,23 @@ import android.app.FragmentTransaction;
 import android.content.Context;
 import android.support.annotation.NonNull;
 import android.support.constraint.ConstraintLayout;
+import android.support.v4.app.Fragment;
 import android.support.v7.widget.RecyclerView;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import java.util.List;
 
+import in.co.ragasoft.transcare.LoadPageListner;
 import in.co.ragasoft.transcare.R;
 import in.co.ragasoft.transcare.fragments.MyReports;
+import in.co.ragasoft.transcare.fragments.MyReportsView;
 import in.co.ragasoft.transcare.modelClasses.TestPanelModel;
 
-/**
- * Created by sam on 3/28/2018.
- */
-
-public class MyReportsAdapter extends RecyclerView.Adapter<MyReportsAdapter.MyViewHolder> {
+public class MyReportsByDateAdapter extends RecyclerView.Adapter<MyReportsByDateAdapter.MyViewHolder> implements LoadPageListner {
 
     List<TestPanelModel> list;
     Context context;
@@ -29,10 +29,13 @@ public class MyReportsAdapter extends RecyclerView.Adapter<MyReportsAdapter.MyVi
 
     MyReports myReports;
 
+    MyReportsView myReportsView;
+
     FragmentManager fragmentManager;
     FragmentTransaction fragmentTransaction;
+    Fragment fragment;
 
-    public MyReportsAdapter(Context context, List<TestPanelModel> list) {
+    public MyReportsByDateAdapter(Context context, List<TestPanelModel> list) {
         this.list = list;
         this.context = context;
 //        myReports =
@@ -41,33 +44,41 @@ public class MyReportsAdapter extends RecyclerView.Adapter<MyReportsAdapter.MyVi
 
     @NonNull
     @Override
-    public MyReportsAdapter.MyViewHolder onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
+    public MyReportsByDateAdapter.MyViewHolder onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
         View view = LayoutInflater.from(parent.getContext()).inflate(R.layout.my_reports_list_design, parent, false);
         //context =  view.getContext().getApplicationContext();
-        return new MyReportsAdapter.MyViewHolder(view);
+        return new MyReportsByDateAdapter.MyViewHolder(view);
     }
 
     @Override
-    public void onBindViewHolder(@NonNull final MyReportsAdapter.MyViewHolder holder, final int position) {
+    public void onBindViewHolder(@NonNull final MyReportsByDateAdapter.MyViewHolder holder, final int position) {
         final TestPanelModel tmodel = list.get(position);
         //holder.monthTv.setText(tmodel.getName());
         holder.itemGroup1.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-               /* MyReportsView myReportsView = new MyReportsView();
-
-              //  fragmentManager = ((Activity)(context)).getFragmentManager();
-               // fragmentManager = ((Activity)context).getFragmentManager();
-                fragmentManager =((Activity)context.getApplicationContext()).getFragmentManager();
-              //  FragmentManager fragmentManager = (HomeActivity)context;
-               fragmentTransaction = fragmentManager.beginTransaction();
-             // fragmentTransaction.replace(R.id.frame, myReportsView);
-              fragmentTransaction.replace(R.id.frame, myReportsView);
-                fragmentTransaction.addToBackStack(null);
-                fragmentTransaction.commit();*/
+                fragment = new MyReportsView();
+                loaddFragment(fragment);
+                Toast.makeText(context, "<<<<<>>>>>>>>>>>>set", Toast.LENGTH_SHORT).show();
+             /*  LoadPageListner loadPageListner = new LoadPageListner() {
+                   @Override
+                   public void loaddFragment(Fragment fragment) {
+                       myReportsView = new MyReportsView();
+                       fragmentTransaction = ((Activity)context).getFragmentManager().beginTransaction();
+                       fragmentTransaction.replace(R.id.frame, myReportsView);
+                       fragmentTransaction.commit();
+                   }
+               };*/
             }
         });
     }
+
+    @Override
+    public int getItemViewType(int position) {
+        return super.getItemViewType(position);
+    }
+
+
 
     @Override
     public int getItemCount() {
@@ -75,6 +86,17 @@ public class MyReportsAdapter extends RecyclerView.Adapter<MyReportsAdapter.MyVi
             return 0;
         else
             return list.size();
+    }
+
+    @Override
+    public void loaddFragment(Fragment fragment) {
+
+            /*myReportsView = new MyReportsView();
+            fragmentTransaction = ((Activity)context).getFragmentManager().beginTransaction();
+            fragmentTransaction.replace(R.id.frame, myReportsView);
+            fragmentTransaction.commit();
+
+        fragmentTransaction.addToBackStack(null);*/
     }
 
     public class MyViewHolder extends RecyclerView.ViewHolder {

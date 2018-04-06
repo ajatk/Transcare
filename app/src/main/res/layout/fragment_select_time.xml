@@ -1,0 +1,242 @@
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/background">
+
+    <android.support.constraint.ConstraintLayout
+        android:id="@+id/constraintLayout9"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="15sp"
+        android:layout_marginEnd="16dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="4dp"
+        android:background="@color/blue_base_app_color1"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <RadioGroup
+            android:id="@+id/selectTime_radioGroup1"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="8dp"
+            android:layout_marginLeft="16dp"
+            android:layout_marginRight="8dp"
+            android:layout_marginStart="16dp"
+            android:backgroundTint="@color/white"
+            android:orientation="vertical"
+            app:layout_constraintEnd_toStartOf="@+id/selectAddress_radioGroup2"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent">
+
+            <RadioButton
+                android:id="@+id/sheduleAppt"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:backgroundTint="@color/white"
+                android:buttonTint="@color/white"
+                android:text="Schedule Appt."
+                android:textColor="@color/white"
+                android:textSize="@dimen/radioButton_textSize" />
+
+            <RadioButton
+                android:id="@+id/bookNow"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:backgroundTint="@color/white"
+                android:buttonTint="@color/white"
+                android:text="Book Now"
+                android:textColor="@color/white"
+                android:textSize="@dimen/radioButton_textSize" />
+        </RadioGroup>
+
+        <RadioGroup
+            android:id="@+id/selectAddress_radioGroup2"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="16dp"
+            android:layout_marginRight="16dp"
+            android:backgroundTint="@color/white"
+            android:orientation="vertical"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@+id/selectTime_radioGroup1"
+            tools:ignore="MissingConstraints"
+            tools:layout_editor_absoluteY="0dp">
+
+            <RadioButton
+                android:id="@+id/visitLab"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:backgroundTint="@color/white"
+                android:buttonTint="@color/white"
+                android:text="Schedule Appt."
+                android:textColor="@color/white"
+                android:textSize="@dimen/radioButton_textSize" />
+
+            <RadioButton
+                android:id="@+id/onSite"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:backgroundTint="@color/white"
+                android:buttonTint="@color/white"
+                android:text="On Site / Home Collection"
+                android:textColor="@color/white"
+                android:textSize="@dimen/radioButton_textSize" />
+        </RadioGroup>
+
+    </android.support.constraint.ConstraintLayout>
+
+    <Spinner
+        android:id="@+id/spinnerReport"
+        android:layout_width="0dp"
+        android:layout_height="@dimen/textView_Height_selectTime"
+        android:layout_marginEnd="16dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="@dimen/report_delivery_prefrences"
+        android:background="@color/blue_base_app_color"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/constraintLayout9" />
+
+    <ImageView
+        android:id="@+id/imageView9"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="28dp"
+        android:layout_marginRight="28dp"
+        android:layout_marginTop="60dp"
+        android:src="@drawable/arrow_drop_down"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/constraintLayout9" />
+
+    <TextView
+        android:id="@+id/spinner_whatsapp"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/textView_Height_selectTime"
+        android:layout_marginEnd="16dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="1dp"
+        android:background="@color/blue_base_app_color1"
+        android:gravity="start"
+        android:text="Whatsapp"
+        android:textAlignment="viewStart"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/spinnerReport" />
+
+    <ImageView
+        android:id="@+id/whatsapp_image"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="8dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="8dp"
+        android:src="@drawable/arrow_drop_down"
+        app:layout_constraintBottom_toBottomOf="@+id/spinner_whatsapp"
+        app:layout_constraintStart_toStartOf="@+id/spinner_whatsapp"
+        app:layout_constraintTop_toTopOf="@+id/spinner_whatsapp"
+        app:layout_constraintVertical_bias="1.0" />
+
+
+    <TextView
+        android:id="@+id/textView37"
+        android:layout_width="0dp"
+        android:layout_height="match_parent"
+        android:layout_marginStart="14dp"
+        android:text="Report Delivery Prefrences"
+        android:textColor="@color/white"
+        android:textSize="@dimen/radioButton_textSize"
+        app:layout_constraintBottom_toTopOf="@+id/spinner_whatsapp"
+        app:layout_constraintEnd_toStartOf="@+id/imageView9"
+        app:layout_constraintHorizontal_bias="0.458"
+        app:layout_constraintStart_toStartOf="@+id/spinnerReport"
+        app:layout_constraintTop_toTopOf="@+id/spinnerReport"
+        app:layout_constraintVertical_bias="0.35000002" />
+
+    <ImageView
+        android:id="@+id/imageView11"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="28dp"
+        android:layout_marginRight="28dp"
+        android:layout_marginTop="14dp"
+        android:src="@drawable/arrow_drop_down"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/spinnerReport" />
+
+
+    <TextView
+        android:id="@+id/textView41"
+        android:layout_width="0dp"
+        android:layout_height="match_parent"
+        android:gravity="center_vertical"
+        android:text="Whatsapp"
+        android:textColor="@color/white"
+        android:textSize="@dimen/radioButton_textSize"
+        app:layout_constraintBottom_toBottomOf="@+id/spinner_whatsapp"
+        app:layout_constraintEnd_toStartOf="@+id/imageView11"
+        app:layout_constraintStart_toEndOf="@+id/whatsapp_image"
+        app:layout_constraintTop_toBottomOf="@+id/spinnerReport"
+        app:layout_constraintVertical_bias="0.71000004" />
+
+    <EditText
+        android:id="@+id/email_tv"
+        android:layout_width="0dp"
+        android:layout_height="@dimen/textView_Height_selectTime"
+        android:layout_marginEnd="16dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="32dp"
+        android:background="@color/blue_base_app_color1"
+        android:gravity="center_vertical"
+        android:paddingLeft="@dimen/email_padding_left"
+        android:text="Email"
+        android:textColor="@color/white"
+        android:textSize="@dimen/radioButton_textSize"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/spinner_whatsapp" />
+
+    <ImageView
+        android:layout_width="@dimen/email_image_width"
+        android:layout_height="@dimen/email_image_width"
+        android:layout_marginStart="24dp"
+        android:layout_marginTop="37dp"
+        android:src="@drawable/email"
+        android:textSize="@dimen/radioButton_textSize"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/spinner_whatsapp"
+        tools:ignore="MissingConstraints" />
+
+    <TextView
+        android:id="@+id/homeDelevery"
+        android:layout_width="0dp"
+        android:layout_height="@dimen/textView_Height_selectTime"
+        android:layout_marginEnd="16dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="3dp"
+        android:background="@color/blue_base_app_color1"
+        android:gravity="center_vertical"
+        android:paddingLeft="40sp"
+        android:text="Home Delivery"
+        android:textColor="@color/white"
+        android:textSize="@dimen/radioButton_textSize"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/email_tv" />
+
+    <ImageView
+        android:layout_width="@dimen/email_image_width"
+        android:layout_height="@dimen/email_image_width"
+        android:layout_marginLeft="24dp"
+        android:layout_marginStart="24dp"
+        android:layout_marginTop="8dp"
+        android:src="@drawable/email"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/email_tv"
+        tools:ignore="MissingConstraints" />
+</android.support.constraint.ConstraintLayout>
