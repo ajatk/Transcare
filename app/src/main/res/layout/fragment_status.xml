@@ -157,6 +157,7 @@
                     android:backgroundTint="@color/white"
                     android:gravity="center_vertical"
                     android:numStars="5"
+                    android:progressBackgroundTint="@color/white"
                     android:progressTint="@color/Redd"
                     android:rating="3.5"
                     android:stepSize="0.5"
