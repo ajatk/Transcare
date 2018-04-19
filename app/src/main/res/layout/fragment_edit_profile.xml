@@ -25,36 +25,17 @@
             app:layout_constraintTop_toBottomOf="@+id/profile_imageView"
             tools:ignore="MissingConstraints" />
 
-        <info.abdolahi.CircularMusicProgressBar
+        <de.hdodenhof.circleimageview.CircleImageView
             android:id="@+id/profile_imageView"
             android:layout_width="@dimen/ProfileImageWidth"
             android:layout_height="@dimen/ProfileImageHeight"
             android:layout_marginTop="28dp"
             android:src="@drawable/ic_launcher_background"
-            app:animateProgress="false"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent"
             tools:ignore="MissingConstraints" />
 
-        <com.jackandphantom.circularprogressbar.CircleProgressbar
-            android:id="@+id/yourCircularProgressbar"
-            android:layout_width="@dimen/progress_bar_width"
-            android:layout_height="@dimen/progress_bar_height"
-            android:layout_marginBottom="8dp"
-            android:layout_marginEnd="8dp"
-            android:layout_marginStart="8dp"
-            android:layout_marginTop="8dp"
-
-            app:cpb_foregroundProgressColor="#1864c2"
-            app:cpb_foregroundProgressWidth="15"
-            app:cpb_progress="50"
-            app:cpb_roundedCorner="true"
-            app:cpb_touchEnabled="true"
-            app:layout_constraintBottom_toBottomOf="@+id/profile_imageView"
-            app:layout_constraintEnd_toEndOf="@+id/profile_imageView"
-            app:layout_constraintStart_toStartOf="@+id/profile_imageView"
-            app:layout_constraintTop_toTopOf="@+id/profile_imageView" />
 
         <TextView
             android:id="@+id/textView"

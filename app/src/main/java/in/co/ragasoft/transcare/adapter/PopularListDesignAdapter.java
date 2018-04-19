@@ -37,6 +37,8 @@ public class PopularListDesignAdapter extends RecyclerView.Adapter<PopularListDe
         TestPanelModel tmodel = alist.get(position);
         holder.itemPrice.setText(tmodel.getRupee());
 
+
+
     }
 
     @Override

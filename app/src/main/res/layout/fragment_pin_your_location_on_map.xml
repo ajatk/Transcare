@@ -127,13 +127,12 @@
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toTopOf="parent" />
 
-            <ImageView
-                android:id="@+id/google_map"
+            <com.google.android.gms.maps.MapView
+                android:id="@+id/frame_map"
                 android:layout_width="0dp"
                 android:layout_height="@dimen/map_image_view_height"
                 android:layout_marginEnd="16dp"
                 android:layout_marginStart="16dp"
-                android:background="@drawable/google_map"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintHorizontal_bias="0.0"
                 app:layout_constraintStart_toStartOf="parent"
@@ -159,7 +158,7 @@
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintHorizontal_bias="0.0"
                 app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/google_map" />
+                app:layout_constraintTop_toBottomOf="@+id/frame_map" />
 
             <View
                 android:layout_width="1sp"
@@ -169,7 +168,7 @@
                 android:layout_marginTop="@dimen/view_margin_top"
                 android:background="@drawable/my_reports_line_view"
                 app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/google_map" />
+                app:layout_constraintTop_toBottomOf="@+id/frame_map" />
 
             <android.support.constraint.ConstraintLayout
 

@@ -27,12 +27,15 @@ public class HealthPackagesFragment extends Fragment {
         View view = inflater.inflate(R.layout.fragment_health_packages, container, false);
         context = getActivity();
         list = new ArrayList<>();
+        getmoney();
+
         rv = view.findViewById(R.id.recyclerview_healthPackages);
+
         tadapter = new PopularListDesignAdapter(context, list);
         RecyclerView.LayoutManager manager = new LinearLayoutManager(getActivity());
         rv.setLayoutManager(manager);
         rv.setAdapter(tadapter);
-        getmoney();
+
         return view;
     }
 

@@ -41,7 +41,6 @@ public class MyCartAdapter extends RecyclerView.Adapter<MyCartAdapter.ViewHolder
     public void onBindViewHolder(@NonNull ViewHolder holder, int position) {
         TestPanelModel tmodel = list.get(position);
         holder.listItem1.setText(tmodel.getName());
-        holder.itemGroup1.setMaxHeight(30);
         holder.itemGroup1.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {

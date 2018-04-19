@@ -1,7 +1,9 @@
 package in.co.ragasoft.transcare.adapter;
 
-import android.app.FragmentManager;
-import android.app.FragmentTransaction;
+
+import android.app.Activity;
+import android.support.v4.app.FragmentManager;
+import android.support.v4.app.FragmentTransaction;
 import android.content.Context;
 import android.support.annotation.NonNull;
 import android.support.constraint.ConstraintLayout;
@@ -15,13 +17,14 @@ import android.widget.Toast;
 
 import java.util.List;
 
+import in.co.ragasoft.transcare.HomeActivity;
 import in.co.ragasoft.transcare.LoadPageListner;
 import in.co.ragasoft.transcare.R;
 import in.co.ragasoft.transcare.fragments.MyReports;
 import in.co.ragasoft.transcare.fragments.MyReportsView;
 import in.co.ragasoft.transcare.modelClasses.TestPanelModel;
 
-public class MyReportsByDateAdapter extends RecyclerView.Adapter<MyReportsByDateAdapter.MyViewHolder> implements LoadPageListner {
+public class MyReportsByDateAdapter extends RecyclerView.Adapter<MyReportsByDateAdapter.MyViewHolder> {
 
     List<TestPanelModel> list;
     Context context;
@@ -57,18 +60,15 @@ public class MyReportsByDateAdapter extends RecyclerView.Adapter<MyReportsByDate
         holder.itemGroup1.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
+
                 fragment = new MyReportsView();
-                loaddFragment(fragment);
                 Toast.makeText(context, "<<<<<>>>>>>>>>>>>set", Toast.LENGTH_SHORT).show();
-             /*  LoadPageListner loadPageListner = new LoadPageListner() {
-                   @Override
-                   public void loaddFragment(Fragment fragment) {
-                       myReportsView = new MyReportsView();
-                       fragmentTransaction = ((Activity)context).getFragmentManager().beginTransaction();
-                       fragmentTransaction.replace(R.id.frame, myReportsView);
-                       fragmentTransaction.commit();
-                   }
-               };*/
+                ((HomeActivity) context).getSupportFragmentManager()
+                        .beginTransaction()
+                        .replace(R.id.frame, fragment)
+                        .addToBackStack("report view")
+                        .commit();
+
             }
         });
     }
@@ -79,7 +79,6 @@ public class MyReportsByDateAdapter extends RecyclerView.Adapter<MyReportsByDate
     }
 
 
-
     @Override
     public int getItemCount() {
         if (list == null)
@@ -88,16 +87,16 @@ public class MyReportsByDateAdapter extends RecyclerView.Adapter<MyReportsByDate
             return list.size();
     }
 
-    @Override
+   /* @Override
     public void loaddFragment(Fragment fragment) {
 
-            /*myReportsView = new MyReportsView();
+            *//*myReportsView = new MyReportsView();
             fragmentTransaction = ((Activity)context).getFragmentManager().beginTransaction();
             fragmentTransaction.replace(R.id.frame, myReportsView);
             fragmentTransaction.commit();
 
-        fragmentTransaction.addToBackStack(null);*/
-    }
+        fragmentTransaction.addToBackStack(null);*//*
+    }*/
 
     public class MyViewHolder extends RecyclerView.ViewHolder {
 

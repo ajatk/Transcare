@@ -25,7 +25,9 @@ public class ExpandableListAdapter extends BaseExpandableListAdapter {
     HashMap<String, List<String>> listDataChild;
     private Context _context;
     private List<String> _listDataHeader;
+    private List<String>listDataHeaders;
     private HashMap<String, List<String>> _listDataChild;
+    private HashMap<String, List<String>> secList_listDataChild;
     private List<String> child_list;
 
     public ExpandableListAdapter(Context context, List<String> listDataHeader,
@@ -77,8 +79,7 @@ public class ExpandableListAdapter extends BaseExpandableListAdapter {
     public View getGroupView(int groupPosition, boolean isExpanded, View convertView, ViewGroup parent) {
         String headerTitle = String.valueOf(getGroup(groupPosition));
         if (convertView == null) {
-            LayoutInflater infalInflater = (LayoutInflater) this._context
-                    .getSystemService(Context.LAYOUT_INFLATER_SERVICE);
+            LayoutInflater infalInflater = (LayoutInflater) this._context.getSystemService(Context.LAYOUT_INFLATER_SERVICE);
             convertView = infalInflater.inflate(R.layout.expandable_list_book_appointment, null);
         }
         TextView lblListHeader = convertView
@@ -86,61 +87,30 @@ public class ExpandableListAdapter extends BaseExpandableListAdapter {
         lblListHeader.setTypeface(null, Typeface.BOLD);
         lblListHeader.setText(headerTitle);
 
-       /*CustExpListview  SecondLevelexplv = new CustExpListview (_context);
 
-        SecondLevelexplv.setAdapter(new SecondLevelAdapter(_context,child_list));
-
-        SecondLevelexplv.setGroupIndicator(null);
-
-        return SecondLevelexplv;
-        //*/
         return convertView;
     }
 
     @Override
     public View getChildView(int groupPosition, int childPosition, boolean isLastChild, View convertView, ViewGroup parent) {
         final String childText = (String) getChild(groupPosition, childPosition);
+        listDataHeaders = new ArrayList<String>();
+        listDataHeaders.add("Report ");
+        secList_listDataChild = new HashMap<String, List<String>>();
 
-       /* if (convertView == null)
-        {
-            LayoutInflater infalInflater = (LayoutInflater) this._context
-                    .getSystemService(Context.LAYOUT_INFLATER_SERVICE);
-            //convertView = infalInflater.inflate(R.layout.second_level_expandable_list, null);
-           // convertView = infalInflater.inflate(R.layout.expandable_list_book_appointment, null);
-            child_list = new ArrayList<>();
-            child_list.add("Same as Register Number");
-            child_list.add("Add Whats app Number");
-        }*/
-        /*child_list = new ArrayList<>();
-        child_list.add("Same as Register Number");
-        child_list.add("Add Whats app Number");
-        *//*RadioGroup txtListChild = (RadioGroup) convertView
-                .findViewById(R.id.radioGroup_book);
-        txtListChild.clearCheck();*//*
-       *//* ExpandableListView txtListChild = convertView
-                .findViewById(R.id.listView_whatsapp);
-        txtListChild.setAdapter(new SecondLevelAdapter(_context,child_list));*//*
-      listDataChild = new HashMap<String, List<String>>();
-      listDataChild.put(child_list.get(0),child_list);*/
+        List<String> top250 = new ArrayList<String>();
+        top250.add("The Shawshank Redemption");
+        secList_listDataChild.put(listDataHeaders.get(0),top250);
 
         CustExpListview SecondLevelexplv = new CustExpListview(_context);
 
-        SecondLevelexplv.setAdapter(new SecondLevelAdapter(_context, _listDataHeader, listDataChild));
+        SecondLevelexplv.setAdapter(new SecondLevelAdapter(_context,listDataHeaders,secList_listDataChild));
 
         SecondLevelexplv.setGroupIndicator(null);
-
         return SecondLevelexplv;
+       // return convertView;
     }
-    /*    if (convertView == null)
-        {
-            LayoutInflater infalInflater = (LayoutInflater) this._context
-                    .getSystemService(Context.LAYOUT_INFLATER_SERVICE);
-            convertView = infalInflater.inflate(R.layout.spin_adapt, null);
-        }
-        RadioGroup lblListHeader = (RadioGroup) convertView
-                .findViewById(R.id.radioGroup_book);
-        lblListHeader.setTypeface(null, Typeface.BOLD);
-        lblListHeader.setText(headerTitle);*/
+
 
     @Override
     public boolean isChildSelectable(int groupPosition, int childPosition) {
@@ -156,21 +126,29 @@ public class ExpandableListAdapter extends BaseExpandableListAdapter {
         }
 
         protected void onMeasure(int widthMeasureSpec, int heightMeasureSpec) {
-            widthMeasureSpec = MeasureSpec.makeMeasureSpec(660, MeasureSpec.EXACTLY);
-            heightMeasureSpec = MeasureSpec.makeMeasureSpec(600, MeasureSpec.AT_MOST);
+
+            widthMeasureSpec = MeasureSpec.makeMeasureSpec(960,
+
+                    MeasureSpec.AT_MOST);
+
+            heightMeasureSpec = MeasureSpec.makeMeasureSpec(600,
+
+                    MeasureSpec.AT_MOST);
+
             super.onMeasure(widthMeasureSpec, heightMeasureSpec);
+
         }
     }
 
     public class SecondLevelAdapter extends BaseExpandableListAdapter {
-
+        private List<String> listDataHeader;
 
         private Context _context;
         // private List<String> _list_DataHeader;
         private List<String> child_list;
         //   private HashMap<String, List<String>> _listDataChild;
         private HashMap<String, List<String>> listDataChild;
-        private List<String> listDataHeader;
+
 
        /* public SecondLevelAdapter(Context context, List<String> listDataHeader,
                                   HashMap<String, List<String>> listChildData) {
@@ -221,8 +199,7 @@ public class ExpandableListAdapter extends BaseExpandableListAdapter {
 
         @Override
         public Object getChild(int groupPosition, int childPosition) {
-            return this.listDataChild.get(this.listDataHeader.get(groupPosition))
-                    .get(childPosition);
+            return 2;
         }
 
         @Override
@@ -243,16 +220,17 @@ public class ExpandableListAdapter extends BaseExpandableListAdapter {
         @Override
         public View getGroupView(int groupPosition, boolean isExpanded, View convertView, ViewGroup parent) {
             String headerTitle = String.valueOf(getGroup(groupPosition));
-            prepareListData();
+
             if (convertView == null) {
-                LayoutInflater infalInflater = (LayoutInflater) this._context
-                        .getSystemService(Context.LAYOUT_INFLATER_SERVICE);
+                LayoutInflater infalInflater = (LayoutInflater) this._context.getSystemService(Context.LAYOUT_INFLATER_SERVICE);
                 convertView = infalInflater.inflate(R.layout.expandable_list_book_appointment, null);
             }
             TextView lbblListHeader = convertView
                     .findViewById(R.id.spinner_whatsapp);
+            final RadioGroup rg = convertView.findViewById(R.id.radioGroup_book);
             lbblListHeader.setTypeface(null, Typeface.BOLD);
             lbblListHeader.setText("WhatsApp");
+
             return convertView;
         }
 
@@ -268,11 +246,12 @@ public class ExpandableListAdapter extends BaseExpandableListAdapter {
             }
             RadioGroup txtListChild = convertView
                     .findViewById(R.id.radioGroup_book);
+            txtListChild.setTag(childText);
             txtListChild.clearCheck();
         /*ExpandableListView txtListChild = convertView
                 .findViewById(R.id.listView_whatsapp);
 */
-            return convertView;
+            return txtListChild;
         }
 
         @Override
@@ -280,21 +259,22 @@ public class ExpandableListAdapter extends BaseExpandableListAdapter {
             return false;
         }
 
-        private void prepareListData() {
-            listDataHeader = new ArrayList<String>();
-            listDataChild = new HashMap<String, List<String>>();
-            // listDataChild2 = new HashMap<String, List<String>>();
-            listDataHeader.add("Report ");
+
+    }
+    private void prepareListData() {
+        listDataHeaders = new ArrayList<String>();
+        listDataChild = new HashMap<String, List<String>>();
+        // listDataChild2 = new HashMap<String, List<String>>();
+        listDataHeaders.add("Report ");
 
 
-            List<String> top250 = new ArrayList<String>();
-            top250.add("The Shawshank Redemption");
-            top250.add("The Shawshank Redemption");
+        List<String> top250 = new ArrayList<String>();
+        top250.add("The Shawshank Redemption");
+        top250.add("The Shawshank Redemption");
 
-            listDataChild.put(listDataHeader.get(0), top250);
-            // listDataChild.put(listDataHeader.get(1), top250);
+        listDataChild.put(listDataHeaders.get(0), top250);
+        // listDataChild.put(listDataHeader.get(1), top250);
 
 
-        }
     }
 }

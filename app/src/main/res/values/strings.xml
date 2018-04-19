@@ -14,6 +14,7 @@
     <string name="ortext">or</string>
     <string name="set_up_your_health">Set Up Your Health Profile</string>
     <string name="spinner_title">SEX    </string>
+    <string name="YOUR_API_KEY">AIzaSyChdSLNQnabzX66uEBxCWEI9lOqqiajZY4 </string>
     <string-array name="Gender">
         <item>male</item>
         <item>female</item>

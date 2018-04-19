@@ -29,12 +29,14 @@ public class PopularTestFrag extends Fragment {
         View view = inflater.inflate(R.layout.fragment_popular_test, container, false);
         context = getActivity();
         list = new ArrayList<TestPanelModel>();
+        getmoney();
         rv = view.findViewById(R.id.recyclerview_poptestPanels);
+
         tadapter = new PopularListDesignAdapter(context, list);
         RecyclerView.LayoutManager manager = new LinearLayoutManager(getActivity());
         rv.setLayoutManager(manager);
         rv.setAdapter(tadapter);
-        getmoney();
+
         return view;
     }
 

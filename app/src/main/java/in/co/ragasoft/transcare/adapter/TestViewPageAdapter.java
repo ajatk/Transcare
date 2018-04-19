@@ -15,7 +15,7 @@ import in.co.ragasoft.transcare.fragments.TestPanelsFragment;
 
 public class TestViewPageAdapter extends FragmentStatePagerAdapter {
 
-    String a[] = {"Poular Test", "Test Panels", "Health Packages"};
+    String a[] = {"Popular Test", "Test Panels", "Health Packages"};
     private Context mContext;
 
 

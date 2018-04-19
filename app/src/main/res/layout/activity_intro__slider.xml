@@ -20,54 +20,67 @@
     </android.support.v4.view.ViewPager>
 
 
-    <!-- <TextView
-         android:id="@+id/getstarted"
-         android:layout_width="0dp"
-         android:layout_height="wrap_content"
-
-
-         android:layout_marginBottom="16dp"
-         android:layout_marginEnd="8dp"
-
-         android:layout_marginStart="8dp"
-         android:background="@color/base_app_color"
-         android:paddingBottom="10dp"
-         android:paddingTop="10dp"
-         android:text="Get Started"
-         android:textAlignment="center"
-         android:textColor="@color/transparent_text_color"
-         android:textSize="@dimen/getstarted_text_size"
-         app:layout_constraintBottom_toBottomOf="@+id/view_Pager"
-
-         app:layout_constraintEnd_toEndOf="parent"
-         app:layout_constraintStart_toStartOf="parent" />-->
-
-    <LinearLayout
-        android:id="@+id/dot_layout"
-        android:layout_width="match_parent"
+    <TextView
+        android:id="@+id/getstarted"
+        android:layout_width="0dp"
         android:layout_height="wrap_content"
-        android:layout_marginTop="@dimen/dotlayout_top_margin"
-        android:gravity="center"
-        android:orientation="horizontal"
-        android:paddingLeft="20sp"
-        android:paddingRight="20sp"
+
+        android:layout_marginBottom="16dp"
+        android:layout_marginEnd="8dp"
+
+        android:layout_marginStart="8dp"
+        android:background="@color/base_app_color"
+        android:paddingBottom="10dp"
+        android:paddingTop="10dp"
+        android:text="Book An Appointment"
+        android:textAlignment="center"
+        android:textColor="@color/transparent_text_color"
+        android:textSize="@dimen/getstarted_text_size"
+        app:layout_constraintBottom_toBottomOf="@+id/view_Pager"
+
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.0"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent">
-
-
-    </LinearLayout>
+        app:layout_constraintStart_toStartOf="parent" />
 
     <TextView
         android:id="@+id/skip"
-        android:layout_width="60sp"
+        android:layout_width="70sp"
         android:layout_height="40sp"
         android:layout_marginTop="@dimen/dotlayout_top_margin1"
-        android:background="@color/white"
         android:paddingTop="10sp"
-        android:text="Skip  >"
+
+        android:text="Skip  >>"
         android:textColor="@color/black"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
+
+    <android.support.constraint.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="@dimen/dots_layout_margin_bottom"
+        android:background="@color/Redd"
+
+        android:elevation="50sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent">
+
+        <LinearLayout
+            android:id="@+id/dot_layout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:orientation="horizontal"
+            android:paddingLeft="20sp"
+            android:paddingRight="20sp"
+
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent">
+
+
+        </LinearLayout>
+    </android.support.constraint.ConstraintLayout>
+
+
 </android.support.constraint.ConstraintLayout>

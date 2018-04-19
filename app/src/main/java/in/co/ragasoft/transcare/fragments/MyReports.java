@@ -4,6 +4,7 @@ import android.content.Context;
 import android.os.Bundle;
 import android.support.v4.app.Fragment;
 import android.support.v4.app.FragmentTransaction;
+import android.support.v7.widget.DefaultItemAnimator;
 import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
 import android.support.v7.widget.Toolbar;
@@ -45,19 +46,29 @@ public class MyReports extends Fragment implements View.OnClickListener, RadioGr
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
         final View view = inflater.inflate(R.layout.fragment_my_reports, container, false);
+        list = new ArrayList<>();
         reports = view.findViewById(R.id.edit_Name);
         reports.setOnClickListener(this);
         context = getActivity();
 
-        rvBydate = view.findViewById(R.id.recyclerView_myReports); //rvBydate.setVisibility(View.VISIBLE);
+        rvBydate = view.findViewById(R.id.recyclerView_myReports);
         rvByTestName = view.findViewById(R.id.recyclerView_byTestName);
         rB1 = view.findViewById(R.id.radioButton1);
         rB2 = view.findViewById(R.id.radioButton2);
-        getmoney();
+
+
+        rvBydate.setVisibility(View.VISIBLE);
+        rvByTestName.setVisibility(View.GONE);
+        //adapter = new MyReportsByDateAdapter(context, list);
+        adapter = new MyReportsByDateAdapter(context, list);
+        RecyclerView.LayoutManager manager = new LinearLayoutManager(getActivity());
+        rvBydate.setLayoutManager(manager);
+        rvBydate.setAdapter(adapter);
+
+
 
         rg = view.findViewById(R.id.radioGroup);
         rg.setOnCheckedChangeListener(new RadioGroup.OnCheckedChangeListener() {
-
 
             @Override
             public void onCheckedChanged(RadioGroup group, int checkedId) {
@@ -79,8 +90,7 @@ public class MyReports extends Fragment implements View.OnClickListener, RadioGr
                         rvByTestName.setVisibility(View.VISIBLE);
                         rvBydate.setVisibility(View.GONE);
                         madapter = new MyReportsByTestName_Adapter(context, listDataHeader, listDataChild);
-                        //  RecyclerView.LayoutManager rmanager = new LinearLayoutManager(getActivity());
-                        //rvByTestName.setLayoutManager(rmanager);
+
                         rvByTestName.setAdapter(madapter);
                     } else {
                         rvBydate.setVisibility(View.VISIBLE);
@@ -88,6 +98,8 @@ public class MyReports extends Fragment implements View.OnClickListener, RadioGr
                         //adapter = new MyReportsByDateAdapter(context, list);
                         adapter = new MyReportsByDateAdapter(context, list);
                         RecyclerView.LayoutManager manager = new LinearLayoutManager(getActivity());
+                        rvBydate.setHasFixedSize(true);
+                        rvBydate.setItemAnimator(new DefaultItemAnimator());
                         rvBydate.setLayoutManager(manager);
                         rvBydate.setAdapter(adapter);
                     }
@@ -98,12 +110,12 @@ public class MyReports extends Fragment implements View.OnClickListener, RadioGr
 
 
 
-
+        getmoney();
         return view;
     }
 
     public void getmoney() {
-        list = new ArrayList<>();
+
         listDataHeader = new ArrayList<String>();
         listDataChild = new HashMap<String, List<String>>();
 

@@ -15,7 +15,8 @@ import in.co.ragasoft.transcare.fragments.SelectTime;
 public class BookAppointmentViewpagerAdapter extends FragmentStatePagerAdapter {
     String a[] = {"Select Time", "Select Address"};
     private Context mContext;
-
+    SelectLocation selectLocation;
+    SelectTime selectTime;
     public BookAppointmentViewpagerAdapter(Context context, FragmentManager fm) {
         super(fm);
         mContext = context;
@@ -27,6 +28,7 @@ public class BookAppointmentViewpagerAdapter extends FragmentStatePagerAdapter {
 
             return new SelectTime();
         } else {
+
             return new SelectLocation();
 
         }

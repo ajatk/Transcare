@@ -74,9 +74,11 @@
 
     //Intro Slider Activity
     <dimen name="getstarted_text_size">20sp</dimen>
-    <dimen name="dotlayout_top_margin">560dp</dimen>
-    <dimen name="dotlayout_top_margin1">568dp</dimen>
+    <dimen name="dotlayout_top_margin">520dp</dimen>
+    <dimen name="dotlayout_top_margin1">30dp</dimen>
+    <dimen name="book_an_appointment_margin_top">600sp</dimen>
 
+    <dimen name="slider_image_height">400sp</dimen>
 
     //Slider 1 dimesions------------------------------------------////
 
@@ -87,7 +89,7 @@
     <dimen name="margin_left_right2">63dp</dimen>
     <dimen name="margin_bottom_parent">140dp</dimen>
 
-
+    <dimen name="slider_cap_text_width">180sp</dimen>
     //Toolbar Layout dimensions-----------------------------------////
 
     <dimen name="toolbar_height">60dp</dimen>
@@ -106,9 +108,8 @@
     <dimen name="rebook_text_size">20sp</dimen>
     <dimen name="top_bottom_margin_line">16dp</dimen>
     <dimen name="cmplt_profile_text_size">9sp</dimen>
-
-
     <dimen name="name_text_height">40sp</dimen>
+    <dimen name="name_text_height1">50sp</dimen>
     <dimen name="personal_info_margin_top">16dp</dimen>
     <dimen name="personal_information_textsize">20sp</dimen>
     <dimen name="personal_information_textsize1">16sp</dimen>
@@ -122,6 +123,8 @@
     <dimen name="profileImage_marginTop">58dp</dimen>
     <dimen name="loginUsing_textHeight">44dp</dimen>
 
+
+    <dimen name="banner_layout_margin_top">26dp</dimen>
     ////// Choose test panel ----//////////////
     <dimen name="add_toCart_button_height">20sp</dimen>
     <dimen name="add_toCart_button_width">60sp</dimen>
@@ -169,7 +172,7 @@
     <dimen name="notsure_text_size">18sp</dimen>
     <dimen name="viewpager_width">300dp</dimen>
     <dimen name="viewPager_height">160dp</dimen>
-    <dimen name="LinearLayout_circleIndicator_height">515dp</dimen>
+    <dimen name="LinearLayout_circleIndicator_height">470dp</dimen>
     <dimen name="bookTest_Layout_MarginTop">36dp</dimen>
     <dimen name="bookTest_Layout_MarginTop2">10dp</dimen>
     <dimen name="EditTextWidth">70dp</dimen>
@@ -187,7 +190,7 @@
     <dimen name="Toolbar_Height">50dp</dimen>
     <dimen name="text_size_bookee_for">12sp</dimen>
     <dimen name="text_size_self_for">12sp</dimen>
-    <dimen name="arrow_back_marginTop">66dp</dimen>
+    <dimen name="arrow_back_marginTop">8dp</dimen>
 
     //// select test panel --- ..............///
     <dimen name="viewpager_margin_top">26dp</dimen>
@@ -258,6 +261,22 @@
     //// My Cart -------------------------------------------////
 
     <dimen name="discount_tax_amount_text_size">12sp</dimen>
+
+    //// Status fragment ========================= ///////////////////////////////////
+
+    <dimen name="profile_name_text_size">16sp</dimen>
+    <dimen name="map_view_margin_top">60dp</dimen>
+    <dimen name="profile_image_margin_left">16dp</dimen>
+    <dimen name="layout_price_margin_left">50dp</dimen>
+    <dimen name="layout_price_margin_right">16dp</dimen>
+    <dimen name="rating_stars_view_width">80sp</dimen>
+    <dimen name="rating_stars_layout_height">13dp</dimen>
+    <dimen name="rating_text_size">12sp</dimen>
+    <dimen name="text_margin_start_left">26dp</dimen>
+    <dimen name="margin_top_collector_name">10dp</dimen>
+    <dimen name="collector_image_height_width">75sp</dimen>
+    <dimen name="bottom_image_margin_left">24dp</dimen>
+    <dimen name="dots_layout_margin_bottom">80dp</dimen>
 
 
 </resources>

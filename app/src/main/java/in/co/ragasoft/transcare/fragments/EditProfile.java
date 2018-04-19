@@ -20,7 +20,7 @@ import android.widget.Spinner;
 import android.widget.TextView;
 import android.widget.Toolbar;
 
-import com.jackandphantom.circularprogressbar.CircleProgressbar;
+
 
 import java.util.ArrayList;
 import java.util.List;
@@ -30,22 +30,17 @@ import butterknife.BindView;
 import butterknife.ButterKnife;
 import de.hdodenhof.circleimageview.CircleImageView;
 import in.co.ragasoft.transcare.R;
-import info.abdolahi.CircularMusicProgressBar;
-import info.abdolahi.OnCircularSeekBarChangeListener;
 
 public class EditProfile extends Fragment implements AdapterView.OnItemSelectedListener {
 
     private static final String TAG = "MainActivity";
     Context context;
-    CircularMusicProgressBar circleProfileImage;
+
     String spinnerG;
     List<String> arrayList;
     @BindView(R.id.editProfile_circleImage)
     CircleImageView editProfileCircleImage;
-    @BindView(R.id.profile_imageView)
-    CircularMusicProgressBar profileImageView;
-    @BindView(R.id.yourCircularProgressbar)
-    CircleProgressbar yourCircularProgressbar;
+
     @BindView(R.id.edit_Name)
     EditText editName;
     @BindView(R.id.edit_address)
@@ -87,33 +82,7 @@ public class EditProfile extends Fragment implements AdapterView.OnItemSelectedL
         spinnerGender = view.findViewById(R.id.spinnerGender);
         //  spinnerGender.setPrompt("sex");
         spinnerGender.setOnItemSelectedListener(this);
-        circleProfileImage = view.findViewById(R.id.profile_imageView);
-        // set progress to 40%
-        circleProfileImage.setValue(0);
-        circleProfileImage.setOnCircularBarChangeListener(new OnCircularSeekBarChangeListener() {
-            @Override
-            public void onProgressChanged(CircularMusicProgressBar circularBar, int progress, boolean fromUser) {
-                Log.d(TAG, "onProgressChanged: progress: " + progress + " / from user? " + fromUser);
-            }
 
-            @Override
-            public void onClick(CircularMusicProgressBar circularBar) {
-                Log.d(TAG, "onClick");
-                updateRandomly();
-            }
-
-            @Override
-            public void onLongPress(CircularMusicProgressBar circularBar) {
-                Log.d(TAG, "onLongPress");
-            }
-
-        });
-        circleProfileImage.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                updateRandomly();
-            }
-        });
 
         arrayList = new ArrayList<String>();
         arrayList.add("Gender");
@@ -124,27 +93,11 @@ public class EditProfile extends Fragment implements AdapterView.OnItemSelectedL
         arrayAdapter.setDropDownViewResource(R.layout.spinner_textview);
         spinnerGender.setAdapter(arrayAdapter);
 
-        CircleProgressbar circleProgressbar = view.findViewById(R.id.yourCircularProgressbar);
-        circleProgressbar.setForegroundProgressColor(Color.BLUE);
-        //circleProgressbar.setBackgroundColor(Color.GREEN);
-        circleProgressbar.setBackgroundColor(Color.TRANSPARENT);
-        circleProgressbar.setBackgroundProgressWidth(10);
-        circleProgressbar.setForegroundProgressWidth(10);
-        circleProgressbar.setForegroundProgressWidth(10);
-        circleProgressbar.enabledTouch(true);
-        circleProgressbar.setRoundedCorner(true);
-        circleProgressbar.setClockwise(true);
-        int animationDuration = 2500; // 2500ms = 2,5s
-        circleProgressbar.setProgressWithAnimation(100, animationDuration);
+
         return view;
     }
 
-    private void updateRandomly() {
-        Random random = new Random();
-        final float percent = random.nextFloat() * 100;
-        circleProfileImage.setValue(percent);
 
-    }
 
     @Override
     public void onItemSelected(AdapterView<?> adapterView, View view, int i, long id) {

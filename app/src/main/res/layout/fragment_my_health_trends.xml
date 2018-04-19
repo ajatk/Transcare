@@ -58,7 +58,6 @@
             android:layout_height="@dimen/ProfileImageHeight"
             android:layout_marginTop="76dp"
             android:src="@drawable/my_report_image"
-            app:animateProgress="false"
             app:civ_border_color="@color/white"
             app:civ_border_width="2sp"
             app:layout_constraintEnd_toEndOf="parent"
@@ -82,12 +81,12 @@
             tools:ignore="MissingConstraints" />
 
         <TextView
-            android:id="@+id/edit_Name"
+            android:id="@+id/selectParameters"
             android:layout_width="match_parent"
-            android:layout_height="@dimen/name_text_height"
+            android:layout_height="@dimen/name_text_height1"
             android:layout_marginEnd="15dp"
             android:layout_marginStart="15dp"
-            android:layout_marginTop="26dp"
+            android:layout_marginTop="16dp"
             android:background="@color/blue_base_app_color"
             android:gravity="center_vertical"
             android:paddingLeft="10sp"
@@ -96,6 +95,7 @@
             android:text="Select parameter To View"
             android:textColor="#fff"
             android:textSize="@dimen/editName_textSize"
+            app:layout_constraintBottom_toTopOf="@+id/recyclerView_myHealthTrends"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintHorizontal_bias="0.57"
             app:layout_constraintStart_toStartOf="parent"
@@ -109,7 +109,7 @@
             android:layout_marginBottom="16dp"
             android:layout_marginEnd="16dp"
             android:layout_marginStart="16dp"
-            android:layout_marginTop="3dp"
+            android:layout_marginTop="5dp"
             android:text="Submit"
             android:textColor="#fff"
             android:textSize="@dimen/editName_textSize"
@@ -117,7 +117,7 @@
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintHorizontal_bias="0.0"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/edit_Name"
+            app:layout_constraintTop_toBottomOf="@+id/selectParameters"
             app:layout_constraintVertical_bias="0.0" />
 
     </android.support.constraint.ConstraintLayout>

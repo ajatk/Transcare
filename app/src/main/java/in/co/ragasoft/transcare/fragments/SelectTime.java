@@ -24,7 +24,7 @@ import in.co.ragasoft.transcare.adapter.SecondLevelAdapter;
 import in.co.ragasoft.transcare.adapter.SpinAdapter;
 
 
-public class SelectTime extends Fragment {
+public class SelectTime extends Fragment implements OnGroupClickListener {
 
     Spinner reportSpin, whatsappSpin;
     SpinAdapter spinAdapter;
@@ -50,7 +50,33 @@ public class SelectTime extends Fragment {
 
         // setting list adapter
         expListView.setAdapter(listAdapter);
-        expListView.setOnGroupClickListener(new OnGroupClickListener() {
+        expListView.setOnGroupClickListener(this);
+
+        return view;
+
+    }
+
+    private void prepareListData() {
+        listDataHeader = new ArrayList<String>();
+        listDataChild = new HashMap<String, List<String>>();
+        // listDataChild2 = new HashMap<String, List<String>>();
+        listDataHeader.add("Report Delivery Prefrences");
+
+
+        List<String> top250 = new ArrayList<String>();
+        top250.add("The Shawshank Redemption");
+        top250.add("The Shawshank Redemption");
+
+        listDataChild.put(listDataHeader.get(0), top250);
+        // listDataChild.put(listDataHeader.get(1), top250);
+
+
+    }
+
+
+    @Override
+    public boolean onGroupClick(ExpandableListView parent, View v, int groupPosition, long id) {
+           expListView.setOnGroupClickListener(new OnGroupClickListener() {
 
             @Override
             public boolean onGroupClick(ExpandableListView parent, View v,
@@ -103,28 +129,8 @@ public class SelectTime extends Fragment {
                 return false;
             }
         });
-
-        return view;
+        return true;
     }
-
-    private void prepareListData() {
-        listDataHeader = new ArrayList<String>();
-        listDataChild = new HashMap<String, List<String>>();
-        // listDataChild2 = new HashMap<String, List<String>>();
-        listDataHeader.add("Report Delivery Prefrences");
-
-
-        List<String> top250 = new ArrayList<String>();
-        top250.add("The Shawshank Redemption");
-        top250.add("The Shawshank Redemption");
-
-        listDataChild.put(listDataHeader.get(0), top250);
-        // listDataChild.put(listDataHeader.get(1), top250);
-
-
-    }
-
-
 }
 /*public class SelectTime extends Fragment implements AdapterView.OnItemSelectedListener {
 

@@ -15,7 +15,7 @@ import in.co.ragasoft.transcare.Adapters.Intro_Slider_Adapter;
 
 public class Intro_SliderActivity extends AppCompatActivity implements View.OnClickListener {
     LinearLayout layoutDot;
-    TextView getStarted;
+    TextView skip, getStarted;
     Intro_Slider_Adapter pagerAdapter;
     private ViewPager viewPager;
     private TextView[] dotstv;
@@ -28,7 +28,9 @@ public class Intro_SliderActivity extends AppCompatActivity implements View.OnCl
         setContentView(R.layout.activity_intro__slider);
         viewPager = findViewById(R.id.view_Pager);
         layoutDot = findViewById(R.id.dot_layout);
-        getStarted = findViewById(R.id.skip);
+        skip = findViewById(R.id.skip);
+        skip.setOnClickListener(this);
+        getStarted = findViewById(R.id.getstarted);
         getStarted.setOnClickListener(this);
         setStatusBarTransparent();
 
@@ -73,18 +75,21 @@ public class Intro_SliderActivity extends AppCompatActivity implements View.OnCl
 
     private void setDotStatus(int page) {
         layoutDot.removeAllViews();
+        layoutDot.setBackgroundColor(Color.WHITE);
+        //layoutDot.
 
         dotstv = new TextView[layouts.length];
         for (int i = 0; i < layouts.length; i++) {
             dotstv[i] = new TextView(this);
             dotstv[i].setText(Html.fromHtml("&#8226;"));
             dotstv[i].setTextSize(40);
-            dotstv[i].setTextColor(Color.parseColor("#4286f4"));
+            dotstv[i].setTextColor(Color.parseColor("#f5f7f9"));
             layoutDot.addView(dotstv[i]);
         }
         //set current dot active
         if (dotstv.length > 0) {
             dotstv[page].setTextColor(Color.parseColor("#cc484a"));
+
         }
 
     }
@@ -104,10 +109,16 @@ public class Intro_SliderActivity extends AppCompatActivity implements View.OnCl
 
     @Override
     public void onClick(View v) {
-        if (v == getStarted) {
-            Intent intent = new Intent(Intro_SliderActivity.this, SignInActivity.class);
-            startActivity(intent);
-        }
+        switch (v.getId()) {
+            case R.id.skip:
+                Intent intent = new Intent(Intro_SliderActivity.this, SignInActivity.class);
+                startActivity(intent);
+                break;
 
+            case R.id.getstarted: {
+                Intent i = new Intent(Intro_SliderActivity.this, SignInActivity.class);
+                startActivity(i);
+            }
+        }
     }
 }

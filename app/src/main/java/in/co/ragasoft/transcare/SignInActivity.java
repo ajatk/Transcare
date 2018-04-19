@@ -18,6 +18,7 @@ public class SignInActivity extends AppCompatActivity implements View.OnClickLis
         createAccont.setOnClickListener(this);
         signin.setOnClickListener(this);
 
+
     }
 
     @Override
@@ -27,10 +28,12 @@ public class SignInActivity extends AppCompatActivity implements View.OnClickLis
             case R.id.quick_sign_in:
                 Intent intent = new Intent(SignInActivity.this, HomeActivity.class);
                 startActivity(intent);
+                finish();
                 break;
             case R.id.createAccount:
                 Intent cA = new Intent(SignInActivity.this, CreateAccount.class);
                 startActivity(cA);
+
                 break;
 
 

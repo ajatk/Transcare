@@ -17,17 +17,20 @@ public class SelectYourTestPanel extends Fragment {
     TestViewPageAdapter pageAdapter;
     TabLayout tabLayout;
     Context context;
+    PopularTestFrag popularTestFrag;
 
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
         View view = inflater.inflate(R.layout.fragment_select_your_test_panel, container, false);
         context = getActivity();
+        popularTestFrag =new PopularTestFrag();
         viewPager = view.findViewById(R.id.viewPagerTest);
-        pageAdapter = new TestViewPageAdapter(context, getActivity().getSupportFragmentManager());
-        viewPager.setAdapter(pageAdapter);
         tabLayout = view.findViewById(R.id.sliding_tabs);
         tabLayout.setupWithViewPager(viewPager);
+        pageAdapter = new TestViewPageAdapter(context, getActivity().getSupportFragmentManager());
+        viewPager.setAdapter(pageAdapter);
+
 
         return view;
     }

@@ -19,7 +19,6 @@ import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
 import android.view.MenuItem;
 import android.view.View;
-import android.widget.ImageView;
 import android.widget.Toast;
 
 import in.co.ragasoft.transcare.fragments.EditProfile;
@@ -27,11 +26,10 @@ import in.co.ragasoft.transcare.fragments.HealthPanelsFrag;
 import in.co.ragasoft.transcare.fragments.HomeFragment;
 import in.co.ragasoft.transcare.fragments.MyReports;
 import in.co.ragasoft.transcare.fragments.MyReportsView;
-import in.co.ragasoft.transcare.unkonown_frag.MyCart;
 
 public class HomeActivity extends AppCompatActivity
         implements NavigationView.OnNavigationItemSelectedListener, HealthPanelsFrag.OnFragmentInteractionListener,
-        HomeFragment.OnFragmentInteractionListener, MyReportsView.OnFragmentInteractionListener, View.OnClickListener {
+        HomeFragment.OnFragmentInteractionListener, MyReportsView.OnFragmentInteractionListener{
 
     private static int navItemIndex = 0;
     Fragment fragment = null;
@@ -45,12 +43,8 @@ public class HomeActivity extends AppCompatActivity
     ActionBarDrawerToggle toggle;
     NavigationView navigationView;
     BottomNavigationView bottomNavigationView;
-    ConstraintLayout srchToolbarLayout, mycartt;
-    MyCart myCart;
-    MyReportsView myReportsView;
-    int count = 0;
+    ConstraintLayout srchToolbarLayout;
     private Handler mHandler;
-    private ImageView imageView;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -59,8 +53,7 @@ public class HomeActivity extends AppCompatActivity
         toolbar = findViewById(R.id.toolbar);
         srchToolbarLayout = findViewById(R.id.srch_toolbar_layout);
         toolbar.inflateMenu(R.menu.toolbar_menu_item);
-        imageView = findViewById(R.id.myCart_);
-        imageView.setOnClickListener(this);
+
         toolbar.setOnMenuItemClickListener(new Toolbar.OnMenuItemClickListener() {
             @Override
             public boolean onMenuItemClick(MenuItem item) {
@@ -69,7 +62,7 @@ public class HomeActivity extends AppCompatActivity
             }
         });
         setSupportActionBar(toolbar);
-        mycartt = findViewById(R.id.myCartt);
+
         mHandler = new Handler();
         drawer = findViewById(R.id.drawer_layout);
         toggle = new ActionBarDrawerToggle(
@@ -105,11 +98,13 @@ public class HomeActivity extends AppCompatActivity
 
                         if (myReports == null) {
                             toolbar.setVisibility(View.GONE);
-                            fragment = new MyReports();
-                            loadFragment(fragment);
+                            fragment=new MyReports();
+                           loadFragment(fragment);
                         } else {
                             toolbar.setVisibility(View.GONE);
-                            loadFragment(fragment);
+                            fragmentTransaction = getSupportFragmentManager().beginTransaction();
+                            fragmentTransaction.replace(R.id.frame, myReports);
+                            fragmentTransaction.commit();
                         }
                         fragmentTransaction.addToBackStack(null);
 
@@ -135,7 +130,7 @@ public class HomeActivity extends AppCompatActivity
             fragmentTransaction.commit();
         }
         fragmentTransaction.addToBackStack(null);
-        // toolbar.setVisibility(View.GONE);
+       // toolbar.setVisibility(View.GONE);
         toolbar.setNavigationIcon(R.drawable.menu);
 //        displaySelectedScreen(R.id.my_family);
     }
@@ -148,11 +143,11 @@ public class HomeActivity extends AppCompatActivity
 
     @Override
     public void onBackPressed() {
-        // toolbar.setVisibility(View.GONE);
+       // toolbar.setVisibility(View.GONE);
         DrawerLayout drawer = findViewById(R.id.drawer_layout);
         if (drawer.isDrawerOpen(GravityCompat.START)) {
             drawer.closeDrawer(GravityCompat.START);
-            if (homeFragment == null) {
+            if(homeFragment==null){
                 toolbar.setVisibility(View.VISIBLE);
             }
 
@@ -163,7 +158,49 @@ public class HomeActivity extends AppCompatActivity
         }
     }
 
-    /*private Fragment getFragment() {
+//    @Override
+//    public boolean onCreateOptionsMenu(Menu menu) {
+//        // Inflate the menu; this adds items to the action bar if it is present.
+//        getMenuInflater().inflate(R.menu.home, menu);
+//        return true;
+//    }
+//
+//    @Override
+//    public boolean onOptionsItemSelected(MenuItem item) {
+//        // Handle action bar item clicks here. The action bar will
+//        // automatically handle clicks on the Home/Up button, so long
+//        // as you specify a parent activity in AndroidManifest.xml.
+//        int id = item.getItemId();
+//
+//        //noinspection SimplifiableIfStatement
+//
+//        return super.onOptionsItemSelected(item);
+//    }
+
+    @SuppressWarnings("StatementWithEmptyBody")
+    @Override
+    public boolean onNavigationItemSelected(MenuItem item) {
+        // Handle navigation view item clicks here.
+//        int id = item.getItemId();
+//
+//        if (id == R.id.nav_camera) {
+//            // Handle the camera action
+//        } else if (id == R.id.nav_gallery) {
+//
+//        } else if (id == R.id.nav_slideshow) {
+//
+//        } else if (id == R.id.nav_manage) {
+//
+//        } else if (id == R.id.nav_share) {
+//
+//        } else if (id == R.id.nav_send) {
+//
+//        }
+        displaySelectedScreen(item.getItemId());
+        return true;
+    }
+
+    private Fragment getFragment() {
         switch (navItemIndex) {
             case 0:
                 HealthPanelsFrag healthPanelsFrag = new HealthPanelsFrag();
@@ -174,14 +211,6 @@ public class HomeActivity extends AppCompatActivity
 
         }
         return fragment;
-    }*/
-
-    @SuppressWarnings("StatementWithEmptyBody")
-    @Override
-    public boolean onNavigationItemSelected(MenuItem item) {
-
-        displaySelectedScreen(item.getItemId());
-        return true;
     }
 
     private void displaySelectedScreen(int itemId) {
@@ -257,30 +286,4 @@ public class HomeActivity extends AppCompatActivity
     public void onFragmentInteraction(Uri uri) {
 
     }
-
-    @Override
-    public void onClick(View v) {
-
-        switch (v.getId()) {
-            case R.id.myCart_:
-                count++;
-
-                if (count == 1) {
-
-                    fragment = new MyCart();
-                    loadFragment(fragment);
-                    count++;
-                } else if (count > 1) {
-                    count = 0;
-                    Toast.makeText(context, "<<<<<finisd done>>>", Toast.LENGTH_SHORT).show();
-                    // mycartXml.setVisibility(View.GONE);
-                }
-
-
-                break;
-        }
-
-    }
-
-
 }

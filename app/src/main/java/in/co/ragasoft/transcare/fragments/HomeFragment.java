@@ -26,13 +26,15 @@ public class HomeFragment extends Fragment implements View.OnClickListener {
     DashboardSliderAdapter pagerAdapter;
     ImageView bookATest, healthTrends;
     View view;
-    ConstraintLayout bookTestLayout, reports, testPanelLayout, myFamily;
+    ConstraintLayout bookTestLayout, reports, testPanelLayout, myFamily, healthTrend;
     Fragment fragment = null;
     SelectYourTestPanel testPanel;
     FragmentManager fragmentManager;
     FragmentTransaction fragmentTransaction;
     BookForFrag bookFor;
     MyFamily mfamily;
+    MyHealthTrends myHealth;
+
     Context context;
     private int[] layouts;
     private Drawable[] drawable;
@@ -51,12 +53,10 @@ public class HomeFragment extends Fragment implements View.OnClickListener {
         view = inflater.inflate(R.layout.fragment_home, container, false);
         // bookATest =view.findViewById(R.id.booktest_image); bookATest.setImageResource(R.drawable.book_test);
         // healthTrends = view.findViewById(R.id.healthtracker_image);healthTrends.setImageResource(R.drawable.health_trends);
-        bookTestLayout = view.findViewById(R.id.layout_bookTest);
-        bookTestLayout.setOnClickListener(this);
-        testPanelLayout = view.findViewById(R.id.layout_testPanel);
-        testPanelLayout.setOnClickListener(this);
-        myFamily = view.findViewById(R.id.layout_myFamily);
-        myFamily.setOnClickListener(this);
+        bookTestLayout = view.findViewById(R.id.layout_bookTest);   bookTestLayout.setOnClickListener(this);
+        testPanelLayout = view.findViewById(R.id.layout_testPanel); testPanelLayout.setOnClickListener(this);
+        myFamily = view.findViewById(R.id.layout_myFamily);  myFamily.setOnClickListener(this);
+        healthTrend = view.findViewById(R.id.layout_healthTrends);  healthTrend.setOnClickListener(this);
 
 
         viewPager = view.findViewById(R.id.viewPager_Dashboard);
@@ -109,7 +109,7 @@ public class HomeFragment extends Fragment implements View.OnClickListener {
             dotstv[i] = new TextView(getContext());
             dotstv[i].setText(Html.fromHtml("&#8226;"));
             dotstv[i].setTextSize(40);
-            dotstv[i].setTextColor(Color.parseColor("#4286f4"));
+            dotstv[i].setTextColor(Color.parseColor("#f5f7f9"));
             layoutDot.addView(dotstv[i]);
         }
         //set current dot active
@@ -181,6 +181,21 @@ public class HomeFragment extends Fragment implements View.OnClickListener {
                 }
                 fragmentTransaction.addToBackStack(null);
                 break;
+
+            case R.id.layout_healthTrends:
+                if (myHealth == null) {
+                    myHealth = new MyHealthTrends();
+                    //fragmentManager = getFragmentManager();
+                    fragmentTransaction = getActivity().getSupportFragmentManager().beginTransaction();
+                    fragmentTransaction.replace(R.id.frame, myHealth);
+                    fragmentTransaction.commit();
+                } else {
+                    fragmentTransaction = getActivity().getSupportFragmentManager().beginTransaction();
+                    fragmentTransaction.replace(R.id.frame, myHealth);
+                    fragmentTransaction.commit();
+                }
+                fragmentTransaction.addToBackStack(null);
+                break;
         }
 
     }
@@ -190,4 +205,6 @@ public class HomeFragment extends Fragment implements View.OnClickListener {
         // TODO: Update argument type and name
         void onFragmentInteraction(Uri uri);
     }
+
+
 }

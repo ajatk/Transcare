@@ -8,11 +8,9 @@ import android.support.constraint.ConstraintLayout;
 import android.support.v4.app.ActivityCompat;
 import android.support.v4.app.Fragment;
 import android.support.v4.app.FragmentTransaction;
-import android.support.v7.widget.Toolbar;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
-
 
 import com.google.android.gms.maps.CameraUpdateFactory;
 import com.google.android.gms.maps.GoogleMap;
@@ -25,28 +23,24 @@ import com.google.android.gms.maps.model.MarkerOptions;
 
 import in.co.ragasoft.transcare.R;
 
-
-public class Status extends Fragment implements View.OnClickListener {
-
+public class StatusCollector extends Fragment implements View.OnClickListener {
     private GoogleMap googleMap;
     MapView mapView;
     Context context;
-    StatusCollector statusCollector;
     ConstraintLayout collectorOnWay;
     Fragment fragment;
     FragmentTransaction fragmentTransaction;
-    Toolbar toolbar;
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
-        View view = inflater.inflate(R.layout.fragment_status, container, false);
+        // Inflate the layout for this fragment
+       View view = inflater.inflate(R.layout.fragment_status_collector, container, false);
+
         context =getActivity();
         mapView = view.findViewById(R.id.frame_map);
-        toolbar = view.findViewById(R.id.toolbar);
         mapView.onCreate(savedInstanceState);
         mapView.onResume();
         try {
-
             MapsInitializer.initialize(getActivity().getApplicationContext());
 
         } catch (Exception e) {
@@ -72,8 +66,8 @@ public class Status extends Fragment implements View.OnClickListener {
                 googleMap.addMarker( new MarkerOptions().position(mohali).title("mohali chd").snippet("set transcare for Health Test"));
                 CameraPosition cameraPosition = new CameraPosition.Builder().target(mohali).zoom(12).build();
                 googleMap.animateCamera(CameraUpdateFactory.newCameraPosition(cameraPosition));
-             }
-         });
+            }
+        });
         collectorOnWay = view.findViewById(R.id.collectorOnWay); collectorOnWay.setOnClickListener(this);
         return view;
     }
@@ -93,7 +87,7 @@ public class Status extends Fragment implements View.OnClickListener {
     @Override
     public void onDestroy() {
         super.onDestroy();
-       mapView.onDestroy();
+        mapView.onDestroy();
     }
 
     @Override
@@ -107,7 +101,7 @@ public class Status extends Fragment implements View.OnClickListener {
         switch (v.getId())
         {
             case R.id.collectorOnWay:
-                fragment = new StatusCollector();
+                fragment = new StatusFull();
                 fragmentTransaction = getActivity().getSupportFragmentManager().beginTransaction();
                 fragmentTransaction.replace(R.id.frame, fragment);
                 fragmentTransaction.commit();
@@ -116,5 +110,4 @@ public class Status extends Fragment implements View.OnClickListener {
         }
     }
 }
-
 

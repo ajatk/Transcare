@@ -26,6 +26,7 @@ public class Splash extends AppCompatActivity implements View.OnClickListener {
         if (v == logo_spalsh) {
             Intent intent = new Intent(Splash.this, Intro_SliderActivity.class);
             startActivity(intent);
+            finish();
         }
 
     }

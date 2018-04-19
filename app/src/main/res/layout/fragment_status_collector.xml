@@ -93,6 +93,7 @@
                 android:layout_marginLeft="@dimen/profile_image_margin_left"
                 android:layout_marginStart="@dimen/profile_image_margin_left"
                 android:layout_marginTop="8dp"
+                android:elevation="10sp"
                 android:gravity="center_vertical"
                 android:src="@drawable/profile"
                 android:textColor="@color/white"
@@ -125,14 +126,14 @@
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_marginStart="@dimen/text_margin_start_left"
-                    android:layout_marginTop="@dimen/margin_top_collector_name"
+                    android:layout_marginTop="10dp"
                     android:gravity="center_vertical"
                     android:text="Mr jaswonder Singh"
                     android:textColor="@color/white"
                     android:textSize="@dimen/profile_name_text_size"
                     android:textStyle="bold"
                     app:layout_constraintStart_toStartOf="parent"
-                    app:layout_constraintTop_toBottomOf="@+id/discount_tv"
+                    app:layout_constraintTop_toTopOf="parent"
                     android:layout_marginLeft="@dimen/text_margin_start_left" />
 
                 <TextView
@@ -150,14 +151,12 @@
                     app:layout_constraintTop_toBottomOf="@+id/tax_tv"
                     android:layout_marginLeft="@dimen/text_margin_start_left" />
 
-                <RatingBar
+                <TextView
                     android:id="@+id/rating_view"
                     style="?android:attr/ratingBarStyleSmall"
                     android:layout_width="@dimen/rating_stars_view_width"
                     android:layout_height="@dimen/rating_stars_layout_height"
-                    android:layout_marginLeft="8dp"
-                    android:layout_marginStart="8dp"
-                    android:layout_marginTop="8dp"
+                    android:layout_marginTop="7dp"
                     android:backgroundTint="@color/white"
                     android:gravity="center_vertical"
                     android:numStars="5"
@@ -173,6 +172,7 @@
                     android:layout_width="wrap_content"
                     android:layout_height="30sp"
                     android:layout_marginBottom="10dp"
+                    android:layout_marginStart="@dimen/text_margin_start_left"
                     android:layout_marginTop="6dp"
                     android:background="@color/blue_base_app_color"
                     android:gravity="center_vertical"
@@ -192,12 +192,6 @@
                     android:id="@+id/textView46"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:layout_marginStart="@dimen/text_margin_start_left"
-                    android:layout_marginTop="8dp"
-                    android:text="Rating"
-                    android:textColor="@color/white"
-                    android:textSize="@dimen/rating_text_size"
-                    android:textStyle="bold"
                     app:layout_constraintStart_toStartOf="parent"
                     app:layout_constraintTop_toBottomOf="@+id/amount_tv"
                     android:layout_marginLeft="@dimen/text_margin_start_left" />
@@ -207,10 +201,6 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_marginStart="8dp"
-                    android:text="3.5"
-                    android:textColor="@color/white"
-                    android:textSize="@dimen/rating_text_size"
-                    android:textStyle="bold"
                     app:layout_constraintBaseline_toBaselineOf="@+id/textView46"
                     app:layout_constraintStart_toEndOf="@+id/textView46"
                     android:layout_marginLeft="8dp" />
@@ -229,10 +219,9 @@
                 <de.hdodenhof.circleimageview.CircleImageView
                     android:layout_width="55sp"
                     android:layout_height="55sp"
-                    android:elevation="50sp"
+                    android:elevation="20sp"
                     android:layout_marginStart="@dimen/bottom_image_margin_left"
-                    app:civ_border_color="@color/white"
-                    app:civ_border_width="2px"
+
                     android:background="@drawable/circular_sahpe_icon"
                     android:src="@drawable/on_way_scooter"
                     app:layout_constraintBottom_toBottomOf="parent"

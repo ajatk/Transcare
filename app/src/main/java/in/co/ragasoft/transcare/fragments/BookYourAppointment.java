@@ -61,7 +61,7 @@ public class BookYourAppointment extends Fragment implements RadioGroup.OnChecke
 
         if (null != rb && checkedId > -1) {
 
-            if (rB1.isChecked() == rB4.isChecked()) {
+            if (rB1.isChecked() && rB4.isChecked()) {
                 fragment = new PinYourLocationOnMap();
 
                 methodFrag(fragment);

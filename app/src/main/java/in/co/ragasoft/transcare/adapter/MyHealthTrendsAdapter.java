@@ -11,6 +11,7 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.TextView;
 
+import java.util.ArrayList;
 import java.util.List;
 
 import in.co.ragasoft.transcare.R;
@@ -23,7 +24,8 @@ import in.co.ragasoft.transcare.modelClasses.TestPanelModel;
 
 public class MyHealthTrendsAdapter extends RecyclerView.Adapter<MyHealthTrendsAdapter.ViewHolder> {
 
-    List<TestPanelModel> list;
+   // List<TestPanelModel> list;
+   ArrayList<String> list;
     Context context;
     RecyclerView rv;
 
@@ -32,17 +34,23 @@ public class MyHealthTrendsAdapter extends RecyclerView.Adapter<MyHealthTrendsAd
     FragmentManager fragmentManager;
     FragmentTransaction fragmentTransaction;
 
+    public MyHealthTrendsAdapter(Context context, ArrayList<String> list) {
+        this.list =list;
+        this.context =context;
+    }
+
     @NonNull
     @Override
     public ViewHolder onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
-        View view = LayoutInflater.from(parent.getContext()).inflate(R.layout.my_reports_list_design, parent, false);
+        View view = LayoutInflater.from(parent.getContext()).inflate(R.layout.health_trend_list, parent, false);
         //context =  view.getContext().getApplicationContext();
         return new ViewHolder(view);
     }
 
     @Override
     public void onBindViewHolder(@NonNull ViewHolder holder, int position) {
-        final TestPanelModel tmodel = list.get(position);
+        final String tmodel = list.get(position);
+        holder.testName.setText(tmodel);
     }
 
     @Override
@@ -59,8 +67,9 @@ public class MyHealthTrendsAdapter extends RecyclerView.Adapter<MyHealthTrendsAd
 
         public ViewHolder(View itemView) {
             super(itemView);
+            testName = itemView.findViewById(R.id.itemOnList1);
+           // testName = itemView.findViewById(R.id.testName_text);
 
-            listItem1 = itemView.findViewById(R.id.itemOnList1);
         }
     }
 }
